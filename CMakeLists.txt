@@ -11,3 +11,4 @@ include("bootstrap.cmake")
 
 create_bin(rosbridge main.cpp)
 use_lib(rosbridge ALCOMMON ROS)
+target_link_libraries(rosbridge log4cxx)

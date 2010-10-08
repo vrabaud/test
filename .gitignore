@@ -2,3 +2,6 @@ build-*
 srv
 impl
 srv_gen
+CMakeLists.txt.user
+*.pyc
+*.pyo

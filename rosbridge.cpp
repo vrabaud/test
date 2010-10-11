@@ -11,6 +11,7 @@
 
 #include <ros/ros.h>
 #include <boost/thread.hpp>
+#include <alrosnaoqi.h>
 
 RosBridge::RosBridge(AL::ALPtr<AL::ALBroker> pBroker)
   : ALModule(pBroker, "RosBridge")
@@ -44,18 +45,19 @@ void RosBridge::init(void)
   std::cout << "rosbridge init" << std::endl;
 }
 
-
-#include <alrosaltexttospeech_generated.h>
-
 void RosBridge::main()
 {
   printf("main thread\n");
   ros::M_string remaps;
   ros::init(remaps, "NaoQi");
   ros::NodeHandle n;
-  AL::ALRosALTextToSpeech tts;
-  tts.bindMethods(getParentBroker(), n);
+  AL::ALRosNaoQi  rosnaoqi;
+
+  rosnaoqi.bindModules(getParentBroker(), n);
+
   //ros::ServiceServer service = n.advertiseService("say", say);
+
   printf("Ready to add two ints.\n");
+
   ros::spin();
 }

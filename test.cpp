@@ -10,7 +10,7 @@
 
 //#include "srv_gen/cpp/include/rosbridge/Say.h"
 
-#include <rosbridge/ALTextToSpeechsay.h>
+#include <rosbridge/ALTextToSpeechSay.h>
 
 int main(int argc, char **argv)
 {
@@ -30,7 +30,7 @@ int main(int argc, char **argv)
   else
   {
 
-    std::cout << "Failed to call service add_two_ints" << std::endl;
+    std::cout << "Failed to call service ALTextToSpeechsay" << std::endl;
     return 1;
   }
 

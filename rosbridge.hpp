@@ -5,8 +5,8 @@
 ** Copyright (C) 2010 Aldebaran Robotics
 */
 
-#ifndef   	ROSBRIDGE_H_
-# define   	ROSBRIDGE_H_
+#ifndef   	ROSBRIDGE_ROSBRIDGE_HPP_
+# define   	ROSBRIDGE_ROSBRIDGE_HPP_
 
 # include <alcore/alptr.h>
 # include <alcommon/almodule.h>
@@ -28,14 +28,6 @@ public:
    */
   std::string version();
 
-  /**
-   * dataChanged. Called by stm when subcription has been modified.
-   * @param pDataName, name of the suscribed data
-   * @param pValue, value of the suscribed data
-   * @param pMessage, message write by user during suscription
-   */
-  void dataChanged(const std::string& pDataName, const AL::ALValue& pValue, const std::string& pMessage);
-
   /** ros main
     * @internal
     */
@@ -43,4 +35,4 @@ public:
 
 };
 
-#endif 	    /* !ROSBRIDGE_H_ */
+#endif 	    /* ROSBRIDGE_ROSBRIDGE_HPP_ */

@@ -20,7 +20,7 @@ generate_src() {
 
 generate_srv() {
   #generate srv/*.srv and impl/*
-  PYTHONPATH=../.. python gen_ros_srv.py --out-dir=~/src/aldebaran/rosbridge
+  PYTHONPATH=../.. python gen_ros.py --out-dir=~/src/aldebaran/rosbridge
 }
 
 launch() {

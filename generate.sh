@@ -10,9 +10,18 @@
 #should be called inside a ros env. (for python code generation to works)
 
 generate_src() {
-  #generate cpp/python bindings for service
+  generate_from_msg
+  generate_from_srv
+}
 
-  #export ROS_ROOT=~/src/aldebaran/ros/
+generate_from_msg() {
+  # Generate Files based on Messages
+  PYTHONPATH=${ROS_ROOT}/core/roslib/src python ${ROS_ROOT}/core/roscpp/scripts/genmsg_cpp.py msg/*.msg
+  PYTHONPATH=${ROS_ROOT}/core/roslib/src python ${ROS_ROOT}/core/rospy/scripts/genmsg_py.py msg/*.msg
+}
+
+generate_from_srv() {
+  # Generate Files based on Services
   PYTHONPATH=${ROS_ROOT}/core/roslib/src python ${ROS_ROOT}/core/roscpp/scripts/gensrv_cpp.py srv/*.srv
   ROS_PACKAGE_PATH=$(pwd)
   PYTHONPATH=${ROS_ROOT}/core/roslib/src python ${ROS_ROOT}/core/rospy/scripts/gensrv_py.py srv/*.srv

@@ -69,3 +69,38 @@ ROS_MASTER_URI=http://localhost:11311/ ./sdk/bin/rosbridge  --pip <naoqi ip>
 Then you can call naoqi methods:
 rosservice call /NaoQi/ALTextToSpeech/setVolume  1.0
 rosservice call /NaoQi/ALTextToSpeech/say "I am running ros"
+
+
+
+
+
+
+== Compilation using the ros tools ==
+
+Get a ros environment and enter inside. (. ./setup.zsh)
+
+Then build what you need:
+#for example image_view will build a lot of stuff you need
+rosmake image_view
+
+Then you need to transport your ROS_ROOT into a t001chain sdk:
+cd $ROS_ROOT
+~/src/aldebaran/rosbridge/tools/generate-t001chain-sdk.sh
+
+This will take some times and generated a root.cmake and cmake/modules files.
+
+When this is generated the ROS_ROOT can be used like a normal t001chain sdk.
+
+You can add it to your toolchain file or use toc.
+To add it to toc, edit base.cfg, and replace the ros project with:
+
+(you can now remove your git checkout of ros) (later I will port my modification to the git checkout)
+
+[project "ros"]
+#this is your ROS_ROOT
+src=/home/ctaf42/src/svn/ros
+is_bin_sdk = True
+#git.url = "git@git.aldebaran.lan:ros/ros.git"
+
+
+now that should build.

@@ -12,6 +12,8 @@
 #include <ros/ros.h>
 #include <boost/thread.hpp>
 #include <alrosnaoqi_generated.h>
+#include <alrosgatherer.h>
+#include <alrospublisher.h>
 
 RosBridge::RosBridge(AL::ALPtr<AL::ALBroker> pBroker)
   : ALModule(pBroker, "RosBridge")
@@ -40,11 +42,23 @@ void RosBridge::main()
   ros::M_string remaps;
   ros::init(remaps, "NaoQi");
   ros::NodeHandle n;
-  AL::ALRosNaoQi  rosnaoqi;
-
-  printf("Binding Module API's for ROS\n");
-  rosnaoqi.bindModules(getParentBroker(), n);
+  AL::ALRosNaoQi     rosNaoqi;
+  AL::ALRosGatherer  rosGatherer;
+  AL::ALRosPublisher rosPublisher;
+  
+  printf("Binding NaoQi's Module API for ROS\n");
+  rosNaoqi.bindModules(getParentBroker(), n);
+  
+  printf("Publishing NaoQi's data for ROS\n");
+  rosGatherer.init(getParentBroker());
+  rosPublisher.init(rosGatherer.getMotorNames(), n);
+  
   printf("Ready...\n");
-
-  ros::spin();
+  
+  ros::Rate loop_rate(20);
+  while (ros::ok()) {
+    rosPublisher.publish(rosGatherer.getValues());
+    loop_rate.sleep();
+    ros::spinOnce();
+  }
 }

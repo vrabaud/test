@@ -16,6 +16,7 @@ create_module(rosbridge)
 #configure_src_module(albluetooth ${albluetooth_SRCS})
 set(ROSBRIDGE_IS_REMOTE ON CACHE BOOL "" FORCE)
 
+include_directories(msg_external)
 include_directories(msg_gen/cpp/include)
 include_directories(srv_gen/cpp/include)
 include_directories(services)

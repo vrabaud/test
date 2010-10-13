@@ -1,12 +1,12 @@
 /**
  * @author Chris Kilner
  *
- * Purpose: prepare for publishing data.
- * Works with ALGatherer, but has no NaoQi specific
+ * Purpose: Publishes data as ROS topics
+ * Works with ALRosGatherer, but has no NaoQi specific
  * details here
  *
- * Assumes that the data that arrives, conforms to
- * the structure layed out in algatherer
+ * Assumes that the data that arrives conforms to
+ * the structure layed out in ALRosGatherer
  *
  */
 
@@ -143,7 +143,7 @@ namespace AL {
   }
 
   void ALRosPublisher::xPublishInertial(const std::vector<float>& values) {
-    std::cout << "Publish Inertial" << std::endl;
+    //std::cout << "Publish Inertial" << std::endl;
 
     rosbridge::NaoQiInertialSensor data;
     int i = 0;
@@ -158,7 +158,7 @@ namespace AL {
   }
 
   void ALRosPublisher::xPublishFSR(const std::vector<float>& values) {
-    std::cout << "Publish FSR" << std::endl;
+    //std::cout << "Publish FSR" << std::endl;
 
     rosbridge::NaoQiFSRs data;
     int i = 0;
@@ -166,19 +166,23 @@ namespace AL {
     data.LFootFrontRight = values[kFSRStart + i++];
     data.LFootRearLeft = values[kFSRStart + i++];
     data.LFootRearRight = values[kFSRStart + i++];
-    geometry_msg::Point32 lCOP(kFSRStart + i++, kFSRStart + i++);
+    geometry_msgs::Point32 lCOP;
+    lCOP.x = kFSRStart + i++;
+    lCOP.y = kFSRStart + i++;
     data.LFootCenterOfPressure = lCOP;
     data.RFootFrontLeft = values[kFSRStart + i++];
     data.RFootFrontRight = values[kFSRStart + i++];
     data.RFootRearLeft = values[kFSRStart + i++];
     data.RFootRearRight = values[kFSRStart + i++];
-    geometry_msg::Point32 rCOP(kFSRStart + i++, kFSRStart + i++);
+    geometry_msgs::Point32 rCOP;
+    rCOP.x = kFSRStart + i++;
+    rCOP.y = kFSRStart + i++;
     data.RFootCenterOfPressure = rCOP;
     fFSR_pub.publish(data);
   }
 
   void ALRosPublisher::xPublishButtons(const std::vector<float>& values) {
-    std::cout << "Publish Buttons" << std::endl;
+    //std::cout << "Publish Buttons" << std::endl;
 
     rosbridge::NaoQiButtons data;
     int i = 0;
@@ -194,44 +198,44 @@ namespace AL {
   }
 
   void ALRosPublisher::xPublishMotorSensors(const std::vector<float>& values) {
-    std::cout << "Publish MotorSensors" << std::endl;
+    //std::cout << "Publish MotorSensors" << std::endl;
 
     rosbridge::NaoQiSensorAngles data;
-    int i = 0;
-    for(int i = 0; i < fNumMotors; i++) {
+    data.angles.resize(fNumMotors);
+    for(unsigned int i = 0; i < fNumMotors; i++) {
      data.angles[i] = values[fMotorSensorsStart+i];
     }
     fMotorSensors_pub.publish(data);
   }
 
   void ALRosPublisher::xPublishMotorCommands(const std::vector<float>& values) {
-    std::cout << "Publish MotorCommands" << std::endl;
+    //std::cout << "Publish MotorCommands" << std::endl;
 
     rosbridge::NaoQiCommandAngles data;
-    int i = 0;
-    for(int i = 0; i < fNumMotors; i++) {
+    data.angles.resize(fNumMotors);
+    for(unsigned int i = 0; i < fNumMotors; i++) {
      data.angles[i] = values[fMotorCommandsStart+i];
     }
     fMotorCommands_pub.publish(data);
   }
 
   void ALRosPublisher::xPublishMotorCurrent(const std::vector<float>& values) {
-    std::cout << "Publish MotorCurrent" << std::endl;
+    //std::cout << "Publish MotorCurrent" << std::endl;
 
     rosbridge::NaoQiSensorCurrents data;
-    int i = 0;
-    for(int i = 0; i < fNumMotors; i++) {
+    data.currents.resize(fNumMotors);
+    for(unsigned int i = 0; i < fNumMotors; i++) {
      data.currents[i] = values[fMotorCurrentsStart+i];
     }
     fMotorCurrents_pub.publish(data);
   }
 
   void ALRosPublisher::xPublishMotorStiffness(const std::vector<float>& values) {
-    std::cout << "Publish MotorStiffness" << std::endl;
+    //std::cout << "Publish MotorStiffness" << std::endl;
 
     rosbridge::NaoQiSensorStiffnesses data;
-    int i = 0;
-    for(int i = 0; i < fNumMotors; i++) {
+    data.stiffnesses.resize(fNumMotors);
+    for(unsigned int i = 0; i < fNumMotors; i++) {
      data.stiffnesses[i] = values[fMotorStiffnessesStart+i];
     }
     fMotorStiffnesses_pub.publish(data);

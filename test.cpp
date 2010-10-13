@@ -17,8 +17,8 @@ int main(int argc, char **argv)
   ros::init(argc, argv, "ploufplouf");
 
   ros::NodeHandle n;
-  ros::ServiceClient client = n.serviceClient<rosbridge::ALTextToSpeechsay>("/NaoQi/ALTextToSpeech/say");
-  rosbridge::ALTextToSpeechsay srv;
+  ros::ServiceClient client = n.serviceClient<rosbridge::ALTextToSpeechSay>("/NaoQi/ALTextToSpeech/say");
+  rosbridge::ALTextToSpeechSay srv;
   //rosbridge::Say srv;
   std::cout << "bim0" << std::endl;
   srv.request.stringToSay = argv[1];

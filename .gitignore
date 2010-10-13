@@ -1,7 +1,9 @@
 build-*
 srv
-impl
+services
 srv_gen
+msg_gen
 CMakeLists.txt.user
 *.pyc
 *.pyo
+src/rosbridge/msg

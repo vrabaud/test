@@ -7,7 +7,7 @@
 /**
  * This tutorial demonstrates simple receipt of messages over the ROS system.
  */
-void buttonCallback(const rosbridge::NaoQiButtons::ConstPtr& msg)
+void buttonCallback(const rosbridge::Buttons::ConstPtr& msg)
 {
   ROS_INFO("Ouch! a button");
 }

@@ -59,6 +59,9 @@ use_lib(rosbridge BOOST_THREAD)
 use_lib(rosbridge ALCOMMON ROS ROSCONSOLE ROSLIB)
 target_link_libraries(rosbridge log4cxx)
 
-# tests
-create_bin(testsay test.cpp)
-use_lib(testsay ROS ROSCONSOLE ROSLIB)
+# tests ---
+create_bin(test_say test/test_say.cpp)
+use_lib(test_say ROS ROSCONSOLE ROSLIB)
+
+create_bin(test_topics test/test_topics.cpp)
+use_lib(test_topics ROS ROSCONSOLE ROSLIB)

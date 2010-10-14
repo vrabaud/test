@@ -12,13 +12,13 @@
 
 #include "alrospublisher.h"
 #include <iostream>
-#include <rosbridge/naoqiinertialsensor.h>
-#include <rosbridge/naoqifsrs.h>
-#include <rosbridge/naoqiButtons.h>
-#include <rosbridge/naoqiSensorAngles.h>
-#include <rosbridge/naoqiCommandAngles.h>
-#include <rosbridge/naoqiSensorCurrents.h>
-#include <rosbridge/naoqisensorstiffnesses.h>
+#include <rosbridge/InertialSensor.h>
+#include <rosbridge/FSRs.h>
+#include <rosbridge/Buttons.h>
+#include <rosbridge/Sensorangles.h>
+#include <rosbridge/CommandAngles.h>
+#include <rosbridge/SensorCurrents.h>
+#include <rosbridge/SensorStiffnesses.h>
 
 namespace AL {
   /**
@@ -48,15 +48,13 @@ namespace AL {
     }
 
     if (fMotorStiffnessesStart + fNumMotors != values.size()) {
-      std::cout << "Invalid length: " <<
-        (fMotorStiffnessesStart + fNumMotors) <<
-        " != " << values.size() << std::endl;
+      // drop this silently
       return;
     }
 
     if (fLastValues.empty()) {
       // fill with rubbish to force publication
-      fLastValues.assign(values.size(), -1.0f);
+      fLastValues.assign(values.size(), -42.4242f);
     }
 
     // inertial
@@ -132,20 +130,20 @@ namespace AL {
 
     // prepare publishers
     int bufferDepth = 10;
-    fInertial_pub = pRosNode.advertise<rosbridge::NaoQiInertialSensor>("NaoQi/InertialSensor", bufferDepth);
-    fFSR_pub = pRosNode.advertise<rosbridge::NaoQiFSRs>("NaoQi/FSRs", bufferDepth);
-    fButtons_pub = pRosNode.advertise<rosbridge::NaoQiButtons>("NaoQi/Buttons", bufferDepth);
+    fInertial_pub = pRosNode.advertise<rosbridge::InertialSensor>("NaoQi/InertialSensor", bufferDepth);
+    fFSR_pub = pRosNode.advertise<rosbridge::FSRs>("NaoQi/FSRs", bufferDepth);
+    fButtons_pub = pRosNode.advertise<rosbridge::Buttons>("NaoQi/Buttons", bufferDepth);
 
-    fMotorSensors_pub = pRosNode.advertise<rosbridge::NaoQiSensorAngles>("NaoQi/SensorAngles", bufferDepth);
-    fMotorCommands_pub = pRosNode.advertise<rosbridge::NaoQiCommandAngles>("NaoQi/CommandAngles", bufferDepth);
-    fMotorCurrents_pub = pRosNode.advertise<rosbridge::NaoQiSensorCurrents>("NaoQi/SensorCurrents", bufferDepth);
-    fMotorStiffnesses_pub = pRosNode.advertise<rosbridge::NaoQiSensorStiffnesses>("NaoQi/SensorStiffnesses", bufferDepth);
+    fMotorSensors_pub = pRosNode.advertise<rosbridge::SensorAngles>("NaoQi/SensorAngles", bufferDepth);
+    fMotorCommands_pub = pRosNode.advertise<rosbridge::CommandAngles>("NaoQi/CommandAngles", bufferDepth);
+    fMotorCurrents_pub = pRosNode.advertise<rosbridge::SensorCurrents>("NaoQi/SensorCurrents", bufferDepth);
+    fMotorStiffnesses_pub = pRosNode.advertise<rosbridge::SensorStiffnesses>("NaoQi/SensorStiffnesses", bufferDepth);
   }
 
   void ALRosPublisher::xPublishInertial(const std::vector<float>& values) {
     //std::cout << "Publish Inertial" << std::endl;
 
-    rosbridge::NaoQiInertialSensor data;
+    rosbridge::InertialSensor data;
     int i = 0;
     data.accX = values[kInertialStart + i++];
     data.accY = values[kInertialStart + i++];
@@ -160,7 +158,7 @@ namespace AL {
   void ALRosPublisher::xPublishFSR(const std::vector<float>& values) {
     //std::cout << "Publish FSR" << std::endl;
 
-    rosbridge::NaoQiFSRs data;
+    rosbridge::FSRs data;
     int i = 0;
     data.LFootFrontLeft = values[kFSRStart + i++];
     data.LFootFrontRight = values[kFSRStart + i++];
@@ -184,7 +182,7 @@ namespace AL {
   void ALRosPublisher::xPublishButtons(const std::vector<float>& values) {
     //std::cout << "Publish Buttons" << std::endl;
 
-    rosbridge::NaoQiButtons data;
+    rosbridge::Buttons data;
     int i = 0;
     data.ChestButton = (values[kFSRStart + i++] > 0.0f) ? 1 :0;
     data.LFoorBumperLeft = (values[kFSRStart + i++] > 0.0f) ? 1 :0;
@@ -200,7 +198,7 @@ namespace AL {
   void ALRosPublisher::xPublishMotorSensors(const std::vector<float>& values) {
     //std::cout << "Publish MotorSensors" << std::endl;
 
-    rosbridge::NaoQiSensorAngles data;
+    rosbridge::SensorAngles data;
     data.angles.resize(fNumMotors);
     for(unsigned int i = 0; i < fNumMotors; i++) {
      data.angles[i] = values[fMotorSensorsStart+i];
@@ -211,7 +209,7 @@ namespace AL {
   void ALRosPublisher::xPublishMotorCommands(const std::vector<float>& values) {
     //std::cout << "Publish MotorCommands" << std::endl;
 
-    rosbridge::NaoQiCommandAngles data;
+    rosbridge::CommandAngles data;
     data.angles.resize(fNumMotors);
     for(unsigned int i = 0; i < fNumMotors; i++) {
      data.angles[i] = values[fMotorCommandsStart+i];
@@ -222,7 +220,7 @@ namespace AL {
   void ALRosPublisher::xPublishMotorCurrent(const std::vector<float>& values) {
     //std::cout << "Publish MotorCurrent" << std::endl;
 
-    rosbridge::NaoQiSensorCurrents data;
+    rosbridge::SensorCurrents data;
     data.currents.resize(fNumMotors);
     for(unsigned int i = 0; i < fNumMotors; i++) {
      data.currents[i] = values[fMotorCurrentsStart+i];
@@ -233,7 +231,7 @@ namespace AL {
   void ALRosPublisher::xPublishMotorStiffness(const std::vector<float>& values) {
     //std::cout << "Publish MotorStiffness" << std::endl;
 
-    rosbridge::NaoQiSensorStiffnesses data;
+    rosbridge::SensorStiffnesses data;
     data.stiffnesses.resize(fNumMotors);
     for(unsigned int i = 0; i < fNumMotors; i++) {
      data.stiffnesses[i] = values[fMotorStiffnessesStart+i];

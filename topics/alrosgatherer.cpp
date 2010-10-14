@@ -27,7 +27,18 @@ namespace AL {
 
   ALValue ALRosGatherer::getValues() {
     // TODO use a faster method
-    return fMemory->getListData(fDataRequest);
+    try
+    {
+        return fMemory->getListData(fDataRequest);
+    } catch (const AL::ALError&) {
+        // Probably a SOAP fault in remote
+        ALValue a;
+        a.arrayReserve(1);  // so that convertion to float
+        a[0] = -42.42f;     // array works. Publisher will notice
+                            // and discard due to size mismatch
+        std::cout << "Exception while gathering data" << std::endl;
+        return a;
+    }
   }
 
   const std::vector<std::string>& ALRosGatherer::getKeys() const {

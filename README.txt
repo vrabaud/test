@@ -36,7 +36,6 @@ Compile ros:
 
 
 
-
 == Transform you ros checkout into a compatible t001chain sdk ==
 
 Inside your ros environment, call generate-t001chain-sdk.sh that will
@@ -88,11 +87,9 @@ generator to find rosbridge package. (cpp does not need that..) This will allow 
   ln -s ~/src/aldebaran/rosbridge .
   roscd rosbridge
 
-Generate python and c++ bindings for rosbridge
+Generate python and c++ bindings for rosbridge (you should be in your ros env)
 
-  PYTHONPATH=${ROS_ROOT}/core/roslib/src python ${ROS_ROOT}/core/roscpp/scripts/gensrv_cpp.py ~/src/aldebaran/rosbridge/srv/*.srv
-  ROS_PACKAGE_PATH=$(pwd)
-  PYTHONPATH=${ROS_ROOT}/core/roslib/src python ${ROS_ROOT}/core/rospy/scripts/gensrv_py.py ~/src/aldebaran/rosbridge/srv/*.srv
+  ./generate.sh
 
 Now you are done. You can use rosservice call to test your generated bindings.
 

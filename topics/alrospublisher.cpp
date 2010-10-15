@@ -15,7 +15,7 @@
 #include <rosbridge/InertialSensor.h>
 #include <rosbridge/FSRs.h>
 #include <rosbridge/Buttons.h>
-#include <rosbridge/Sensorangles.h>
+#include <rosbridge/SensorAngles.h>
 #include <rosbridge/CommandAngles.h>
 #include <rosbridge/SensorCurrents.h>
 #include <rosbridge/SensorStiffnesses.h>

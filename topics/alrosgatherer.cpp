@@ -6,10 +6,10 @@
  */
 
 #include "alrosgatherer.h"
-
 #include <alcommon/albroker.h>
 #include <alproxies/almemoryproxy.h>
 #include <alproxies/almotionproxy.h>
+#include <alcore/alerror.h>
 
 namespace AL {
 

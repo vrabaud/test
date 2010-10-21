@@ -24,7 +24,7 @@ Now you need to create setup.zsh (or use the provided setup.sh) to enter in the 
 
 Enter in the ros environment:
 
-  #now you can enter in the ros env: (assuming you run zsh, but who dont? seriously!)
+  #now you can enter in the ros env: (assuming you run zsh, but who doesn't? seriously!)
   . ./setup.zsh
   #or for bash user:
   . ./setup.sh
@@ -35,8 +35,7 @@ Compile ros:
   rosmake
 
 
-
-== Transform you ros checkout into a compatible t001chain sdk ==
+== Transform your ros checkout into a compatible t001chain sdk ==
 
 Inside your ros environment, call generate-t001chain-sdk.sh that will
 create *Config.cmake files corresponding to each ros libraries and a root.cmake
@@ -110,4 +109,4 @@ Then you can call naoqi methods:
   rosservice call /NaoQi/ALTextToSpeech/setVolume  1.0
   rosservice call /NaoQi/ALTextToSpeech/say "I am running ros"
 
-Is'nt that cool?
+Isn't that cool?

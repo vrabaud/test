@@ -29,7 +29,7 @@ generate_from_srv() {
 
 generate_srv() {
   #generate srv/*.srv and impl/*
-  PYTHONPATH=../.. python gen_ros.py --out-dir=~/src/aldebaran/rosbridge/services/
+  PYTHONPATH=../python-code-generator/gen_ros --out-dir=~/git_share/src/rosbridge/
 }
 
 launch() {
@@ -40,5 +40,6 @@ launch() {
   #start the test client
   ROS_MASTER_URI=http://cgestes-de2:11311/ ./sdk/bin/testsay pafdfdf
 }
+
 
 generate_src

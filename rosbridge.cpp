@@ -14,6 +14,7 @@
 #include <alrosnaoqi_generated.h>
 #include <alrosgatherer.h>
 #include <alrospublisher.h>
+#include <alcommon/albroker.h>
 
 RosBridge::RosBridge(AL::ALPtr<AL::ALBroker> pBroker)
   : ALModule(pBroker, "RosBridge")
@@ -46,19 +47,25 @@ void RosBridge::main()
   AL::ALRosGatherer  rosGatherer;
   AL::ALRosPublisher rosPublisher;
   
-  printf("Binding NaoQi's Module API for ROS\n");
+  printf("Binding NaoQi's API for ROS\n");
   rosNaoqi.bindModules(getParentBroker(), n);
   
-  printf("Publishing NaoQi's data for ROS\n");
-  rosGatherer.init(getParentBroker());
-  rosPublisher.init(rosGatherer.getMotorNames(), n);
-  
-  printf("Ready...\n");
-  
-  ros::Rate loop_rate(20);
-  while (ros::ok()) {
-    rosPublisher.publish(rosGatherer.getValues());
-    loop_rate.sleep();
-    ros::spinOnce();
-  }
+  if (!getParentBroker()->isModulePresent("DCM")) {
+      printf("No Nao hardware found: no publishing.\n");
+      printf("Ready...\n");
+      ros::spin();
+  } else {
+      printf("Publishing NaoQi's data for ROS\n");
+      rosGatherer.init(getParentBroker());
+      rosPublisher.init(rosGatherer.getMotorNames(), n);
+
+      printf("Ready...\n");
+
+      ros::Rate loop_rate(20);
+      while (ros::ok()) {
+        rosPublisher.publish(rosGatherer.getValues());
+        loop_rate.sleep();
+        ros::spinOnce();
+      }
+    }
 }

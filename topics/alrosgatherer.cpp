@@ -33,7 +33,7 @@ namespace AL {
     } catch (const AL::ALError&) {
         // Probably a SOAP fault in remote
         ALValue a;
-        a.arrayReserve(1);  // so that convertion to float
+        a.arraySetSize(1);  // so that convertion to float
         a[0] = -42.42f;     // array works. Publisher will notice
                             // and discard due to size mismatch
         std::cout << "Exception while gathering data" << std::endl;

@@ -49,8 +49,10 @@ namespace AL
 
     void xPublishMotorStiffness(const std::vector<float>& values);
 
-    std::vector<float> fLastValues;
+    void xPublishJointStates(const std::vector<float>& values);
 
+    std::vector<float> fLastValues;
+    std::vector<std::string> fMotorNames;
     unsigned int fNumMotors;
     unsigned int fMotorSensorsStart;
     unsigned int fMotorCommandsStart;
@@ -73,6 +75,7 @@ namespace AL
     ros::Publisher fMotorCommands_pub;
     ros::Publisher fMotorCurrents_pub;
     ros::Publisher fMotorStiffnesses_pub;
+    ros::Publisher fJointStates_pub;
   };
 
 }

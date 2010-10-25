@@ -19,6 +19,8 @@
 #include <rosbridge/CommandAngles.h>
 #include <rosbridge/SensorCurrents.h>
 #include <rosbridge/SensorStiffnesses.h>
+#include "sensor_msgs/JointState.h"
+//motionProxy.getPosition('Torso', motion.SPACE_WORLD, True)
 
 namespace AL {
   /**
@@ -81,47 +83,19 @@ namespace AL {
       }
     }
 
-    // Motor Sensors
-    for (unsigned int i = 0; i < fNumMotors; ++i) {
-      if (fLastValues[fMotorSensorsStart+i] != values[fMotorSensorsStart+i]) {
-        // there is noise at a 0.01 rads ( 0.57 degrees )
-        // the values are consistent i.e. noise in the last bit
-        xPublishMotorSensors(values);
-        break;
-      }
-    }
 
-    // Motor Commands
-    for (unsigned int i = 0; i < fNumMotors; ++i) {
-      if (fLastValues[fMotorCommandsStart+i] != values[fMotorCommandsStart+i]) {
-        // when stiffness is off, sensors get copied to commands
-        // so this continues to change most of the time
-        xPublishMotorCommands(values);
-        break;
-      }
-    }
-
-    // Motor Currents
-    for (unsigned int i = 0; i < fNumMotors; ++i) {
-      if (fLastValues[fMotorCurrentsStart+i] != values[fMotorCurrentsStart+i]) {
-        xPublishMotorCurrent(values);
-        break;
-      }
-    }
-
-    // Motor Stiffness
-    for (unsigned int i = 0; i < fNumMotors; ++i) {
-      if (fLastValues[fMotorStiffnessesStart+i] != values[fMotorStiffnessesStart+i]) {
-        xPublishMotorStiffness(values);
-        break;
-      }
-    }
+   xPublishMotorSensors(values);
+   xPublishMotorCommands(values);
+   xPublishMotorCurrent(values);
+   xPublishMotorStiffness(values);
+   xPublishJointStates(values);
 
     fLastValues = values;
   }
 
   void ALRosPublisher::init(const std::vector<std::string>& motorNames, ros::NodeHandle& pRosNode) {
     // prepare motor message sizes in relation to motor names
+    fMotorNames            = motorNames;
     fNumMotors             = motorNames.size();
     fMotorSensorsStart     = kMotorsStart;
     fMotorCommandsStart    = fMotorSensorsStart + fNumMotors;
@@ -138,6 +112,7 @@ namespace AL {
     fMotorCommands_pub = pRosNode.advertise<rosbridge::CommandAngles>("NaoQi/CommandAngles", bufferDepth);
     fMotorCurrents_pub = pRosNode.advertise<rosbridge::SensorCurrents>("NaoQi/SensorCurrents", bufferDepth);
     fMotorStiffnesses_pub = pRosNode.advertise<rosbridge::SensorStiffnesses>("NaoQi/SensorStiffnesses", bufferDepth);
+    fJointStates_pub = pRosNode.advertise<sensor_msgs::JointState>("joint_states", bufferDepth);
   }
 
   void ALRosPublisher::xPublishInertial(const std::vector<float>& values) {
@@ -237,5 +212,16 @@ namespace AL {
      data.stiffnesses[i] = values[fMotorStiffnessesStart+i];
     }
     fMotorStiffnesses_pub.publish(data);
+  }
+
+  void ALRosPublisher::xPublishJointStates(const std::vector<float>& values) {
+      sensor_msgs::JointState data;
+      data.header.stamp = ros::Time::now();
+      data.name = fMotorNames;
+      data.position.resize(fNumMotors);
+      for(unsigned int i = 0; i < fNumMotors; i++) {
+       data.position[i] = values[fMotorSensorsStart+i];
+      }
+      fJointStates_pub.publish(data);
   }
 }

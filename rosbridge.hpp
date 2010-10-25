@@ -11,6 +11,11 @@
 # include <alcore/alptr.h>
 # include <alcommon/almodule.h>
 
+namespace ros {
+  class NodeHandle;
+};
+
+
 class RosBridge : public AL::ALModule
 {
 public:
@@ -27,6 +32,11 @@ public:
    * @return string containing the version
    */
   std::string version();
+
+  /** ros main publisher
+    * @internal
+    */
+  void mainPublisher(ros::NodeHandle *n);
 
   /** ros main
     * @internal

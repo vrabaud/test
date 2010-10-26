@@ -29,17 +29,30 @@ mkdir dist/bin
 mkdir dist/lib
 mkdir dist/config
 
-cat >dist/setup.sh <<EOF
-export ROS_ROOT=$(pwd)/ros/
-export PATH=$ROS_ROOT/../bin:$PATH
-#export PYTHONPATH=$ROS_ROOT/core/roslib/src:$PYTHONPATH
+cat >dist/config/rosconsole.config <<EOF
+log4j.rootLogger=INFO, A1
+log4j.logger.ros=INFO
+log4j.logger.ros.roscpp.superdebug=ERROR
 
-if [ ! "$ROS_MASTER_URI" ] ; then
+# A1 is set to be a ConsoleAppender.
+log4j.appender.A1=org.apache.log4j.ConsoleAppender
+# A1 uses PatternLayout.
+log4j.appender.A1.layout=org.apache.log4j.PatternLayout
+log4j.appender.A1.layout.ConversionPattern=\%-4r [\%t] \%-5p \%c \%x - \%m\%n
+
+EOF
+
+cat >dist/setup.sh <<EOF
+export ROS_ROOT=\$(pwd)/ros/
+export PATH=\$ROS_ROOT/../bin:\$PATH
+#export PYTHONPATH=$ROS_ROOT/core/roslib/src:\$PYTHONPATH
+
+if [ ! "\$ROS_MASTER_URI" ] ; then
   export ROS_MASTER_URI=http://localhost:11311 ;
 fi
 
-export ROS_PACKAGE_PATH=${ROS_ROOT}/../stacks
-export LD_LIBRARY_PATH=${ROS_ROOT}/../lib
+export ROS_PACKAGE_PATH=\${ROS_ROOT}/../stacks
+export LD_LIBRARY_PATH=\${ROS_ROOT}/../lib
 #export GSCAM_CONFIG="v4l2src device=/dev/video2 ! video/x-raw-rgb ! ffmpegcolorspace ! identity name=ros ! fakesink"
 #export GSCAM_CONFIG="fakesrc is-live=true ! naovideosrc ! ffmpegcolorspace ! identity name=ros ! fakesink"
 export GSCAM_CONFIG="fakesrc is-live=true ! ffmpegcolorspace ! video/x-raw-rgb ! identity name=ros ! fakesink"

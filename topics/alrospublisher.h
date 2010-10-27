@@ -1,5 +1,7 @@
 /**
  * @author Chris Kilner
+ *
+ * Copyright (C) 2010 Aldebaran Robotics
  */
 
 #ifndef ROSBRIDGE_ALROSPUBLISHER_H
@@ -8,6 +10,7 @@
 #include <string>
 #include <vector>
 #include <ros/ros.h>
+#include <tf/transform_broadcaster.h>
 
 namespace AL
 {
@@ -31,25 +34,28 @@ namespace AL
 
     void publish(const std::vector<float>& values);
 
-    void init(const std::vector<std::string>& motorNames, ros::NodeHandle& pRosNode);
+    void init(const std::vector<std::string>& motorNames, ros::NodeHandle& pRosNode, bool pIsDCMActive);
 
   private:
-    
-    void xPublishInertial(const std::vector<float>& values);
 
-    void xPublishFSR(const std::vector<float>& values);
+    void xPublishInertial(const std::vector<float>& values, const ros::Time& time) const;
 
-    void xPublishButtons(const std::vector<float>& values);
+    void xPublishFSR(const std::vector<float>& values, const ros::Time& time) const;
 
-    void xPublishMotorSensors(const std::vector<float>& values);
+    void xPublishButtons(const std::vector<float>& values, const ros::Time& time) const;
 
-    void xPublishMotorCommands(const std::vector<float>& values);
+    void xPublishMotorSensors(const std::vector<float>& values, const ros::Time& time) const;
 
-    void xPublishMotorCurrent(const std::vector<float>& values);
+    void xPublishMotorCommands(const std::vector<float>& values, const ros::Time& time) const;
 
-    void xPublishMotorStiffness(const std::vector<float>& values);
+    void xPublishMotorCurrent(const std::vector<float>& values, const ros::Time& time) const;
 
-    void xPublishJointStates(const std::vector<float>& values);
+    void xPublishMotorStiffness(const std::vector<float>& values, const ros::Time& time) const;
+
+    void xPublishJointStates(const std::vector<float>& values, const ros::Time& time) const;
+
+    // not const due to the TransformBroadcaster
+    void xPublishOdometry(const std::vector<float>& values, const ros::Time& time);
 
     std::vector<float> fLastValues;
     std::vector<std::string> fMotorNames;
@@ -58,15 +64,17 @@ namespace AL
     unsigned int fMotorCommandsStart;
     unsigned int fMotorCurrentsStart;
     unsigned int fMotorStiffnessesStart;
+    unsigned int fTorsoPositionStart;
 
     const unsigned int kInertialStart;
     const unsigned int kInertialSize;
-
     const unsigned int kFSRStart;
     const unsigned int kFSRSize;
     const unsigned int kButtonsStart;
     const unsigned int kButtonsSize;
     const unsigned int kMotorsStart;
+
+    bool fIsDCMActive;
 
     ros::Publisher fInertial_pub;
     ros::Publisher fFSR_pub;
@@ -76,6 +84,9 @@ namespace AL
     ros::Publisher fMotorCurrents_pub;
     ros::Publisher fMotorStiffnesses_pub;
     ros::Publisher fJointStates_pub;
+    ros::Publisher fOdometry_pub;
+    ros::Time      fLastTime;
+    tf::TransformBroadcaster fTransformBroadcaster;
   };
 
 }

@@ -44,8 +44,9 @@ void RosBridge::mainPublisher(ros::NodeHandle *n)
   AL::ALRosGatherer  rosGatherer;
   AL::ALRosPublisher rosPublisher;
 
+  bool isDCMActive = getParentBroker()->isModulePresent("DCM");
   rosGatherer.init(getParentBroker());
-  rosPublisher.init(rosGatherer.getMotorNames(), *n);
+  rosPublisher.init(rosGatherer.getMotorNames(), *n, isDCMActive);
 
   printf("Ready...\n");
 
@@ -58,7 +59,7 @@ void RosBridge::mainPublisher(ros::NodeHandle *n)
 
 void RosBridge::main()
 {
-  printf("main thread\n");
+  printf("RosBridge starting...\n");
   ros::M_string remaps;
   ros::init(remaps, "NaoQi");
 
@@ -68,20 +69,10 @@ void RosBridge::main()
   printf("Binding NaoQi's API for ROS\n");
   rosNaoqi.bindModules(getParentBroker(), n);
 
-  //AL::ALRosALTextToSpeech fALRosALTextToSpeech;
-  //fALRosALTextToSpeech.bindMethods(getParentBroker(), n);
+  //launch the thread now, when we are sure ros is init
+  boost::thread *rosPubThread = new boost::thread(boost::bind(&RosBridge::mainPublisher, this, &n));
 
-  if (!getParentBroker()->isModulePresent("DCM")) {
-    printf("No Nao hardware found: no publishing.\n");
-    printf("Ready...\n");
-  }
-  else {
-    //launch the thread now, when we are sure ros is init
-    boost::thread *rosPubThread = new boost::thread(boost::bind(&RosBridge::mainPublisher, this, &n));
-  }
-
-  printf("Start spinning with 30 threads.\n");
+  printf("Spinning with 30 threads...\n");
   ros::MultiThreadedSpinner multispin(30);
   multispin.spin();
-  printf("Multispin ta mere bim.\n");
 }

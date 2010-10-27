@@ -27,9 +27,9 @@
 mkdir dist
 mkdir dist/bin
 mkdir dist/lib
-mkdir dist/config
+mkdir -p dist/ros/config
 
-cat >dist/config/rosconsole.config <<EOF
+cat >dist/ros/config/rosconsole.config <<EOF
 log4j.rootLogger=INFO, A1
 log4j.logger.ros=INFO
 log4j.logger.ros.roscpp.superdebug=ERROR
@@ -53,9 +53,8 @@ fi
 
 export ROS_PACKAGE_PATH=\${ROS_ROOT}/../stacks
 export LD_LIBRARY_PATH=\${ROS_ROOT}/../lib
-#export GSCAM_CONFIG="v4l2src device=/dev/video2 ! video/x-raw-rgb ! ffmpegcolorspace ! identity name=ros ! fakesink"
-#export GSCAM_CONFIG="fakesrc is-live=true ! naovideosrc ! ffmpegcolorspace ! identity name=ros ! fakesink"
-export GSCAM_CONFIG="fakesrc is-live=true ! ffmpegcolorspace ! video/x-raw-rgb ! identity name=ros ! fakesink"
+#export GSCAM_CONFIG="v4l2src device=/dev/video ! video/x-raw-rgb ! ffmpegcolorspace ! identity name=ros ! fakesink"
+export GSCAM_CONFIG="fakesrc is-live=true ! naovideosrc ! ffmpegcolorspace ! video/x-raw-rgb ! identity name=ros ! fakesink"
 EOF
 
 insta() {
@@ -86,6 +85,10 @@ insta ros/tools/topic_tools
 insta ros/tools/rospack
 
 insta stacks/image_common/image_transport
+insta stacks/image_transport_plugins/compressed_image_transport
+insta stacks/image_transport_plugins/theora_image_transport
+insta stacks/image_transport_plugins/libtheora
+
 insta stacks/common/pluginlib
 
 insta stacks/image_common/camera_calibration_parsers

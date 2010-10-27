@@ -16,7 +16,6 @@ create_module(rosbridge)
 #configure_src_module(albluetooth ${albluetooth_SRCS})
 set(ROSBRIDGE_IS_REMOTE ON CACHE BOOL "" FORCE)
 
-include_directories(msg_external)
 include_directories(msg_gen/cpp/include)
 include_directories(srv_gen/cpp/include)
 include_directories(services)
@@ -56,7 +55,7 @@ configure_src_module(rosbridge
 #create_bin(rosbridge rosbridge.hpp rosbridge.cpp rosbridgemain.cpp)
 
 use_lib(rosbridge BOOST_THREAD)
-use_lib(rosbridge ALCOMMON ROS ROSCONSOLE ROSLIB)
+use_lib(rosbridge ALCOMMON ROSCPP ROSCONSOLE ROSLIB GEOMETRY_MSGS NAV_MSGS SENSOR_MSGS TF )
 target_link_libraries(rosbridge log4cxx)
 
 add_subdirectory("test")

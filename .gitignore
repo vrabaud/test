@@ -8,3 +8,4 @@ CMakeLists.txt.user
 *.pyo
 /src/rosbridge/msg
 /src/rosbridge/srv
+/test/services/*

@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALPythonBridge.evalFull
+# evaluates script and returns an informative array.
+
+# string to eval
+string stringToEvaluate
+---
+# an array containing [return value, exceptions, stdout, stderr]
+AL::ALValue value
+
+

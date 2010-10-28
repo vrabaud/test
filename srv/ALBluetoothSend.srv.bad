@@ -1,0 +1,14 @@
+# Generated for NaoQi method ALBluetooth.send
+# Send data to a bluetooth device, each value should be provided.
+
+# the device name
+string devicename
+# array of 4 signed short, should be between -32768 and 32768 (duty cycle ranging from -100% to 100%)
+AL::ALValue PWMs
+# array of 2 unsigned short, should be between 500 and 2500 (pulse width in microsecond)
+AL::ALValue servos
+# array of 4 bool
+AL::ALValue GPIOs
+---
+
+

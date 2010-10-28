@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALLaser.setOpeningAngle
+# Set openning angle of the laser
+
+# float containing the min value in rad, this value must be upper than -2.35619449
+AL::ALValue angle_min_f
+# float containing the max value in rad, this value must be lower than 2.092349795
+AL::ALValue angle_max_f
+---
+
+

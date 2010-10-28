@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALMemory.getDataListName
+# Allows programs to get an array containing all the data's name.
+
+---
+# return an array of data's string name.
+AL::ALValue value
+
+

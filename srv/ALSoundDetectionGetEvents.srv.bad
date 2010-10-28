@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALSoundDetection.getEvents
+# Get index of events detected
+
+# Name of detector. For now only one detector is available : "soundDetection/SoundDetector".
+string type
+---
+# Return index of all detections of the current audio buffer
+AL::ALValue value
+
+

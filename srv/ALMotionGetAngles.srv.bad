@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALMotion.getAngles
+# Gets the angles of the joints
+
+# Names the joints, chains, "Body", "BodyJoints" or "BodyActuators".
+AL::ALValue names
+# If true, sensor angles will be returned
+bool useSensors
+---
+# Joint angles in radians.
+float32[] value
+
+

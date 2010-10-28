@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALVisionVideoInput.resolutionToSizes
+# return the width and the height of a resolution
+
+# { 0 = kQQVGA, 1 = kQVGA, 2 = kVGA }
+int32 resolution
+---
+# array of sizes: (return [-1;-1] if the format is invalid)
+AL::ALValue value
+
+

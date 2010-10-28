@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALBluetooth.getAssociatedDeviceList
+# list all bluetooth devices that are associated with nao.
+
+---
+# a list of bluetooth device <name, address>
+AL::ALValue value
+
+

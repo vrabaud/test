@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALMemory.insertObject
+# Insert object in ALMemory. Please use ALMemoryFastAccess
+
+# ALMemory data name
+string name
+# buffer in ALValue
+AL::ALValue buffer
+# buffer size
+int32 bufferSize
+---
+
+

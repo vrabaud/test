@@ -1,0 +1,18 @@
+# Generated for NaoQi method ALMotionRecorder.startPeriodicRecording
+# Start recording the motion in a periodic mode
+
+# Names of joints that must be recorded
+string[] jointsToRecord
+# Default number of poses to record
+int32 nbPoses
+# set to true to ignore nbPoses and keep recording new poses as long as record is not manually stopped
+bool extensionAllowed
+# Time in seconds to wait between two poses
+float32 timeStep
+# Names of joints that must be replayed
+string[] jointsToReplay
+# An ALValue holding data for replayed joints. It holds two ALValues. The first one is an AlValue where each line corresponds to a joint, and column elements are times of control points The second one is also an ALValue where each line corresponds to a joint, but column elements are arrays containing [float angle, Handle1, Handle2] elements, where Handle is [int InterpolationType, float dAngle, float dTime] describing the handle offsets relative to the angle and time of the point. The first bezier param describes the handle that controls the curve preceding the point, the second describes the curve following the point.
+AL::ALValue replayData
+---
+
+

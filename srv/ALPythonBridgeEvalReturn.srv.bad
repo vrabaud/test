@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALPythonBridge.evalReturn
+# eval script and return result. evalReturn(2+2) will return 4
+
+# string to eval
+string stringToEvaluate
+---
+# the result of the evaluation
+AL::ALValue value
+
+

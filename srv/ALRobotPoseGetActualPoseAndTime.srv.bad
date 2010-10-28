@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALRobotPose.getActualPoseAndTime
+# Get the actual robot pose and the time since this pose was activate.
+
+---
+# A ALValue array of size 2. With first a string of the robot pose and
+AL::ALValue value
+
+

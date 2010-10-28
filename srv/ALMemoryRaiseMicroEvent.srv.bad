@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMemory.raiseMicroEvent
+# Raise a micro-event, insert data associated to event. Call user callback
+
+# Name of the data to be inserted.
+string name
+# Value of the data. could be int, double, string, or an array of any of these types.
+AL::ALValue data
+---
+
+

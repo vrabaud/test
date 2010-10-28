@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALRobotPose.getPoseNames
+# Get the full list of pose possibly return by this module.
+
+---
+# A ALValue array of string containing the possible Poses.
+AL::ALValue value
+
+

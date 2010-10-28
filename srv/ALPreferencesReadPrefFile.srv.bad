@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALPreferences.readPrefFile
+# Reads all preferences from an xml files and stores them in an ALValue.
+
+# Name of the module associate to the preference.
+string fileName
+# If true a memory name will be generated for each non-array preference.
+bool autoGenerateMemoryNames
+---
+# array reprenting the whole file.
+AL::ALValue value
+
+

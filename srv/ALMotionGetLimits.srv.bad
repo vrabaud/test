@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMotion.getLimits
+# Get the minAngle, maxAngle, and maxChangePerCycle for a given chain in the body.
+
+# Name of a joint, chain, "Body", "BodyJoints" or "BodyActuators".
+string name
+---
+# Array of ALValue arrays containing the minAngle, maxAngle and maxChangePerCycle for all the joints specified.
+AL::ALValue value
+
+

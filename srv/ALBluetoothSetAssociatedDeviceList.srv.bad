@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALBluetooth.setAssociatedDeviceList
+# set the device list that nao should handle. Association will be persistent after reboot.
+
+# list of bluetooth device <name, address>
+AL::ALValue deviceList
+---
+
+

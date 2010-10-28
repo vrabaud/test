@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALLeds.getIntensity
+# Gets the intensity of a LED or device
+
+# The name of the LED or Group.
+string name
+---
+# The intensity of the LED or Group.
+AL::ALValue value
+
+

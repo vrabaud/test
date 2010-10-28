@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALMotion.setMotionConfig
+# Internal Use.
+
+# Internal: An array of ALValues [i][0]: name, [i][1]: value
+AL::ALValue config
+---
+
+

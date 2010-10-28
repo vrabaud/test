@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALMotion.angleInterpolationBezier
+# Interpolates a sequence of timed angles for several motors using bezier control points. This is a blocking call.
+
+# A vector of joint names
+string[] jointNames
+# An ragged ALValue matrix of floats. Each line corresponding to a motor, and column element to a control point.
+AL::ALValue times
+# An ALValue array of arrays each containing [float angle, Handle1, Handle2], where Handle is [int InterpolationType, float dAngle, float dTime] descibing the handle offsets relative to the angle and time of the point. The first bezier param describes the handle that controls the curve preceeding the point, the second describes the curve following the point.
+AL::ALValue controlPoints
+---
+
+

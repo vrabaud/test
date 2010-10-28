@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALVisionRecognition.setParam
+# Set vision recognition parameters.
+
+# Name of the parameter to be changed. Among ("resolution",[int])
+string paramName
+# Value(s) of the parameter to be changed.
+AL::ALValue paramValue
+---
+
+

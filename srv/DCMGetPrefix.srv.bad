@@ -1,0 +1,8 @@
+# Generated for NaoQi method DCM.getPrefix
+# Return the STM base name
+
+---
+# the STM base name for all device/sensors (1st string in the array) and all devices (2nd string in the array)
+AL::ALValue value
+
+

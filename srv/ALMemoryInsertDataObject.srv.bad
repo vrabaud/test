@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMemory.insertDataObject
+# Allows any program to insert data into ALMemory.
+
+# Name of the data to be inserted.
+string name
+# Value of the data. Data type is an ALValue. Could be int, double, string, or an array of any of these types.
+AL::ALValue data
+---
+
+

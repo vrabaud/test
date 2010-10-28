@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALMotionRecorder.stopAndGetRecording
+# Stop recording the motion and return data
+
+---
+# Returns the recorded data as an ALValue
+AL::ALValue value
+
+

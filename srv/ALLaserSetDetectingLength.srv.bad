@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALLaser.setDetectingLength
+# Set detection threshold of the laser
+
+# int containing the min length that the laser will detect(mm), this value must be upper than 20 mm
+AL::ALValue length_min_l
+# int containing the max length that the laser will detect(mm), this value must be lower than 5600 mm
+AL::ALValue length_max_l
+---
+
+

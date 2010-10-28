@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMemory.raiseEvent
+# Raise an event, insert data associated to event. Call user callback
+
+# Name of the event to raise.
+string name
+# Value of the data. could be int, double, string, or an array of any of these types.
+AL::ALValue data
+---
+
+

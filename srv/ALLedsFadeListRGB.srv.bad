@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALLeds.fadeListRGB
+# Chain a list of color for a device, as the motion.doMove command.
+
+# The name of the LED or Group.
+string name
+# List of RGB led value, RGB as seen in hexa-decimal: 0x00RRGGBB.
+AL::ALValue rgbList
+# List of time to go to given intensity.
+AL::ALValue timeList
+---
+
+

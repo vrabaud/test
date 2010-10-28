@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALVisionVideoInput.getImageRemote
+# Applies transformations to the last image from video source and fills pFrameOut.
+
+# Name under which the G.V.M. is known from ALVideoDevice.
+string id
+---
+# Array containing image informations :
+AL::ALValue value
+
+

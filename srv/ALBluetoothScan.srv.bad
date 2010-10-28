@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALBluetooth.scan
+# Scan for bluetooth devices, this may take up to 10 seconds
+
+---
+# a list of bluetooth devices <name, address>
+AL::ALValue value
+
+

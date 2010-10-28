@@ -1,0 +1,18 @@
+# Generated for NaoQi method ALMotion.positionInterpolation
+# Moves an end-effector to the given position and orientation over time. This is a blocking call.
+
+# Name of the chain. Could be: "Head", "LArm", "RArm", "LLeg", "RLeg", "Torso"
+string chainName
+# Task space {SPACE_TORSO = 0, SPACE_WORLD = 1, SPACE_NAO = 2}.
+int32 space
+# Vector of 6D position arrays (x,y,z,wx,wy,wz) in meters and radians
+AL::ALValue path
+# Axis mask. True for axes that you wish to control. e.g. 7 for position only, 56 for rotation only and 63 for both
+int32 axisMask
+# Vector of times in seconds corresponding to the path points
+AL::ALValue durations
+# If true, the movement is absolute else relative
+bool isAbsolute
+---
+
+

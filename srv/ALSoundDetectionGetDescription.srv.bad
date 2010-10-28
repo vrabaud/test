@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALSoundDetection.getDescription
+# Get description of events
+
+# Name of detector. For now only one detector is available : "soundDetection/SoundDetector".
+string type
+# Name of the description : 'default' if not defined
+string nameDesc
+---
+# Return description for all detections
+AL::ALValue value
+
+

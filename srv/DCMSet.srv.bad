@@ -1,0 +1,8 @@
+# Generated for NaoQi method DCM.set
+# Call this function to send a timed-command list to an actuator
+
+# AL::ALValue with all data
+AL::ALValue commands
+---
+
+

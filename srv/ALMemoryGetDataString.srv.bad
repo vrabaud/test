@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALMemory.getDataString
+# Allows programs and modules to get data stored in ALMemory.
+
+# Name of the data.
+string name
+# All the data stored for "duration" seconds will be returned. If 0 returns the lastest value. If -1 returns all stored values.
+int32 duration
+---
+# an array containing all the retrieved data
+AL::ALValue value
+
+

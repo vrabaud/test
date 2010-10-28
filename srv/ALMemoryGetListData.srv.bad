@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMemory.getListData
+# Allows programs and modules to retrieve multiple datas stored in ALMemory at the same time.
+
+# an array containing the datas' name and their durations.
+AL::ALValue name
+---
+# an array containing all the retrieved values of requested data
+AL::ALValue value
+
+

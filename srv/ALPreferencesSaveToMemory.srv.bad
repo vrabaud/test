@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALPreferences.saveToMemory
+# Writes all preferences from ALValue to an xml file.
+
+# array reprenting the whole file.
+AL::ALValue prefs
+---
+# True upon success.
+bool value
+
+

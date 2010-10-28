@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALVisionToolbox.stopVideoRecord
+# Stop a video record that was launched with startVideoRecord() or startVideoRecord_adv(). The function returns the number of frames that were recorded, as well as the video absolute file name.
+
+---
+# Array of two elements [numRecordedFrames, recordAbsolutePath]
+AL::ALValue value
+
+

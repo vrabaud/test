@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALExtractor.getSubscribersInfo
+# Gets the parameters given by the module.
+
+---
+# Array of names and parameters of all subscribers.
+AL::ALValue value
+
+

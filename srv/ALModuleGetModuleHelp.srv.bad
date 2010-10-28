@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALModule.getModuleHelp
+# Retrieves the module's description.
+
+---
+# A structure describing the module.
+AL::ALValue value
+
+

@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALVisionVideoInput.getDirectRawImageRemote
+# Fills pFrameOut with data coming directly from raw buffer (no format conversion).
+
+# Name under which the G.V.M. is known from ALVideoDevice.
+string id
+---
+# Array containing image informations :
+AL::ALValue value
+
+

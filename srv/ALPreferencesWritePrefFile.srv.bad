@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALPreferences.writePrefFile
+# Writes all preferences from ALValue to an xml file.
+
+# Name of the module associate to the preference.
+string fileName
+# array reprenting the whole file.
+AL::ALValue prefs
+# If true all memory names will be removed before saving.
+bool ignoreMemoryNames
+---
+
+

@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALSentinel.onAccY
+# callback for internal use.
+
+# Name of the modified data
+string dataName
+# value of the data
+AL::ALValue data
+# associate message.
+string message
+---
+
+

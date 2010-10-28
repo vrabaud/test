@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALMemory.insertListData
+# Allows any program to insert a list of data into ALMemory.
+
+# list of [Name, Value, lifespan, waitforAnswer, group] for each data to be inserted.
+AL::ALValue listOfInsertData
+---
+
+

@@ -1,0 +1,16 @@
+# Generated for NaoQi method DCM.preferences
+# Save updated value from DCM in XML pref file
+
+# string : 'Save' 'Load' 'Add'
+string action
+# string : 'Chest' 'Head' 'Main' 'All'
+string target
+# The name of the key if action = 'Add'.
+string keyName
+# The ALVAlue of the key to add
+AL::ALValue keyValue
+---
+# Nothing
+int32 value
+
+

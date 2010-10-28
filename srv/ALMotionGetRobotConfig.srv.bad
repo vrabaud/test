@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALMotion.getRobotConfig
+# Get the robot configuration.
+
+---
+# ALValue arrays containing the robot name, the version and the options.
+AL::ALValue value
+
+

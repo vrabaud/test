@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALFileManager.getFileContents
+# Returns the complete path of the file if it does exist. Starts by looking in user's shared folder, then in system folder.
+
+# array reprenting the whole file.
+string prefs
+---
+# True upon success
+AL::ALValue value
+
+

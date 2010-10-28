@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALMotionRecorder.dataChanged
+# Called by ALMemory when subscribed data has been modified.
+
+# The name of the modified data.
+string dataName
+# The changed data.
+AL::ALValue data
+# Associated message.
+string message
+---
+
+

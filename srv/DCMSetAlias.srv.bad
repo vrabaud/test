@@ -1,0 +1,8 @@
+# Generated for NaoQi method DCM.setAlias
+# Call this function to send timed-command list to an alias (list of actuators)
+
+# AL::ALValue with all data
+AL::ALValue commands
+---
+
+

@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALBluetooth.getDeviceList
+# list all available bluetooth devices (need a scan before)
+
+---
+# a list of bluetooth device <name, address>
+AL::ALValue value
+
+

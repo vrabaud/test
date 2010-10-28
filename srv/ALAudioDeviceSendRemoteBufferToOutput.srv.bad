@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALAudioDevice.sendRemoteBufferToOutput
+# This function allows a remote module to send sound onto the nao's loudpseakers
+
+# Number of 16 bits samples per channel to send.
+int32 nbOfFrames
+# Buffer to send
+AL::ALValue pBuffer
+---
+# True if the operation is successfull - False otherwise
+bool value
+
+

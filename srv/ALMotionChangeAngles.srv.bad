@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALMotion.changeAngles
+# Changes Angles. This is a blocking call.
+
+# The name or names of joints, chains, "Body", "BodyJoints" or "BodyActuators".
+AL::ALValue names
+# One or more changes in radians
+AL::ALValue changes
+# The fraction of maximum speed to use
+float32 fractionMaxSpeed
+---
+
+

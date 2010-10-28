@@ -1,6 +1,6 @@
 /build-*
-/srv
-/services
+/srv/*.srv
+/services/*generated*
 /srv_gen
 /msg_gen
 CMakeLists.txt.user
@@ -8,4 +8,4 @@ CMakeLists.txt.user
 *.pyo
 /src/rosbridge/msg
 /src/rosbridge/srv
-/test/services/*
+/test/services/*generated*

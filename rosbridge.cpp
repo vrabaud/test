@@ -14,6 +14,7 @@
 #include <alrosnaoqi_generated.h>
 #include <alrosgatherer.h>
 #include <alrospublisher.h>
+#include <alrossubscriber.h>
 #include <alcommon/albroker.h>
 
 RosBridge::RosBridge(AL::ALPtr<AL::ALBroker> pBroker)
@@ -63,11 +64,13 @@ void RosBridge::main()
   ros::M_string remaps;
   ros::init(remaps, "NaoQi");
 
-  ros::NodeHandle    n;
-  AL::ALRosNaoQi     rosNaoqi;
+  ros::NodeHandle     n;
+  AL::ALRosNaoQi      rosNaoqi;
+  AL::ALRosSubscriber rosSubscriber;
 
   printf("Binding NaoQi's API for ROS\n");
   rosNaoqi.bindModules(getParentBroker(), n);
+  rosSubscriber.init(getParentBroker(), n);
 
   //launch the thread now, when we are sure ros is init
   boost::thread *rosPubThread = new boost::thread(boost::bind(&RosBridge::mainPublisher, this, &n));

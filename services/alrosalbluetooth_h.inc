@@ -7,8 +7,8 @@
 
 //#include <rosbridge/ALBluetoothGetAssociatedDeviceList.h>
 //#include <rosbridge/ALBluetoothGetDeviceList.h>
-//#include <rosbridge/ALModuleGetMethodHelp.h>
-//#include <rosbridge/ALModuleGetModuleHelp.h>
+#include <rosbridge/ALModuleGetMethodHelp.h>
+#include <rosbridge/ALModuleGetModuleHelp.h>
 //#include <rosbridge/ALBluetoothScan.h>
 //#include <rosbridge/ALBluetoothSend.h>
 //#include <rosbridge/ALBluetoothSetAssociatedDeviceList.h>

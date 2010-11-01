@@ -5,21 +5,8 @@
 *
 */
 
-//#include <rosbridge/ALModuleDataChanged.h>
 //#include <rosbridge/ALModuleGetMethodHelp.h>
 //#include <rosbridge/ALModuleGetModuleHelp.h>
-
-//TEST(ALFsr, dataChanged) {
-//  ros::NodeHandle n;
-//  ros::ServiceClient client = n.serviceClient<rosbridge::ALModuleDataChanged>(std::string("NaoQi/ALFsr/dataChanged"));
-//  rosbridge::ALModuleDataChanged msg;
-  //msg.dataName = ;
-  //msg.data = ;
-  //msg.message = ;
-
-//  int result = client.call(msg);
-//  ASSERT_EQ(result, true);
-//}
 
 //TEST(ALFsr, getMethodHelp) {
 //  ros::NodeHandle n;

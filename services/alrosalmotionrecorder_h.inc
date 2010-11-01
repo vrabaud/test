@@ -6,8 +6,8 @@
 */
 
 //#include <rosbridge/ALMotionRecorderDataChanged.h>
-//#include <rosbridge/ALModuleGetMethodHelp.h>
-//#include <rosbridge/ALModuleGetModuleHelp.h>
+#include <rosbridge/ALModuleGetMethodHelp.h>
+#include <rosbridge/ALModuleGetModuleHelp.h>
 //#include <rosbridge/ALMotionRecorderStartPeriodicRecording.h>
 //#include <rosbridge/ALMotionRecorderStopAndGetRecording.h>
 

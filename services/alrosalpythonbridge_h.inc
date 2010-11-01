@@ -7,6 +7,6 @@
 
 //#include <rosbridge/ALPythonBridgeEvalFull.h>
 //#include <rosbridge/ALPythonBridgeEvalReturn.h>
-//#include <rosbridge/ALModuleGetMethodHelp.h>
-//#include <rosbridge/ALModuleGetModuleHelp.h>
+#include <rosbridge/ALModuleGetMethodHelp.h>
+#include <rosbridge/ALModuleGetModuleHelp.h>
 

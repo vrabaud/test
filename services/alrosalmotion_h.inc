@@ -11,8 +11,8 @@
 //#include <rosbridge/ALMotionChangeAngles.h>
 //#include <rosbridge/ALMotionGetAngles.h>
 //#include <rosbridge/ALMotionGetLimits.h>
-//#include <rosbridge/ALModuleGetMethodHelp.h>
-//#include <rosbridge/ALModuleGetModuleHelp.h>
+#include <rosbridge/ALModuleGetMethodHelp.h>
+#include <rosbridge/ALModuleGetModuleHelp.h>
 //#include <rosbridge/ALMotionGetRobotConfig.h>
 //#include <rosbridge/ALMotionGetStiffnesses.h>
 //#include <rosbridge/ALMotionGetTaskList.h>

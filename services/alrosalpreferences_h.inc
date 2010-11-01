@@ -5,8 +5,8 @@
 *
 */
 
-//#include <rosbridge/ALModuleGetMethodHelp.h>
-//#include <rosbridge/ALModuleGetModuleHelp.h>
+#include <rosbridge/ALModuleGetMethodHelp.h>
+#include <rosbridge/ALModuleGetModuleHelp.h>
 //#include <rosbridge/ALPreferencesReadPrefFile.h>
 //#include <rosbridge/ALPreferencesSaveToMemory.h>
 //#include <rosbridge/ALPreferencesWritePrefFile.h>

@@ -5,14 +5,14 @@
 *
 */
 
-//#include <rosbridge/ALMotionRecorderDataChanged.h>
+//#include <rosbridge/ALMemoryDataChanged.h>
 //#include <rosbridge/ALMemoryGetDataString.h>
 //#include <rosbridge/ALMemoryGetData.h>
 //#include <rosbridge/ALMemoryGetDataListName.h>
 //#include <rosbridge/ALMemoryGetDataOnChange.h>
 //#include <rosbridge/ALMemoryGetListData.h>
-//#include <rosbridge/ALModuleGetMethodHelp.h>
-//#include <rosbridge/ALModuleGetModuleHelp.h>
+#include <rosbridge/ALModuleGetMethodHelp.h>
+#include <rosbridge/ALModuleGetModuleHelp.h>
 //#include <rosbridge/ALMemoryInsertDataObject.h>
 //#include <rosbridge/ALMemoryInsertListData.h>
 //#include <rosbridge/ALMemoryInsertObject.h>

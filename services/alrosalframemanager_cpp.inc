@@ -8,47 +8,53 @@
 void ALRosALFrameManager::bindCustomMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ros::NodeHandle& pRosNode)
 {
   //fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALFrameManager/dataChanged"), &ALRosALFrameManager::dataChanged, this));
-  //fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALFrameManager/getMethodHelp"), &ALRosALFrameManager::getMethodHelp, this));
-  //fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALFrameManager/getModuleHelp"), &ALRosALFrameManager::getModuleHelp, this));
+  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALFrameManager/getMethodHelp"), &ALRosALFrameManager::getMethodHelp, this));
+  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALFrameManager/getModuleHelp"), &ALRosALFrameManager::getModuleHelp, this));
 }
 // -- custom ros methods
 
+
 //bool ALRosALFrameManager::dataChanged(
-//    rosbridge::ALFrameManagerDataChanged::Request  &req,
-//    rosbridge::ALFrameManagerDataChanged::Response &res)
+//  rosbridge::ALFrameManagerDataChanged::Request  &req,
+//  rosbridge::ALFrameManagerDataChanged::Response &res)
 //{
+
 //  try {
 //    fProxy->dataChanged(req.dataName, req.data, req.message);
+//
 //    return true;
-//  } catch(const ALError& e) {
-//    // TODO roslog
+//  } catch(const ALError&) {
 //    return false;
 //  }
 //}
 
-//bool ALRosALFrameManager::getMethodHelp(
-//    rosbridge::ALModuleGetMethodHelp::Request  &req,
-//    rosbridge::ALModuleGetMethodHelp::Response &res)
-//{
-//  try {
-//    res.value = fProxy->getMethodHelp(req.methodName);
-//    return true;
-//  } catch(const ALError& e) {
-//    // TODO roslog
-//    return false;
-//  }
-//}
 
-//bool ALRosALFrameManager::getModuleHelp(
-//    rosbridge::ALModuleGetModuleHelp::Request  &req,
-//    rosbridge::ALModuleGetModuleHelp::Response &res)
-//{
-//  try {
-//    res.value = fProxy->getModuleHelp();
-//    return true;
-//  } catch(const ALError& e) {
-//    // TODO roslog
-//    return false;
-//  }
-//}
+bool ALRosALFrameManager::getMethodHelp(
+  rosbridge::ALModuleGetMethodHelp::Request  &req,
+  rosbridge::ALModuleGetMethodHelp::Response &res)
+{
+
+  try {
+    AL::ALValue data = fProxy->getMethodHelp(req.methodName);
+    ALRosMethodHelpHelper(data, res);
+    return true;
+  } catch(const ALError&) {
+    return false;
+  }
+}
+
+
+bool ALRosALFrameManager::getModuleHelp(
+  rosbridge::ALModuleGetModuleHelp::Request  &req,
+  rosbridge::ALModuleGetModuleHelp::Response &res)
+{
+
+  try {
+    AL::ALValue data = fProxy->getModuleHelp();
+    ALRosModuleHelpHelper(data, res);
+    return true;
+  } catch(const ALError&) {
+    return false;
+  }
+}
 

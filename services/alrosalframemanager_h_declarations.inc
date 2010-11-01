@@ -11,12 +11,12 @@ void bindCustomMethods(ALPtr<ALBroker> pNaoQiBroker, ros::NodeHandle& pRosNode);
 //  rosbridge::ALFrameManagerDataChanged::Request  &req,
 //  rosbridge::ALFrameManagerDataChanged::Response &res);
 
-//bool getMethodHelp(
-//  rosbridge::ALModuleGetMethodHelp::Request  &req,
-//  rosbridge::ALModuleGetMethodHelp::Response &res);
+bool getMethodHelp(
+  rosbridge::ALModuleGetMethodHelp::Request  &req,
+  rosbridge::ALModuleGetMethodHelp::Response &res);
 
-//bool getModuleHelp(
-//  rosbridge::ALModuleGetModuleHelp::Request  &req,
-//  rosbridge::ALModuleGetModuleHelp::Response &res);
+bool getModuleHelp(
+  rosbridge::ALModuleGetModuleHelp::Request  &req,
+  rosbridge::ALModuleGetModuleHelp::Response &res);
 
 

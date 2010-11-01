@@ -7,8 +7,8 @@
 
 //#include <rosbridge/ALSentinelBatteryChargeCellVoltageMinChanged.h>
 //#include <rosbridge/ALSentinelBatteryChargeStatusChanged.h>
-//#include <rosbridge/ALModuleGetMethodHelp.h>
-//#include <rosbridge/ALModuleGetModuleHelp.h>
+#include <rosbridge/ALModuleGetMethodHelp.h>
+#include <rosbridge/ALModuleGetModuleHelp.h>
 //#include <rosbridge/ALSentinelOnAccX.h>
 //#include <rosbridge/ALSentinelOnAccY.h>
 //#include <rosbridge/ALSentinelOnAccZ.h>

@@ -8,8 +8,8 @@
 void bindCustomMethods(ALPtr<ALBroker> pNaoQiBroker, ros::NodeHandle& pRosNode);
 
 //bool dataChanged(
-//  rosbridge::ALMotionRecorderDataChanged::Request  &req,
-//  rosbridge::ALMotionRecorderDataChanged::Response &res);
+//  rosbridge::ALMemoryDataChanged::Request  &req,
+//  rosbridge::ALMemoryDataChanged::Response &res);
 
 //bool getDataString(
 //  rosbridge::ALMemoryGetDataString::Request  &req,
@@ -31,13 +31,13 @@ void bindCustomMethods(ALPtr<ALBroker> pNaoQiBroker, ros::NodeHandle& pRosNode);
 //  rosbridge::ALMemoryGetListData::Request  &req,
 //  rosbridge::ALMemoryGetListData::Response &res);
 
-//bool getMethodHelp(
-//  rosbridge::ALModuleGetMethodHelp::Request  &req,
-//  rosbridge::ALModuleGetMethodHelp::Response &res);
+bool getMethodHelp(
+  rosbridge::ALModuleGetMethodHelp::Request  &req,
+  rosbridge::ALModuleGetMethodHelp::Response &res);
 
-//bool getModuleHelp(
-//  rosbridge::ALModuleGetModuleHelp::Request  &req,
-//  rosbridge::ALModuleGetModuleHelp::Response &res);
+bool getModuleHelp(
+  rosbridge::ALModuleGetModuleHelp::Request  &req,
+  rosbridge::ALModuleGetModuleHelp::Response &res);
 
 //bool insertDataObject(
 //  rosbridge::ALMemoryInsertDataObject::Request  &req,

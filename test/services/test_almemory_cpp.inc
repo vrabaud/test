@@ -5,7 +5,7 @@
 *
 */
 
-//#include <rosbridge/ALMotionRecorderDataChanged.h>
+//#include <rosbridge/ALMemoryDataChanged.h>
 //#include <rosbridge/ALMemoryGetDataString.h>
 //#include <rosbridge/ALMemoryGetData.h>
 //#include <rosbridge/ALMemoryGetDataListName.h>
@@ -21,8 +21,8 @@
 
 //TEST(ALMemory, dataChanged) {
 //  ros::NodeHandle n;
-//  ros::ServiceClient client = n.serviceClient<rosbridge::ALMotionRecorderDataChanged>(std::string("NaoQi/ALMemory/dataChanged"));
-//  rosbridge::ALMotionRecorderDataChanged msg;
+//  ros::ServiceClient client = n.serviceClient<rosbridge::ALMemoryDataChanged>(std::string("NaoQi/ALMemory/dataChanged"));
+//  rosbridge::ALMemoryDataChanged msg;
   //msg.dataName = ;
   //msg.data = ;
   //msg.message = ;

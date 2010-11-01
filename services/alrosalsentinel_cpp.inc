@@ -9,8 +9,8 @@ void ALRosALSentinel::bindCustomMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ro
 {
   //fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALSentinel/BatteryChargeCellVoltageMinChanged"), &ALRosALSentinel::BatteryChargeCellVoltageMinChanged, this));
   //fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALSentinel/BatteryChargeStatusChanged"), &ALRosALSentinel::BatteryChargeStatusChanged, this));
-  //fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALSentinel/getMethodHelp"), &ALRosALSentinel::getMethodHelp, this));
-  //fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALSentinel/getModuleHelp"), &ALRosALSentinel::getModuleHelp, this));
+  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALSentinel/getMethodHelp"), &ALRosALSentinel::getMethodHelp, this));
+  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALSentinel/getModuleHelp"), &ALRosALSentinel::getModuleHelp, this));
   //fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALSentinel/onAccX"), &ALRosALSentinel::onAccX, this));
   //fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALSentinel/onAccY"), &ALRosALSentinel::onAccY, this));
   //fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALSentinel/onAccZ"), &ALRosALSentinel::onAccZ, this));
@@ -21,145 +21,167 @@ void ALRosALSentinel::bindCustomMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ro
 }
 // -- custom ros methods
 
+
 //bool ALRosALSentinel::BatteryChargeCellVoltageMinChanged(
-//    rosbridge::ALSentinelBatteryChargeCellVoltageMinChanged::Request  &req,
-//    rosbridge::ALSentinelBatteryChargeCellVoltageMinChanged::Response &res)
+//  rosbridge::ALSentinelBatteryChargeCellVoltageMinChanged::Request  &req,
+//  rosbridge::ALSentinelBatteryChargeCellVoltageMinChanged::Response &res)
 //{
+
 //  try {
 //    fProxy->BatteryChargeCellVoltageMinChanged(req.dataName, req.data, req.message);
+//
 //    return true;
-//  } catch(const ALError& e) {
-//    // TODO roslog
+//  } catch(const ALError&) {
 //    return false;
 //  }
 //}
+
 
 //bool ALRosALSentinel::BatteryChargeStatusChanged(
-//    rosbridge::ALSentinelBatteryChargeStatusChanged::Request  &req,
-//    rosbridge::ALSentinelBatteryChargeStatusChanged::Response &res)
+//  rosbridge::ALSentinelBatteryChargeStatusChanged::Request  &req,
+//  rosbridge::ALSentinelBatteryChargeStatusChanged::Response &res)
 //{
+
 //  try {
 //    fProxy->BatteryChargeStatusChanged(req.dataName, req.data, req.message);
+//
 //    return true;
-//  } catch(const ALError& e) {
-//    // TODO roslog
+//  } catch(const ALError&) {
 //    return false;
 //  }
 //}
 
-//bool ALRosALSentinel::getMethodHelp(
-//    rosbridge::ALModuleGetMethodHelp::Request  &req,
-//    rosbridge::ALModuleGetMethodHelp::Response &res)
-//{
-//  try {
-//    res.value = fProxy->getMethodHelp(req.methodName);
-//    return true;
-//  } catch(const ALError& e) {
-//    // TODO roslog
-//    return false;
-//  }
-//}
 
-//bool ALRosALSentinel::getModuleHelp(
-//    rosbridge::ALModuleGetModuleHelp::Request  &req,
-//    rosbridge::ALModuleGetModuleHelp::Response &res)
-//{
-//  try {
-//    res.value = fProxy->getModuleHelp();
-//    return true;
-//  } catch(const ALError& e) {
-//    // TODO roslog
-//    return false;
-//  }
-//}
+bool ALRosALSentinel::getMethodHelp(
+  rosbridge::ALModuleGetMethodHelp::Request  &req,
+  rosbridge::ALModuleGetMethodHelp::Response &res)
+{
+
+  try {
+    AL::ALValue data = fProxy->getMethodHelp(req.methodName);
+    ALRosMethodHelpHelper(data, res);
+    return true;
+  } catch(const ALError&) {
+    return false;
+  }
+}
+
+
+bool ALRosALSentinel::getModuleHelp(
+  rosbridge::ALModuleGetModuleHelp::Request  &req,
+  rosbridge::ALModuleGetModuleHelp::Response &res)
+{
+
+  try {
+    AL::ALValue data = fProxy->getModuleHelp();
+    ALRosModuleHelpHelper(data, res);
+    return true;
+  } catch(const ALError&) {
+    return false;
+  }
+}
+
 
 //bool ALRosALSentinel::onAccX(
-//    rosbridge::ALSentinelOnAccX::Request  &req,
-//    rosbridge::ALSentinelOnAccX::Response &res)
+//  rosbridge::ALSentinelOnAccX::Request  &req,
+//  rosbridge::ALSentinelOnAccX::Response &res)
 //{
+
 //  try {
 //    fProxy->onAccX(req.dataName, req.data, req.message);
+//
 //    return true;
-//  } catch(const ALError& e) {
-//    // TODO roslog
+//  } catch(const ALError&) {
 //    return false;
 //  }
 //}
+
 
 //bool ALRosALSentinel::onAccY(
-//    rosbridge::ALSentinelOnAccY::Request  &req,
-//    rosbridge::ALSentinelOnAccY::Response &res)
+//  rosbridge::ALSentinelOnAccY::Request  &req,
+//  rosbridge::ALSentinelOnAccY::Response &res)
 //{
+
 //  try {
 //    fProxy->onAccY(req.dataName, req.data, req.message);
+//
 //    return true;
-//  } catch(const ALError& e) {
-//    // TODO roslog
+//  } catch(const ALError&) {
 //    return false;
 //  }
 //}
+
 
 //bool ALRosALSentinel::onAccZ(
-//    rosbridge::ALSentinelOnAccZ::Request  &req,
-//    rosbridge::ALSentinelOnAccZ::Response &res)
+//  rosbridge::ALSentinelOnAccZ::Request  &req,
+//  rosbridge::ALSentinelOnAccZ::Response &res)
 //{
+
 //  try {
 //    fProxy->onAccZ(req.dataName, req.data, req.message);
+//
 //    return true;
-//  } catch(const ALError& e) {
-//    // TODO roslog
+//  } catch(const ALError&) {
 //    return false;
 //  }
 //}
+
 
 //bool ALRosALSentinel::onBatteryMeasure(
-//    rosbridge::ALSentinelOnBatteryMeasure::Request  &req,
-//    rosbridge::ALSentinelOnBatteryMeasure::Response &res)
+//  rosbridge::ALSentinelOnBatteryMeasure::Request  &req,
+//  rosbridge::ALSentinelOnBatteryMeasure::Response &res)
 //{
+
 //  try {
 //    fProxy->onBatteryMeasure(req.dataName, req.data, req.message);
+//
 //    return true;
-//  } catch(const ALError& e) {
-//    // TODO roslog
+//  } catch(const ALError&) {
 //    return false;
 //  }
 //}
+
 
 //bool ALRosALSentinel::onMotorError(
-//    rosbridge::ALSentinelOnMotorError::Request  &req,
-//    rosbridge::ALSentinelOnMotorError::Response &res)
+//  rosbridge::ALSentinelOnMotorError::Request  &req,
+//  rosbridge::ALSentinelOnMotorError::Response &res)
 //{
+
 //  try {
 //    fProxy->onMotorError(req.dataName, req.data, req.message);
+//
 //    return true;
-//  } catch(const ALError& e) {
-//    // TODO roslog
+//  } catch(const ALError&) {
 //    return false;
 //  }
 //}
+
 
 //bool ALRosALSentinel::onTemperatureMeasure(
-//    rosbridge::ALSentinelOnTemperatureMeasure::Request  &req,
-//    rosbridge::ALSentinelOnTemperatureMeasure::Response &res)
+//  rosbridge::ALSentinelOnTemperatureMeasure::Request  &req,
+//  rosbridge::ALSentinelOnTemperatureMeasure::Response &res)
 //{
+
 //  try {
 //    fProxy->onTemperatureMeasure(req.dataName, req.data, req.message);
+//
 //    return true;
-//  } catch(const ALError& e) {
-//    // TODO roslog
+//  } catch(const ALError&) {
 //    return false;
 //  }
 //}
 
+
 //bool ALRosALSentinel::powerButtonOnPress(
-//    rosbridge::ALSentinelPowerButtonOnPress::Request  &req,
-//    rosbridge::ALSentinelPowerButtonOnPress::Response &res)
+//  rosbridge::ALSentinelPowerButtonOnPress::Request  &req,
+//  rosbridge::ALSentinelPowerButtonOnPress::Response &res)
 //{
+
 //  try {
 //    fProxy->powerButtonOnPress(req.dataName, req.data, req.message);
+//
 //    return true;
-//  } catch(const ALError& e) {
-//    // TODO roslog
+//  } catch(const ALError&) {
 //    return false;
 //  }
 //}

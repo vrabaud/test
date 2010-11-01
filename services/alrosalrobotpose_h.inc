@@ -6,7 +6,7 @@
 */
 
 //#include <rosbridge/ALRobotPoseGetActualPoseAndTime.h>
-//#include <rosbridge/ALModuleGetMethodHelp.h>
-//#include <rosbridge/ALModuleGetModuleHelp.h>
+#include <rosbridge/ALModuleGetMethodHelp.h>
+#include <rosbridge/ALModuleGetModuleHelp.h>
 //#include <rosbridge/ALRobotPoseGetPoseNames.h>
 

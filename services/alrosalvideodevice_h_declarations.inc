@@ -15,13 +15,13 @@ void bindCustomMethods(ALPtr<ALBroker> pNaoQiBroker, ros::NodeHandle& pRosNode);
 //  rosbridge::ALVisionVideoInputGetImageRemote::Request  &req,
 //  rosbridge::ALVisionVideoInputGetImageRemote::Response &res);
 
-//bool getMethodHelp(
-//  rosbridge::ALModuleGetMethodHelp::Request  &req,
-//  rosbridge::ALModuleGetMethodHelp::Response &res);
+bool getMethodHelp(
+  rosbridge::ALModuleGetMethodHelp::Request  &req,
+  rosbridge::ALModuleGetMethodHelp::Response &res);
 
-//bool getModuleHelp(
-//  rosbridge::ALModuleGetModuleHelp::Request  &req,
-//  rosbridge::ALModuleGetModuleHelp::Response &res);
+bool getModuleHelp(
+  rosbridge::ALModuleGetModuleHelp::Request  &req,
+  rosbridge::ALModuleGetModuleHelp::Response &res);
 
 //bool resolutionToSizes(
 //  rosbridge::ALVisionVideoInputResolutionToSizes::Request  &req,

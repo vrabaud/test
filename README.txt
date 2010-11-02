@@ -109,4 +109,13 @@ Then you can call naoqi methods:
   rosservice call /NaoQi/ALTextToSpeech/setVolume  1.0
   rosservice call /NaoQi/ALTextToSpeech/say "I am running ros"
 
+
+== deb to install on the robot ==
+boost-iostreams-mt_1.38.0-r3_i386.deb
+libgdbm3_1.8.3-r3_i386.deb
+libapr-1-0_1.3.3-r5_i386.deb
+libaprutil-1-0_1.3.4-r6_i386.deb
+liblog4cxx10_0.10.0-r1_i386.deb
+
+
 Isn't that cool?

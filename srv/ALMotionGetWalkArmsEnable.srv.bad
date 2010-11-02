@@ -1,8 +1,0 @@
-# Generated for NaoQi method ALMotion.getWalkArmsEnable
-# Gets if Arms Motions are enabled during the Walk Process.
-
----
-# True Arm Motions are controlled by the Walk Task.
-AL::ALValue value
-
-

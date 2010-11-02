@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALModule.getMethodList
+# Retrieves the module's method list.
+
+---
+# An array of method names.
+string[] value
+
+

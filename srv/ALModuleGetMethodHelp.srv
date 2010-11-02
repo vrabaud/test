@@ -1,0 +1,21 @@
+# Generated for NaoQi method ALModule.getMethodHelp
+# Retrieves a method's description.
+
+# The name of the method.
+string methodName
+---
+# A structure containing the method's description.
+string methodName
+string methodDescription
+string[] paramsAndDescriptions
+string returnName
+string returnDescription
+
+#    Example NaoQi data
+#    ["angleInterpolation", "Interpolates one or multiple joints to a target angle or along timed trajectories.",
+#    ["names", "Name or names of joints or chains or "Body"",
+#     "angleLists", "An angle, list of angles or list of list of angles in radians",
+#     "timeLists", "A time, list of times or list of list of times in seconds",
+#     "isAbsolute", "If true, the movement is described in absolute angles, else the angles are relative to the current angle."],
+#     "methodUsage", "A string that summarises the usage of the method."]
+# ! the last line is actually for a void methods !?!?

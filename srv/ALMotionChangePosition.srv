@@ -1,0 +1,16 @@
+# Generated for NaoQi method ALMotion.changePosition
+# Creates a move of an end effector in cartesian space. This is a blocking call.
+
+# Name of the effector.
+string effectorName
+# Task space {SPACE_TORSO = 0, SPACE_WORLD = 1, SPACE_NAO = 2}.
+int32 space
+# 6D position change array (xd, yd, zd, wxd, wyd, wzd) in meters and radians
+float32[] positionChange
+# The fraction of maximum speed to use
+float32 fractionMaxSpeed
+# Axis mask. True for axes that you wish to control. e.g. 7 for position only, 56 for rotation only and 63 for both
+int32 axisMask
+---
+
+

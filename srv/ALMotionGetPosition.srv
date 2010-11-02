@@ -1,0 +1,14 @@
+# Generated for NaoQi method ALMotion.getPosition
+# Gets a Position relative to the TASK_SPACE.
+
+# Name of the item. Could be: Head, LArm, RArm, LLeg, RLeg, Torso, CameraTop, CameraBottom, MicroFront, MicroRear, MicroLeft, MicroRight, Accelerometer, Gyrometer, Laser, LFsrFR, LFsrFL, LFsrRR, LFsrRL, RFsrFR, RFsrFL, RFsrRR, RFsrRL, USSensor1, USSensor2, USSensor3, USSensor4.
+string name
+# Task space {SPACE_TORSO = 0, SPACE_WORLD = 1, SPACE_NAO = 2}.
+int32 space
+# If true, the sensor values will be used to determine the position.
+bool useSensorValues
+---
+# Vector containing the Position6D using meters and radians (x, y, z, wx, wy, wz )
+float32[] value
+
+

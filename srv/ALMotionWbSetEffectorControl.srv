@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMotion.wbSetEffectorControl
+# UserFriendly Whole Body API: set new target for controlled effector. This is a non-blocking call.
+
+# Name of the effector : "Head", "LArm" or "RArm". Nao goes to posture init. He manages his balance and keep foot fix. "Head" is controlled in rotation. "LArm" and "RArm" are controlled in position.
+string effectorName
+# "Head" is controlled in rotation (WX, WY, WZ). "LArm" and "RArm" are controlled in position (X, Y, Z). TargetCoordinate must be absolute and expressed in SPACE_NAO. If the desired position/orientation is unfeasible, target is resize to the nearest feasible motion.
+float32[] targetCoordinate
+---
+
+

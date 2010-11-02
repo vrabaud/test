@@ -1,0 +1,16 @@
+# Generated for NaoQi method ALMotion.angleInterpolation
+# Interpolates one or multiple joints to a target angle or along timed trajectories. This is a blocking call.
+
+# Name or names of joints, chains, "Body", "BodyJoints" or "BodyActuators".
+string[] names
+# An angle, list of angles or list of list of angles in radians
+# NOTE: For Ros, this is either an interpolation for a single joint, or an angle
+# for each of the multiple joints specified.
+float32[] angleLists
+# A time, list of times or list of list of times in seconds
+float32[] timeLists
+# If true, the movement is described in absolute angles, else the angles are relative to the current angle.
+bool isAbsolute
+---
+
+

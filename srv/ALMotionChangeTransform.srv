@@ -1,0 +1,16 @@
+# Generated for NaoQi method ALMotion.changeTransform
+# Moves an end-effector to the given position and orientation transform. This is a blocking call.
+
+# Name of the chain. Could be: "Head", "LArm","RArm", "LLeg", "RLeg", "Torso"
+string chainName
+# Task space {SPACE_TORSO = 0, SPACE_WORLD = 1, SPACE_NAO = 2}.
+int32 space
+# ALTransform arrays
+float32[] transform
+# The fraction of maximum speed to use
+float32 fractionMaxSpeed
+# Axis mask. True for axes that you wish to control. e.g. 7 for position only, 56 for rotation only and 63 for both
+int32 axisMask
+---
+
+

@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMotion.getStiffnesses
+# Gets stiffness of a joint or group of joints
+
+# Name of the joints, chains, "Body", "BodyJoints" or "BodyActuators".
+string[] jointName
+---
+# One or more stiffnesses. 1.0 indicates maximum stiffness. 0.0 indicated minimum stiffness
+float32[] value
+
+

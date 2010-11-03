@@ -1,0 +1,25 @@
+# Generated for NaoQi method ALModule.getModuleHelp
+# Retrieves the module's description.
+
+---
+# A structure describing the module.
+string moduleDescription
+
+# the examples are not taken into the ROS message
+
+# Example NaoQi data
+#  ["ALMotion provides methods that help make Nao move. It contains commands for manipulating joint angles, joint stiffness, and a higher level API for controling walks.",
+#  [
+#      ["python", "import naoqi
+#  from naoqi import ALProxy
+#  # configure the IP of your robot
+#  IP = "127.0.0.1"
+#  PORT = 9559
+#  # create a proxy to ALMotion
+#  proxy = ALProxy("ALMotion", IP, PORT)
+#  # print the current state
+#  print proxy.getSummary()
+#  # see method examples for possible calls
+#  "]
+#   ]
+#   ]

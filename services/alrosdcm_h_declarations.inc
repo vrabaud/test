@@ -11,9 +11,9 @@ void bindCustomMethods(ALPtr<ALBroker> pNaoQiBroker, ros::NodeHandle& pRosNode);
 //  rosbridge::DCMCalibration::Request  &req,
 //  rosbridge::DCMCalibration::Response &res);
 
-//bool createAlias(
-//  rosbridge::DCMCreateAlias::Request  &req,
-//  rosbridge::DCMCreateAlias::Response &res);
+bool createAlias(
+  rosbridge::DCMCreateAlias::Request  &req,
+  rosbridge::DCMCreateAlias::Response &res);
 
 bool getMethodHelp(
   rosbridge::ALModuleGetMethodHelp::Request  &req,
@@ -31,12 +31,12 @@ bool getModuleHelp(
 //  rosbridge::DCMPreferences::Request  &req,
 //  rosbridge::DCMPreferences::Response &res);
 
-//bool set(
-//  rosbridge::DCMSet::Request  &req,
-//  rosbridge::DCMSet::Response &res);
+bool set(
+  rosbridge::DCMSet::Request  &req,
+  rosbridge::DCMSet::Response &res);
 
-//bool setAlias(
-//  rosbridge::DCMSetAlias::Request  &req,
-//  rosbridge::DCMSetAlias::Response &res);
+bool setAlias(
+  rosbridge::DCMSetAlias::Request  &req,
+  rosbridge::DCMSetAlias::Response &res);
 
 

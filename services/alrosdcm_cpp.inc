@@ -8,13 +8,13 @@
 void ALRosDCM::bindCustomMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ros::NodeHandle& pRosNode)
 {
   //fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/DCM/calibration"), &ALRosDCM::calibration, this));
-  //fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/DCM/createAlias"), &ALRosDCM::createAlias, this));
+  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/DCM/createAlias"), &ALRosDCM::createAlias, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/DCM/getMethodHelp"), &ALRosDCM::getMethodHelp, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/DCM/getModuleHelp"), &ALRosDCM::getModuleHelp, this));
   //fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/DCM/getPrefix"), &ALRosDCM::getPrefix, this));
   //fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/DCM/preferences"), &ALRosDCM::preferences, this));
-  //fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/DCM/set"), &ALRosDCM::set, this));
-  //fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/DCM/setAlias"), &ALRosDCM::setAlias, this));
+  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/DCM/set"), &ALRosDCM::set, this));
+  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/DCM/setAlias"), &ALRosDCM::setAlias, this));
 }
 // -- custom ros methods
 
@@ -34,19 +34,23 @@ void ALRosDCM::bindCustomMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ros::Node
 //}
 
 
-//bool ALRosDCM::createAlias(
-//  rosbridge::DCMCreateAlias::Request  &req,
-//  rosbridge::DCMCreateAlias::Response &res)
-//{
-
-//  try {
-//    res.value = fProxy->createAlias(req.alias);
-//
-//    return true;
-//  } catch(const ALError&) {
-//    return false;
-//  }
-//}
+bool ALRosDCM::createAlias(
+  rosbridge::DCMCreateAlias::Request  &req,
+  rosbridge::DCMCreateAlias::Response &res)
+{
+  try {
+    AL::ALValue command;
+    command.arraySetSize(2);
+    command[0] = req.alias;
+    command[1] = req.keys;
+    AL::ALValue response = fProxy->createAlias(command);
+    res.alias = (std::string) response[0];
+    res.keys = response[1];
+    return true;
+  } catch(const ALError&) {
+    return false;
+  }
+}
 
 
 bool ALRosDCM::getMethodHelp(
@@ -109,32 +113,52 @@ bool ALRosDCM::getModuleHelp(
 //}
 
 
-//bool ALRosDCM::set(
-//  rosbridge::DCMSet::Request  &req,
-//  rosbridge::DCMSet::Response &res)
-//{
+bool ALRosDCM::set(
+  rosbridge::DCMSet::Request  &req,
+  rosbridge::DCMSet::Response &res)
+{
+  try {
+    AL::ALValue command;
+    command.arraySetSize(3);
+    command[0] = req.name;
+    command[1] = req.type;
+    command[2].arraySetSize(req.commands.size());
+    for (unsigned int i=0; i< req.commands.size(); ++i) {
+      AL::ALValue c;
+      c.arraySetSize(3);
+      c[0] = (float)req.commands[i].command;
+      c[1] = (int)req.commands[i].time;
+      c[2] = (int)req.commands[i].importance;
+      command[2][i] = c;
+    }
+    fProxy->set(command);
+    return true;
+  } catch(const ALError&) {
+    return false;
+  }
+}
 
-//  try {
-//    fProxy->set(req.commands);
-//
-//    return true;
-//  } catch(const ALError&) {
-//    return false;
-//  }
-//}
 
-
-//bool ALRosDCM::setAlias(
-//  rosbridge::DCMSetAlias::Request  &req,
-//  rosbridge::DCMSetAlias::Response &res)
-//{
-
-//  try {
-//    fProxy->setAlias(req.commands);
-//
-//    return true;
-//  } catch(const ALError&) {
-//    return false;
-//  }
-//}
+bool ALRosDCM::setAlias(
+  rosbridge::DCMSetAlias::Request  &req,
+  rosbridge::DCMSetAlias::Response &res)
+{
+  try {
+    AL::ALValue command;
+    command.arraySetSize(5);
+    command[0] = req.name;
+    command[1] = req.updatetype;
+    command[2] = req.commandtype;
+    command[3] = req.importance;
+    command[4] = req.times;
+    command[5].arraySetSize(req.commands.size());
+    for (unsigned int i=0; i< req.commands.size(); ++i) {
+      command[5][i] = req.commands[i].values;
+    }
+    fProxy->setAlias(command);
+    return true;
+  } catch(const ALError&) {
+    return false;
+  }
+}
 

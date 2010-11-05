@@ -6,11 +6,11 @@
 */
 
 //#include <rosbridge/DCMCalibration.h>
-//#include <rosbridge/DCMCreateAlias.h>
+#include <rosbridge/DCMCreateAlias.h>
 #include <rosbridge/ALModuleGetMethodHelp.h>
 #include <rosbridge/ALModuleGetModuleHelp.h>
 //#include <rosbridge/DCMGetPrefix.h>
 //#include <rosbridge/DCMPreferences.h>
-//#include <rosbridge/DCMSet.h>
-//#include <rosbridge/DCMSetAlias.h>
+#include <rosbridge/DCMSet.h>
+#include <rosbridge/DCMSetAlias.h>
 

@@ -1,5 +1,4 @@
 /build-*
-/services/*generated*
 /srv_gen
 /msg_gen
 CMakeLists.txt.user

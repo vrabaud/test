@@ -55,6 +55,7 @@ bool ALRosALSentinel::enableBatteryMeasure(
     fProxy->enableBatteryMeasure(req.enable);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.enableBatteryMeasure failed with exception: %s", e.what());
     return false;
   }
 }
@@ -67,6 +68,7 @@ bool ALRosALSentinel::enableCheckRemainingRam(
     fProxy->enableCheckRemainingRam(req.enable);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.enableCheckRemainingRam failed with exception: %s", e.what());
     return false;
   }
 }
@@ -79,6 +81,7 @@ bool ALRosALSentinel::enableDefaultActionDoubleClick(
     fProxy->enableDefaultActionDoubleClick(req.enable);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.enableDefaultActionDoubleClick failed with exception: %s", e.what());
     return false;
   }
 }
@@ -91,6 +94,7 @@ bool ALRosALSentinel::enableDefaultActionSimpleClick(
     fProxy->enableDefaultActionSimpleClick(req.enable);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.enableDefaultActionSimpleClick failed with exception: %s", e.what());
     return false;
   }
 }
@@ -103,6 +107,7 @@ bool ALRosALSentinel::enableDefaultActionTripleClick(
     fProxy->enableDefaultActionTripleClick(req.enable);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.enableDefaultActionTripleClick failed with exception: %s", e.what());
     return false;
   }
 }
@@ -115,6 +120,7 @@ bool ALRosALSentinel::enableHeatMonitoring(
     fProxy->enableHeatMonitoring(req.enable);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.enableHeatMonitoring failed with exception: %s", e.what());
     return false;
   }
 }
@@ -127,6 +133,7 @@ bool ALRosALSentinel::enablePowerMonitoring(
     fProxy->enablePowerMonitoring(req.enable);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.enablePowerMonitoring failed with exception: %s", e.what());
     return false;
   }
 }
@@ -139,6 +146,7 @@ bool ALRosALSentinel::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -151,6 +159,7 @@ bool ALRosALSentinel::exitNaoqi(
     fProxy->exitNaoqi();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.exitNaoqi failed with exception: %s", e.what());
     return false;
   }
 }
@@ -163,6 +172,7 @@ bool ALRosALSentinel::getBatteryLevel(
     res.value = fProxy->getBatteryLevel();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.getBatteryLevel failed with exception: %s", e.what());
     return false;
   }
 }
@@ -175,6 +185,7 @@ bool ALRosALSentinel::getBatteryLevelDesc(
     res.value = fProxy->getBatteryLevelDesc();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.getBatteryLevelDesc failed with exception: %s", e.what());
     return false;
   }
 }
@@ -187,6 +198,7 @@ bool ALRosALSentinel::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -199,6 +211,7 @@ bool ALRosALSentinel::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -211,6 +224,7 @@ bool ALRosALSentinel::getRemainingRam(
     res.value = fProxy->getRemainingRam();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.getRemainingRam failed with exception: %s", e.what());
     return false;
   }
 }
@@ -223,6 +237,7 @@ bool ALRosALSentinel::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -235,6 +250,7 @@ bool ALRosALSentinel::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -247,6 +263,7 @@ bool ALRosALSentinel::presentation(
     fProxy->presentation(req.enableFastCheckJoints);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.presentation failed with exception: %s", e.what());
     return false;
   }
 }
@@ -259,6 +276,7 @@ bool ALRosALSentinel::run(
     fProxy->run();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.run failed with exception: %s", e.what());
     return false;
   }
 }
@@ -271,6 +289,7 @@ bool ALRosALSentinel::setPowerLimit(
     fProxy->setPowerLimit(req.powerLimit);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.setPowerLimit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -283,6 +302,7 @@ bool ALRosALSentinel::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.version failed with exception: %s", e.what());
     return false;
   }
 }

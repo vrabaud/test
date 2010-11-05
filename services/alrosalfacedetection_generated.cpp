@@ -57,6 +57,7 @@ bool ALRosALFaceDetection::clearDatabase(
     res.value = fProxy->clearDatabase();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.clearDatabase failed with exception: %s", e.what());
     return false;
   }
 }
@@ -69,6 +70,7 @@ bool ALRosALFaceDetection::enableRecognition(
     fProxy->enableRecognition(req.enable);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.enableRecognition failed with exception: %s", e.what());
     return false;
   }
 }
@@ -81,6 +83,7 @@ bool ALRosALFaceDetection::enableTracking(
     fProxy->enableTracking(req.enable);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.enableTracking failed with exception: %s", e.what());
     return false;
   }
 }
@@ -93,6 +96,7 @@ bool ALRosALFaceDetection::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -105,6 +109,7 @@ bool ALRosALFaceDetection::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -117,6 +122,7 @@ bool ALRosALFaceDetection::getCurrentPeriod(
     res.value = fProxy->getCurrentPeriod();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.getCurrentPeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -129,6 +135,7 @@ bool ALRosALFaceDetection::getCurrentPrecision(
     res.value = fProxy->getCurrentPrecision();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.getCurrentPrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -141,6 +148,7 @@ bool ALRosALFaceDetection::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -153,6 +161,7 @@ bool ALRosALFaceDetection::getMyPeriod(
     res.value = fProxy->getMyPeriod(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.getMyPeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -165,6 +174,7 @@ bool ALRosALFaceDetection::getMyPrecision(
     res.value = fProxy->getMyPrecision(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.getMyPrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -177,6 +187,7 @@ bool ALRosALFaceDetection::getOutputNames(
     res.value = fProxy->getOutputNames();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.getOutputNames failed with exception: %s", e.what());
     return false;
   }
 }
@@ -189,6 +200,7 @@ bool ALRosALFaceDetection::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -201,6 +213,7 @@ bool ALRosALFaceDetection::isTrackingEnabled(
     res.value = fProxy->isTrackingEnabled();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.isTrackingEnabled failed with exception: %s", e.what());
     return false;
   }
 }
@@ -213,6 +226,7 @@ bool ALRosALFaceDetection::learnFace(
     res.value = fProxy->learnFace(req.pId);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.learnFace failed with exception: %s", e.what());
     return false;
   }
 }
@@ -225,6 +239,7 @@ bool ALRosALFaceDetection::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -237,6 +252,7 @@ bool ALRosALFaceDetection::reLearnFace(
     res.value = fProxy->reLearnFace(req.pId);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.reLearnFace failed with exception: %s", e.what());
     return false;
   }
 }
@@ -249,6 +265,7 @@ bool ALRosALFaceDetection::subscribeString(
     fProxy->subscribe(req.name, req.period, req.precision);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.subscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -261,6 +278,7 @@ bool ALRosALFaceDetection::subscribe(
     fProxy->subscribe(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.subscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -273,6 +291,7 @@ bool ALRosALFaceDetection::unsubscribe(
     fProxy->unsubscribe(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.unsubscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -285,6 +304,7 @@ bool ALRosALFaceDetection::updatePeriod(
     fProxy->updatePeriod(req.name, req.period);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.updatePeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -297,6 +317,7 @@ bool ALRosALFaceDetection::updatePrecision(
     fProxy->updatePrecision(req.name, req.precision);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.updatePrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -309,6 +330,7 @@ bool ALRosALFaceDetection::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceDetection.version failed with exception: %s", e.what());
     return false;
   }
 }

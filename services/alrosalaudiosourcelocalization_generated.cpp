@@ -53,6 +53,7 @@ bool ALRosALAudioSourceLocalization::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioSourceLocalization.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -65,6 +66,7 @@ bool ALRosALAudioSourceLocalization::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioSourceLocalization.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -77,6 +79,7 @@ bool ALRosALAudioSourceLocalization::getCurrentPeriod(
     res.value = fProxy->getCurrentPeriod();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioSourceLocalization.getCurrentPeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -89,6 +92,7 @@ bool ALRosALAudioSourceLocalization::getCurrentPrecision(
     res.value = fProxy->getCurrentPrecision();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioSourceLocalization.getCurrentPrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -101,6 +105,7 @@ bool ALRosALAudioSourceLocalization::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioSourceLocalization.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -113,6 +118,7 @@ bool ALRosALAudioSourceLocalization::getMyPeriod(
     res.value = fProxy->getMyPeriod(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioSourceLocalization.getMyPeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -125,6 +131,7 @@ bool ALRosALAudioSourceLocalization::getMyPrecision(
     res.value = fProxy->getMyPrecision(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioSourceLocalization.getMyPrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -137,6 +144,7 @@ bool ALRosALAudioSourceLocalization::getOutputNames(
     res.value = fProxy->getOutputNames();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioSourceLocalization.getOutputNames failed with exception: %s", e.what());
     return false;
   }
 }
@@ -149,6 +157,7 @@ bool ALRosALAudioSourceLocalization::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioSourceLocalization.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -161,6 +170,7 @@ bool ALRosALAudioSourceLocalization::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioSourceLocalization.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -173,6 +183,7 @@ bool ALRosALAudioSourceLocalization::setDebugMode(
     fProxy->setDebugMode(req.bSetOrUnset);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioSourceLocalization.setDebugMode failed with exception: %s", e.what());
     return false;
   }
 }
@@ -185,6 +196,7 @@ bool ALRosALAudioSourceLocalization::setParameter(
     fProxy->setParameter(req.param, req.value);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioSourceLocalization.setParameter failed with exception: %s", e.what());
     return false;
   }
 }
@@ -197,6 +209,7 @@ bool ALRosALAudioSourceLocalization::subscribeString(
     fProxy->subscribe(req.name, req.period, req.precision);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioSourceLocalization.subscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -209,6 +222,7 @@ bool ALRosALAudioSourceLocalization::subscribe(
     fProxy->subscribe(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioSourceLocalization.subscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -221,6 +235,7 @@ bool ALRosALAudioSourceLocalization::unsubscribe(
     fProxy->unsubscribe(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioSourceLocalization.unsubscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -233,6 +248,7 @@ bool ALRosALAudioSourceLocalization::updatePeriod(
     fProxy->updatePeriod(req.name, req.period);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioSourceLocalization.updatePeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -245,6 +261,7 @@ bool ALRosALAudioSourceLocalization::updatePrecision(
     fProxy->updatePrecision(req.name, req.precision);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioSourceLocalization.updatePrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -257,6 +274,7 @@ bool ALRosALAudioSourceLocalization::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioSourceLocalization.version failed with exception: %s", e.what());
     return false;
   }
 }

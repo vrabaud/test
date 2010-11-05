@@ -55,7 +55,8 @@ bool ALRosALMotion::angleInterpolation(
 //    fProxy->angleInterpolationBezier(req.jointNames, req.times, req.controlPoints);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALMotion.angleInterpolationBezier failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -108,7 +109,8 @@ bool ALRosALMotion::getAngles(
 //    res.value = fProxy->getLimits(req.name);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALMotion.getLimits failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -122,7 +124,8 @@ bool ALRosALMotion::getMethodHelp(
     AL::ALValue data = fProxy->getMethodHelp(req.methodName);
     ALRosMethodHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.getMethodHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -136,7 +139,8 @@ bool ALRosALMotion::getModuleHelp(
     AL::ALValue data = fProxy->getModuleHelp();
     ALRosModuleHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.getModuleHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -150,7 +154,8 @@ bool ALRosALMotion::getModuleHelp(
 //    res.value = fProxy->getRobotConfig();
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALMotion.getRobotConfig failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -177,7 +182,8 @@ bool ALRosALMotion::getStiffnesses(
 //    res.value = fProxy->getTaskList();
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALMotion.getTaskList failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -200,11 +206,11 @@ bool ALRosALMotion::getWalkArmsEnable(
 //  rosbridge::ALMotionPositionInterpolation::Request  &req,
 //  rosbridge::ALMotionPositionInterpolation::Response &res)
 //{
-
 //  try {
 //    fProxy->positionInterpolation(req.chainName, req.space, req.path, req.axisMask, req.durations, req.isAbsolute);
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALMotion.positionInterpolation failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -227,12 +233,12 @@ bool ALRosALMotion::setAngles(
 //  rosbridge::ALMotionSetMotionConfig::Request  &req,
 //  rosbridge::ALMotionSetMotionConfig::Response &res)
 //{
-
 //  try {
 //    fProxy->setMotionConfig(req.config);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALMotion.setMotionConfig failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -268,11 +274,12 @@ bool ALRosALMotion::stiffnessInterpolation(
 //  rosbridge::ALMotionTransformInterpolation::Request  &req,
 //  rosbridge::ALMotionTransformInterpolation::Response &res)
 //{
-
 //  try {
 //    fProxy->transformInterpolation(req.chainName, req.space, req.path, req.axisMask, req.duration, req.isAbsolute);
+//
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALMotion.transformInterpolation failed with exception: %s", e.what());
 //    return false;
 //  }
 //}

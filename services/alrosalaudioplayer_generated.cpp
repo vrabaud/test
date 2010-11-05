@@ -60,6 +60,7 @@ bool ALRosALAudioPlayer::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -72,6 +73,7 @@ bool ALRosALAudioPlayer::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -84,6 +86,7 @@ bool ALRosALAudioPlayer::getMasterVolume(
     res.value = fProxy->getMasterVolume();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.getMasterVolume failed with exception: %s", e.what());
     return false;
   }
 }
@@ -96,6 +99,7 @@ bool ALRosALAudioPlayer::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -108,6 +112,7 @@ bool ALRosALAudioPlayer::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -120,6 +125,7 @@ bool ALRosALAudioPlayer::getVolume(
     res.value = fProxy->getVolume();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.getVolume failed with exception: %s", e.what());
     return false;
   }
 }
@@ -132,6 +138,7 @@ bool ALRosALAudioPlayer::goTo(
     fProxy->goTo(req.playId, req.position);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.goTo failed with exception: %s", e.what());
     return false;
   }
 }
@@ -144,6 +151,7 @@ bool ALRosALAudioPlayer::loadFile(
     res.value = fProxy->loadFile(req.fileName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.loadFile failed with exception: %s", e.what());
     return false;
   }
 }
@@ -156,6 +164,7 @@ bool ALRosALAudioPlayer::pause(
     fProxy->pause(req.id);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.pause failed with exception: %s", e.what());
     return false;
   }
 }
@@ -168,6 +177,7 @@ bool ALRosALAudioPlayer::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -180,6 +190,7 @@ bool ALRosALAudioPlayer::play(
     res.value = fProxy->play(req.id);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.play failed with exception: %s", e.what());
     return false;
   }
 }
@@ -192,6 +203,7 @@ bool ALRosALAudioPlayer::playInt(
     res.value = fProxy->play(req.id, req.volume, req.pan);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.play failed with exception: %s", e.what());
     return false;
   }
 }
@@ -204,6 +216,7 @@ bool ALRosALAudioPlayer::playFile(
     res.value = fProxy->playFile(req.fileName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.playFile failed with exception: %s", e.what());
     return false;
   }
 }
@@ -216,6 +229,7 @@ bool ALRosALAudioPlayer::playFileString(
     res.value = fProxy->playFile(req.fileName, req.volume, req.pan);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.playFile failed with exception: %s", e.what());
     return false;
   }
 }
@@ -228,6 +242,7 @@ bool ALRosALAudioPlayer::playFileFromPosition(
     res.value = fProxy->playFileFromPosition(req.fileName, req.position);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.playFileFromPosition failed with exception: %s", e.what());
     return false;
   }
 }
@@ -240,6 +255,7 @@ bool ALRosALAudioPlayer::playFileFromPositionString(
     res.value = fProxy->playFileFromPosition(req.fileName, req.position, req.volume, req.pan);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.playFileFromPosition failed with exception: %s", e.what());
     return false;
   }
 }
@@ -252,6 +268,7 @@ bool ALRosALAudioPlayer::playFileInLoop(
     res.value = fProxy->playFileInLoop(req.fileName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.playFileInLoop failed with exception: %s", e.what());
     return false;
   }
 }
@@ -264,6 +281,7 @@ bool ALRosALAudioPlayer::playFileInLoopString(
     res.value = fProxy->playFileInLoop(req.fileName, req.volume, req.pan);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.playFileInLoop failed with exception: %s", e.what());
     return false;
   }
 }
@@ -276,6 +294,7 @@ bool ALRosALAudioPlayer::playInLoop(
     res.value = fProxy->playInLoop(req.fileName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.playInLoop failed with exception: %s", e.what());
     return false;
   }
 }
@@ -288,6 +307,7 @@ bool ALRosALAudioPlayer::playInLoopInt(
     res.value = fProxy->playInLoop(req.fileName, req.volume, req.pan);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.playInLoop failed with exception: %s", e.what());
     return false;
   }
 }
@@ -300,6 +320,7 @@ bool ALRosALAudioPlayer::setMasterVolume(
     fProxy->setMasterVolume(req.volume);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.setMasterVolume failed with exception: %s", e.what());
     return false;
   }
 }
@@ -312,6 +333,7 @@ bool ALRosALAudioPlayer::setPanorama(
     fProxy->setPanorama(req.arg1);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.setPanorama failed with exception: %s", e.what());
     return false;
   }
 }
@@ -324,6 +346,7 @@ bool ALRosALAudioPlayer::setVolume(
     fProxy->setVolume(req.id, req.volume);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.setVolume failed with exception: %s", e.what());
     return false;
   }
 }
@@ -336,6 +359,7 @@ bool ALRosALAudioPlayer::stopAll(
     fProxy->stopAll();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.stopAll failed with exception: %s", e.what());
     return false;
   }
 }
@@ -348,6 +372,7 @@ bool ALRosALAudioPlayer::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.version failed with exception: %s", e.what());
     return false;
   }
 }

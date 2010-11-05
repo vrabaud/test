@@ -20,12 +20,12 @@ bool ALRosALPreferences::getMethodHelp(
   rosbridge::ALModuleGetMethodHelp::Request  &req,
   rosbridge::ALModuleGetMethodHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getMethodHelp(req.methodName);
     ALRosMethodHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALPreferences.getMethodHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -35,12 +35,12 @@ bool ALRosALPreferences::getModuleHelp(
   rosbridge::ALModuleGetModuleHelp::Request  &req,
   rosbridge::ALModuleGetModuleHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getModuleHelp();
     ALRosModuleHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALPreferences.getModuleHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -50,12 +50,12 @@ bool ALRosALPreferences::getModuleHelp(
 //  rosbridge::ALPreferencesReadPrefFile::Request  &req,
 //  rosbridge::ALPreferencesReadPrefFile::Response &res)
 //{
-
 //  try {
 //    res.value = fProxy->readPrefFile(req.fileName, req.autoGenerateMemoryNames);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALPreferences.readPrefFile failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -65,12 +65,12 @@ bool ALRosALPreferences::getModuleHelp(
 //  rosbridge::ALPreferencesSaveToMemory::Request  &req,
 //  rosbridge::ALPreferencesSaveToMemory::Response &res)
 //{
-
 //  try {
 //    res.value = fProxy->saveToMemory(req.prefs);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALPreferences.saveToMemory failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -80,12 +80,12 @@ bool ALRosALPreferences::getModuleHelp(
 //  rosbridge::ALPreferencesWritePrefFile::Request  &req,
 //  rosbridge::ALPreferencesWritePrefFile::Response &res)
 //{
-
 //  try {
 //    fProxy->writePrefFile(req.fileName, req.prefs, req.ignoreMemoryNames);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALPreferences.writePrefFile failed with exception: %s", e.what());
 //    return false;
 //  }
 //}

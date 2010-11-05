@@ -18,12 +18,12 @@ void ALRosALFrameManager::bindCustomMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker
 //  rosbridge::ALFrameManagerDataChanged::Request  &req,
 //  rosbridge::ALFrameManagerDataChanged::Response &res)
 //{
-
 //  try {
 //    fProxy->dataChanged(req.dataName, req.data, req.message);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALFrameManager.dataChanged failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -33,12 +33,12 @@ bool ALRosALFrameManager::getMethodHelp(
   rosbridge::ALModuleGetMethodHelp::Request  &req,
   rosbridge::ALModuleGetMethodHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getMethodHelp(req.methodName);
     ALRosMethodHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.getMethodHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -48,12 +48,12 @@ bool ALRosALFrameManager::getModuleHelp(
   rosbridge::ALModuleGetModuleHelp::Request  &req,
   rosbridge::ALModuleGetModuleHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getModuleHelp();
     ALRosModuleHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.getModuleHelp failed with exception: %s", e.what());
     return false;
   }
 }

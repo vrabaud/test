@@ -19,12 +19,12 @@ bool ALRosALVisionRecognition::getMethodHelp(
   rosbridge::ALModuleGetMethodHelp::Request  &req,
   rosbridge::ALModuleGetMethodHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getMethodHelp(req.methodName);
     ALRosMethodHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALVisionRecognition.getMethodHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -34,12 +34,12 @@ bool ALRosALVisionRecognition::getModuleHelp(
   rosbridge::ALModuleGetModuleHelp::Request  &req,
   rosbridge::ALModuleGetModuleHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getModuleHelp();
     ALRosModuleHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALVisionRecognition.getModuleHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -49,12 +49,12 @@ bool ALRosALVisionRecognition::getModuleHelp(
 //  rosbridge::ALExtractorGetSubscribersInfo::Request  &req,
 //  rosbridge::ALExtractorGetSubscribersInfo::Response &res)
 //{
-
 //  try {
 //    res.value = fProxy->getSubscribersInfo();
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALVisionRecognition.getSubscribersInfo failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -64,12 +64,12 @@ bool ALRosALVisionRecognition::getModuleHelp(
 //  rosbridge::ALVisionRecognitionSetParam::Request  &req,
 //  rosbridge::ALVisionRecognitionSetParam::Response &res)
 //{
-
 //  try {
 //    fProxy->setParam(req.paramName, req.paramValue);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALVisionRecognition.setParam failed with exception: %s", e.what());
 //    return false;
 //  }
 //}

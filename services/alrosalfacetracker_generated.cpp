@@ -47,6 +47,7 @@ bool ALRosALFaceTracker::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceTracker.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -59,6 +60,7 @@ bool ALRosALFaceTracker::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceTracker.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -71,6 +73,7 @@ bool ALRosALFaceTracker::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceTracker.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -83,6 +86,7 @@ bool ALRosALFaceTracker::getPosition(
     res.value = fProxy->getPosition();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceTracker.getPosition failed with exception: %s", e.what());
     return false;
   }
 }
@@ -95,6 +99,7 @@ bool ALRosALFaceTracker::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceTracker.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -107,6 +112,7 @@ bool ALRosALFaceTracker::isActive(
     res.value = fProxy->isActive();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceTracker.isActive failed with exception: %s", e.what());
     return false;
   }
 }
@@ -119,6 +125,7 @@ bool ALRosALFaceTracker::isNewData(
     res.value = fProxy->isNewData();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceTracker.isNewData failed with exception: %s", e.what());
     return false;
   }
 }
@@ -131,6 +138,7 @@ bool ALRosALFaceTracker::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceTracker.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -143,6 +151,7 @@ bool ALRosALFaceTracker::setWholeBodyOn(
     fProxy->setWholeBodyOn(req.pWholeBodyOn);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceTracker.setWholeBodyOn failed with exception: %s", e.what());
     return false;
   }
 }
@@ -155,6 +164,7 @@ bool ALRosALFaceTracker::startTracker(
     fProxy->startTracker();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceTracker.startTracker failed with exception: %s", e.what());
     return false;
   }
 }
@@ -167,6 +177,7 @@ bool ALRosALFaceTracker::stopTracker(
     fProxy->stopTracker();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceTracker.stopTracker failed with exception: %s", e.what());
     return false;
   }
 }
@@ -179,6 +190,7 @@ bool ALRosALFaceTracker::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFaceTracker.version failed with exception: %s", e.what());
     return false;
   }
 }

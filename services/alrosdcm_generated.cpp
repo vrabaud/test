@@ -43,6 +43,7 @@ bool ALRosDCM::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("DCM.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -55,6 +56,7 @@ bool ALRosDCM::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("DCM.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -67,6 +69,7 @@ bool ALRosDCM::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("DCM.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -79,6 +82,7 @@ bool ALRosDCM::getTime(
     res.value = fProxy->getTime(req.offset);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("DCM.getTime failed with exception: %s", e.what());
     return false;
   }
 }
@@ -91,6 +95,7 @@ bool ALRosDCM::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("DCM.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -103,6 +108,7 @@ bool ALRosDCM::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("DCM.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -115,6 +121,7 @@ bool ALRosDCM::special(
     fProxy->special(req.result);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("DCM.special failed with exception: %s", e.what());
     return false;
   }
 }
@@ -127,6 +134,7 @@ bool ALRosDCM::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("DCM.version failed with exception: %s", e.what());
     return false;
   }
 }

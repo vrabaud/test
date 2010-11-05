@@ -52,6 +52,7 @@ bool ALRosALVisionToolbox::backlighting(
     res.value = fProxy->backlighting();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionToolbox.backlighting failed with exception: %s", e.what());
     return false;
   }
 }
@@ -64,6 +65,7 @@ bool ALRosALVisionToolbox::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionToolbox.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -76,6 +78,7 @@ bool ALRosALVisionToolbox::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionToolbox.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -88,6 +91,7 @@ bool ALRosALVisionToolbox::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionToolbox.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -100,6 +104,7 @@ bool ALRosALVisionToolbox::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionToolbox.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -112,6 +117,7 @@ bool ALRosALVisionToolbox::halfPress(
     fProxy->halfPress();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionToolbox.halfPress failed with exception: %s", e.what());
     return false;
   }
 }
@@ -124,6 +130,7 @@ bool ALRosALVisionToolbox::isItDark(
     res.value = fProxy->isItDark();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionToolbox.isItDark failed with exception: %s", e.what());
     return false;
   }
 }
@@ -136,6 +143,7 @@ bool ALRosALVisionToolbox::isVideoRecording(
     res.value = fProxy->isVideoRecording();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionToolbox.isVideoRecording failed with exception: %s", e.what());
     return false;
   }
 }
@@ -148,6 +156,7 @@ bool ALRosALVisionToolbox::logTPRInstanceInfo(
     fProxy->logTPRInstanceInfo(req.instanceNumber);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionToolbox.logTPRInstanceInfo failed with exception: %s", e.what());
     return false;
   }
 }
@@ -160,6 +169,7 @@ bool ALRosALVisionToolbox::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionToolbox.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -172,6 +182,7 @@ bool ALRosALVisionToolbox::setWhiteBalance(
     fProxy->setWhiteBalance(req.camera);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionToolbox.setWhiteBalance failed with exception: %s", e.what());
     return false;
   }
 }
@@ -184,6 +195,7 @@ bool ALRosALVisionToolbox::startVideoRecord(
     fProxy->startVideoRecord(req.videoName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionToolbox.startVideoRecord failed with exception: %s", e.what());
     return false;
   }
 }
@@ -196,6 +208,7 @@ bool ALRosALVisionToolbox::startVideoRecord_adv(
     fProxy->startVideoRecord_adv(req.videoName, req.framerate, req.format, req.resIndex, req.numFrames);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionToolbox.startVideoRecord_adv failed with exception: %s", e.what());
     return false;
   }
 }
@@ -208,6 +221,7 @@ bool ALRosALVisionToolbox::stopTPR(
     fProxy->stopTPR(req.pathAndNameRoot, req.imageRecordFormat);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionToolbox.stopTPR failed with exception: %s", e.what());
     return false;
   }
 }
@@ -220,6 +234,7 @@ bool ALRosALVisionToolbox::takePicture(
     fProxy->takePicture();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionToolbox.takePicture failed with exception: %s", e.what());
     return false;
   }
 }
@@ -232,6 +247,7 @@ bool ALRosALVisionToolbox::takePictureRegularly(
     fProxy->takePictureRegularly(req.secondsBetweenTwoShots, req.pathAndNameRoot, req.overwriteImage, req.imageRecordFormat, req.resolution);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionToolbox.takePictureRegularly failed with exception: %s", e.what());
     return false;
   }
 }
@@ -244,6 +260,7 @@ bool ALRosALVisionToolbox::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionToolbox.version failed with exception: %s", e.what());
     return false;
   }
 }

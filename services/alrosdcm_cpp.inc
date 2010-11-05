@@ -28,7 +28,8 @@ void ALRosDCM::bindCustomMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ros::Node
 //    fProxy->calibration(req.calibrationInput);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("DCM.calibration failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -57,12 +58,12 @@ bool ALRosDCM::getMethodHelp(
   rosbridge::ALModuleGetMethodHelp::Request  &req,
   rosbridge::ALModuleGetMethodHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getMethodHelp(req.methodName);
     ALRosMethodHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("DCM.getMethodHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -72,12 +73,12 @@ bool ALRosDCM::getModuleHelp(
   rosbridge::ALModuleGetModuleHelp::Request  &req,
   rosbridge::ALModuleGetModuleHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getModuleHelp();
     ALRosModuleHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("DCM.getModuleHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -87,12 +88,12 @@ bool ALRosDCM::getModuleHelp(
 //  rosbridge::DCMGetPrefix::Request  &req,
 //  rosbridge::DCMGetPrefix::Response &res)
 //{
-
 //  try {
 //    res.value = fProxy->getPrefix();
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("DCM.getPrefix failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -102,12 +103,12 @@ bool ALRosDCM::getModuleHelp(
 //  rosbridge::DCMPreferences::Request  &req,
 //  rosbridge::DCMPreferences::Response &res)
 //{
-
 //  try {
 //    res.value = fProxy->preferences(req.action, req.target, req.keyName, req.keyValue);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("DCM.preferences failed with exception: %s", e.what());
 //    return false;
 //  }
 //}

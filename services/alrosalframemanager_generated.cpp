@@ -67,6 +67,7 @@ bool ALRosALFrameManager::cleanBehaviors(
     fProxy->cleanBehaviors();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.cleanBehaviors failed with exception: %s", e.what());
     return false;
   }
 }
@@ -79,6 +80,7 @@ bool ALRosALFrameManager::completeBehavior(
     fProxy->completeBehavior(req.id);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.completeBehavior failed with exception: %s", e.what());
     return false;
   }
 }
@@ -91,6 +93,7 @@ bool ALRosALFrameManager::createAndPlayTimeline(
     res.value = fProxy->createAndPlayTimeline(req.xmlFile);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.createAndPlayTimeline failed with exception: %s", e.what());
     return false;
   }
 }
@@ -103,6 +106,7 @@ bool ALRosALFrameManager::deleteBehavior(
     fProxy->deleteBehavior(req.id);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.deleteBehavior failed with exception: %s", e.what());
     return false;
   }
 }
@@ -115,6 +119,7 @@ bool ALRosALFrameManager::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -127,6 +132,7 @@ bool ALRosALFrameManager::exitBehavior(
     fProxy->exitBehavior(req.id);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.exitBehavior failed with exception: %s", e.what());
     return false;
   }
 }
@@ -139,6 +145,7 @@ bool ALRosALFrameManager::getBehaviorPath(
     res.value = fProxy->getBehaviorPath(req.id);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.getBehaviorPath failed with exception: %s", e.what());
     return false;
   }
 }
@@ -151,6 +158,7 @@ bool ALRosALFrameManager::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -163,6 +171,7 @@ bool ALRosALFrameManager::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -175,6 +184,7 @@ bool ALRosALFrameManager::getMotionLength(
     res.value = fProxy->getMotionLength(req.id);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.getMotionLength failed with exception: %s", e.what());
     return false;
   }
 }
@@ -187,6 +197,7 @@ bool ALRosALFrameManager::getTimelineFps(
     res.value = fProxy->getTimelineFps(req.id);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.getTimelineFps failed with exception: %s", e.what());
     return false;
   }
 }
@@ -199,6 +210,7 @@ bool ALRosALFrameManager::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -211,6 +223,7 @@ bool ALRosALFrameManager::gotoAndPlayString(
     fProxy->gotoAndPlay(req.id, req.frame);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.gotoAndPlay failed with exception: %s", e.what());
     return false;
   }
 }
@@ -223,6 +236,7 @@ bool ALRosALFrameManager::gotoAndPlay(
     fProxy->gotoAndPlay(req.id, req.frame);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.gotoAndPlay failed with exception: %s", e.what());
     return false;
   }
 }
@@ -235,6 +249,7 @@ bool ALRosALFrameManager::gotoAndStopString(
     fProxy->gotoAndStop(req.id, req.frame);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.gotoAndStop failed with exception: %s", e.what());
     return false;
   }
 }
@@ -247,6 +262,7 @@ bool ALRosALFrameManager::gotoAndStop(
     fProxy->gotoAndStop(req.id, req.frame);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.gotoAndStop failed with exception: %s", e.what());
     return false;
   }
 }
@@ -259,6 +275,7 @@ bool ALRosALFrameManager::newBehavior(
     res.value = fProxy->newBehavior(req.path, req.xmlFile);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.newBehavior failed with exception: %s", e.what());
     return false;
   }
 }
@@ -271,6 +288,7 @@ bool ALRosALFrameManager::newBehaviorFromChoregraphe(
     res.value = fProxy->newBehaviorFromChoregraphe();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.newBehaviorFromChoregraphe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -283,6 +301,7 @@ bool ALRosALFrameManager::newBehaviorFromFile(
     res.value = fProxy->newBehaviorFromFile(req.xmlFilePath, req.path);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.newBehaviorFromFile failed with exception: %s", e.what());
     return false;
   }
 }
@@ -295,6 +314,7 @@ bool ALRosALFrameManager::onPythonError(
     fProxy->onPythonError(req.boxname, req.methodname, req.error);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.onPythonError failed with exception: %s", e.what());
     return false;
   }
 }
@@ -307,6 +327,7 @@ bool ALRosALFrameManager::onPythonPrint(
     fProxy->onPythonPrint(req.message);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.onPythonPrint failed with exception: %s", e.what());
     return false;
   }
 }
@@ -319,6 +340,7 @@ bool ALRosALFrameManager::onRubyError(
     fProxy->onRubyError(req.boxname, req.methodname, req.error);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.onRubyError failed with exception: %s", e.what());
     return false;
   }
 }
@@ -331,6 +353,7 @@ bool ALRosALFrameManager::onRubyPrint(
     fProxy->onRubyPrint(req.message);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.onRubyPrint failed with exception: %s", e.what());
     return false;
   }
 }
@@ -343,6 +366,7 @@ bool ALRosALFrameManager::onUrbiError(
     fProxy->onUrbiError(req.boxname, req.methodname, req.location, req.error);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.onUrbiError failed with exception: %s", e.what());
     return false;
   }
 }
@@ -355,6 +379,7 @@ bool ALRosALFrameManager::onUrbiPrint(
     fProxy->onUrbiPrint(req.message);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.onUrbiPrint failed with exception: %s", e.what());
     return false;
   }
 }
@@ -367,6 +392,7 @@ bool ALRosALFrameManager::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -379,6 +405,7 @@ bool ALRosALFrameManager::playBehavior(
     fProxy->playBehavior(req.id);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.playBehavior failed with exception: %s", e.what());
     return false;
   }
 }
@@ -391,6 +418,7 @@ bool ALRosALFrameManager::playDefaultProject(
     fProxy->playDefaultProject();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.playDefaultProject failed with exception: %s", e.what());
     return false;
   }
 }
@@ -403,6 +431,7 @@ bool ALRosALFrameManager::playTimeline(
     fProxy->playTimeline(req.id);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.playTimeline failed with exception: %s", e.what());
     return false;
   }
 }
@@ -415,6 +444,7 @@ bool ALRosALFrameManager::setTimelineFps(
     fProxy->setTimelineFps(req.id, req.fps);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.setTimelineFps failed with exception: %s", e.what());
     return false;
   }
 }
@@ -427,6 +457,7 @@ bool ALRosALFrameManager::stopTimeline(
     fProxy->stopTimeline(req.id);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.stopTimeline failed with exception: %s", e.what());
     return false;
   }
 }
@@ -439,6 +470,7 @@ bool ALRosALFrameManager::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFrameManager.version failed with exception: %s", e.what());
     return false;
   }
 }

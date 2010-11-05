@@ -53,6 +53,7 @@ bool ALRosALVisionRecognition::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionRecognition.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -65,6 +66,7 @@ bool ALRosALVisionRecognition::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionRecognition.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -77,6 +79,7 @@ bool ALRosALVisionRecognition::getCurrentPeriod(
     res.value = fProxy->getCurrentPeriod();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionRecognition.getCurrentPeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -89,6 +92,7 @@ bool ALRosALVisionRecognition::getCurrentPrecision(
     res.value = fProxy->getCurrentPrecision();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionRecognition.getCurrentPrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -101,6 +105,7 @@ bool ALRosALVisionRecognition::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionRecognition.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -113,6 +118,7 @@ bool ALRosALVisionRecognition::getMyPeriod(
     res.value = fProxy->getMyPeriod(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionRecognition.getMyPeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -125,6 +131,7 @@ bool ALRosALVisionRecognition::getMyPrecision(
     res.value = fProxy->getMyPrecision(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionRecognition.getMyPrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -137,6 +144,7 @@ bool ALRosALVisionRecognition::getOutputNames(
     res.value = fProxy->getOutputNames();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionRecognition.getOutputNames failed with exception: %s", e.what());
     return false;
   }
 }
@@ -149,6 +157,7 @@ bool ALRosALVisionRecognition::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionRecognition.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -161,6 +170,7 @@ bool ALRosALVisionRecognition::load(
     fProxy->load();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionRecognition.load failed with exception: %s", e.what());
     return false;
   }
 }
@@ -173,6 +183,7 @@ bool ALRosALVisionRecognition::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionRecognition.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -185,6 +196,7 @@ bool ALRosALVisionRecognition::run(
     fProxy->run();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionRecognition.run failed with exception: %s", e.what());
     return false;
   }
 }
@@ -197,6 +209,7 @@ bool ALRosALVisionRecognition::subscribeString(
     fProxy->subscribe(req.name, req.period, req.precision);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionRecognition.subscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -209,6 +222,7 @@ bool ALRosALVisionRecognition::subscribe(
     fProxy->subscribe(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionRecognition.subscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -221,6 +235,7 @@ bool ALRosALVisionRecognition::unsubscribe(
     fProxy->unsubscribe(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionRecognition.unsubscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -233,6 +248,7 @@ bool ALRosALVisionRecognition::updatePeriod(
     fProxy->updatePeriod(req.name, req.period);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionRecognition.updatePeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -245,6 +261,7 @@ bool ALRosALVisionRecognition::updatePrecision(
     fProxy->updatePrecision(req.name, req.precision);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionRecognition.updatePrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -257,6 +274,7 @@ bool ALRosALVisionRecognition::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVisionRecognition.version failed with exception: %s", e.what());
     return false;
   }
 }

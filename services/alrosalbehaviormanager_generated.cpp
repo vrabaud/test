@@ -54,6 +54,7 @@ bool ALRosALBehaviorManager::addDefaultBehavior(
     fProxy->addDefaultBehavior(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBehaviorManager.addDefaultBehavior failed with exception: %s", e.what());
     return false;
   }
 }
@@ -66,6 +67,7 @@ bool ALRosALBehaviorManager::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBehaviorManager.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -78,6 +80,7 @@ bool ALRosALBehaviorManager::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBehaviorManager.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -90,6 +93,7 @@ bool ALRosALBehaviorManager::getDefaultBehaviors(
     res.value = fProxy->getDefaultBehaviors();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBehaviorManager.getDefaultBehaviors failed with exception: %s", e.what());
     return false;
   }
 }
@@ -102,6 +106,7 @@ bool ALRosALBehaviorManager::getInstalledBehaviors(
     res.value = fProxy->getInstalledBehaviors();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBehaviorManager.getInstalledBehaviors failed with exception: %s", e.what());
     return false;
   }
 }
@@ -114,6 +119,7 @@ bool ALRosALBehaviorManager::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBehaviorManager.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -126,6 +132,7 @@ bool ALRosALBehaviorManager::getRunningBehaviors(
     res.value = fProxy->getRunningBehaviors();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBehaviorManager.getRunningBehaviors failed with exception: %s", e.what());
     return false;
   }
 }
@@ -138,6 +145,7 @@ bool ALRosALBehaviorManager::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBehaviorManager.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -150,6 +158,7 @@ bool ALRosALBehaviorManager::isBehaviorInstalled(
     res.value = fProxy->isBehaviorInstalled(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBehaviorManager.isBehaviorInstalled failed with exception: %s", e.what());
     return false;
   }
 }
@@ -162,6 +171,7 @@ bool ALRosALBehaviorManager::isBehaviorRunning(
     res.value = fProxy->isBehaviorRunning(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBehaviorManager.isBehaviorRunning failed with exception: %s", e.what());
     return false;
   }
 }
@@ -174,6 +184,7 @@ bool ALRosALBehaviorManager::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBehaviorManager.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -186,6 +197,7 @@ bool ALRosALBehaviorManager::playDefaultProject(
     fProxy->playDefaultProject();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBehaviorManager.playDefaultProject failed with exception: %s", e.what());
     return false;
   }
 }
@@ -198,6 +210,7 @@ bool ALRosALBehaviorManager::preloadBehavior(
     res.value = fProxy->preloadBehavior(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBehaviorManager.preloadBehavior failed with exception: %s", e.what());
     return false;
   }
 }
@@ -210,6 +223,7 @@ bool ALRosALBehaviorManager::removeBehavior(
     res.value = fProxy->removeBehavior(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBehaviorManager.removeBehavior failed with exception: %s", e.what());
     return false;
   }
 }
@@ -222,6 +236,7 @@ bool ALRosALBehaviorManager::removeDefaultBehavior(
     fProxy->removeDefaultBehavior(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBehaviorManager.removeDefaultBehavior failed with exception: %s", e.what());
     return false;
   }
 }
@@ -234,6 +249,7 @@ bool ALRosALBehaviorManager::runBehavior(
     fProxy->runBehavior(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBehaviorManager.runBehavior failed with exception: %s", e.what());
     return false;
   }
 }
@@ -246,6 +262,7 @@ bool ALRosALBehaviorManager::stopAllBehaviors(
     fProxy->stopAllBehaviors();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBehaviorManager.stopAllBehaviors failed with exception: %s", e.what());
     return false;
   }
 }
@@ -258,6 +275,7 @@ bool ALRosALBehaviorManager::stopBehavior(
     fProxy->stopBehavior(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBehaviorManager.stopBehavior failed with exception: %s", e.what());
     return false;
   }
 }
@@ -270,6 +288,7 @@ bool ALRosALBehaviorManager::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBehaviorManager.version failed with exception: %s", e.what());
     return false;
   }
 }

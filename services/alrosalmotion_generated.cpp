@@ -71,6 +71,7 @@ bool ALRosALMotion::areResourcesAvailable(
     res.value = fProxy->areResourcesAvailable(req.resourceNames);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.areResourcesAvailable failed with exception: %s", e.what());
     return false;
   }
 }
@@ -83,6 +84,7 @@ bool ALRosALMotion::changePosition(
     fProxy->changePosition(req.effectorName, req.space, req.positionChange, req.fractionMaxSpeed, req.axisMask);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.changePosition failed with exception: %s", e.what());
     return false;
   }
 }
@@ -95,6 +97,7 @@ bool ALRosALMotion::changeTransform(
     fProxy->changeTransform(req.chainName, req.space, req.transform, req.fractionMaxSpeed, req.axisMask);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.changeTransform failed with exception: %s", e.what());
     return false;
   }
 }
@@ -107,6 +110,7 @@ bool ALRosALMotion::closeHand(
     fProxy->closeHand(req.handName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.closeHand failed with exception: %s", e.what());
     return false;
   }
 }
@@ -119,6 +123,7 @@ bool ALRosALMotion::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -131,6 +136,7 @@ bool ALRosALMotion::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -143,6 +149,7 @@ bool ALRosALMotion::getCOM(
     res.value = fProxy->getCOM(req.pName, req.pSpace, req.pUseSensorValues);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.getCOM failed with exception: %s", e.what());
     return false;
   }
 }
@@ -155,6 +162,7 @@ bool ALRosALMotion::getJointNames(
     res.value = fProxy->getJointNames(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.getJointNames failed with exception: %s", e.what());
     return false;
   }
 }
@@ -167,6 +175,7 @@ bool ALRosALMotion::getMass(
     res.value = fProxy->getMass(req.pName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.getMass failed with exception: %s", e.what());
     return false;
   }
 }
@@ -179,6 +188,7 @@ bool ALRosALMotion::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -191,6 +201,7 @@ bool ALRosALMotion::getPosition(
     res.value = fProxy->getPosition(req.name, req.space, req.useSensorValues);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.getPosition failed with exception: %s", e.what());
     return false;
   }
 }
@@ -203,6 +214,7 @@ bool ALRosALMotion::getRobotPosition(
     res.value = fProxy->getRobotPosition(req.useSensors);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.getRobotPosition failed with exception: %s", e.what());
     return false;
   }
 }
@@ -215,6 +227,7 @@ bool ALRosALMotion::getRobotVelocity(
     res.value = fProxy->getRobotVelocity();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.getRobotVelocity failed with exception: %s", e.what());
     return false;
   }
 }
@@ -227,6 +240,7 @@ bool ALRosALMotion::getSummary(
     res.value = fProxy->getSummary();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.getSummary failed with exception: %s", e.what());
     return false;
   }
 }
@@ -239,6 +253,7 @@ bool ALRosALMotion::getTransform(
     res.value = fProxy->getTransform(req.name, req.space, req.useSensorValues);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.getTransform failed with exception: %s", e.what());
     return false;
   }
 }
@@ -251,6 +266,7 @@ bool ALRosALMotion::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -263,6 +279,7 @@ bool ALRosALMotion::killAll(
     fProxy->killAll();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.killAll failed with exception: %s", e.what());
     return false;
   }
 }
@@ -275,6 +292,7 @@ bool ALRosALMotion::killTask(
     res.value = fProxy->killTask(req.motionTaskID);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.killTask failed with exception: %s", e.what());
     return false;
   }
 }
@@ -287,6 +305,7 @@ bool ALRosALMotion::killTasksUsingResources(
     fProxy->killTasksUsingResources(req.resourceNames);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.killTasksUsingResources failed with exception: %s", e.what());
     return false;
   }
 }
@@ -299,6 +318,7 @@ bool ALRosALMotion::killWalk(
     fProxy->killWalk();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.killWalk failed with exception: %s", e.what());
     return false;
   }
 }
@@ -311,6 +331,7 @@ bool ALRosALMotion::openHand(
     fProxy->openHand(req.handName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.openHand failed with exception: %s", e.what());
     return false;
   }
 }
@@ -323,6 +344,7 @@ bool ALRosALMotion::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -335,6 +357,7 @@ bool ALRosALMotion::setPosition(
     fProxy->setPosition(req.chainName, req.space, req.position, req.fractionMaxSpeed, req.axisMask);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.setPosition failed with exception: %s", e.what());
     return false;
   }
 }
@@ -347,6 +370,7 @@ bool ALRosALMotion::setTransform(
     fProxy->setTransform(req.chainName, req.space, req.transform, req.fractionMaxSpeed, req.axisMask);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.setTransform failed with exception: %s", e.what());
     return false;
   }
 }
@@ -359,6 +383,7 @@ bool ALRosALMotion::setWalkArmsEnable(
     fProxy->setWalkArmsEnable(req.leftArmEnable, req.rightArmEnable);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.setWalkArmsEnable failed with exception: %s", e.what());
     return false;
   }
 }
@@ -371,6 +396,7 @@ bool ALRosALMotion::setWalkTargetVelocity(
     fProxy->setWalkTargetVelocity(req.x, req.y, req.theta, req.frequency);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.setWalkTargetVelocity failed with exception: %s", e.what());
     return false;
   }
 }
@@ -383,6 +409,7 @@ bool ALRosALMotion::stepTo(
     fProxy->stepTo(req.legName, req.x, req.y, req.theta);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.stepTo failed with exception: %s", e.what());
     return false;
   }
 }
@@ -395,6 +422,7 @@ bool ALRosALMotion::updateTrackerTarget(
     fProxy->updateTrackerTarget(req.pTargetPositionWy, req.pTargetPositionWz, req.pTimeSinceDetectionMs, req.pUseOfWholeBody);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.updateTrackerTarget failed with exception: %s", e.what());
     return false;
   }
 }
@@ -407,6 +435,7 @@ bool ALRosALMotion::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.version failed with exception: %s", e.what());
     return false;
   }
 }
@@ -419,6 +448,7 @@ bool ALRosALMotion::waitUntilWalkIsFinished(
     fProxy->waitUntilWalkIsFinished();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.waitUntilWalkIsFinished failed with exception: %s", e.what());
     return false;
   }
 }
@@ -431,6 +461,7 @@ bool ALRosALMotion::walkIsActive(
     res.value = fProxy->walkIsActive();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.walkIsActive failed with exception: %s", e.what());
     return false;
   }
 }
@@ -443,6 +474,7 @@ bool ALRosALMotion::walkTo(
     fProxy->walkTo(req.x, req.y, req.theta);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.walkTo failed with exception: %s", e.what());
     return false;
   }
 }
@@ -455,6 +487,7 @@ bool ALRosALMotion::wbEnable(
     fProxy->wbEnable(req.isEnabled);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.wbEnable failed with exception: %s", e.what());
     return false;
   }
 }
@@ -467,6 +500,7 @@ bool ALRosALMotion::wbEnableBalanceConstraint(
     fProxy->wbEnableBalanceConstraint(req.isEnable, req.supportLeg);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.wbEnableBalanceConstraint failed with exception: %s", e.what());
     return false;
   }
 }
@@ -479,6 +513,7 @@ bool ALRosALMotion::wbEnableEffectorControl(
     fProxy->wbEnableEffectorControl(req.effectorName, req.isEnabled);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.wbEnableEffectorControl failed with exception: %s", e.what());
     return false;
   }
 }
@@ -491,6 +526,7 @@ bool ALRosALMotion::wbFootState(
     fProxy->wbFootState(req.stateName, req.supportLeg);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotion.wbFootState failed with exception: %s", e.what());
     return false;
   }
 }

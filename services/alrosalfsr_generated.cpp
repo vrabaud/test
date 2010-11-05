@@ -41,6 +41,7 @@ bool ALRosALFsr::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFsr.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -53,6 +54,7 @@ bool ALRosALFsr::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFsr.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -65,6 +67,7 @@ bool ALRosALFsr::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFsr.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -77,6 +80,7 @@ bool ALRosALFsr::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFsr.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -89,6 +93,7 @@ bool ALRosALFsr::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFsr.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -101,6 +106,7 @@ bool ALRosALFsr::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFsr.version failed with exception: %s", e.what());
     return false;
   }
 }

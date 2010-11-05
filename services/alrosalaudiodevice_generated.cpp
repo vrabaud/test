@@ -61,6 +61,7 @@ bool ALRosALAudioDevice::disableEnergyComputation(
     fProxy->disableEnergyComputation();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.disableEnergyComputation failed with exception: %s", e.what());
     return false;
   }
 }
@@ -73,6 +74,7 @@ bool ALRosALAudioDevice::enableEnergyComputation(
     fProxy->enableEnergyComputation();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.enableEnergyComputation failed with exception: %s", e.what());
     return false;
   }
 }
@@ -85,6 +87,7 @@ bool ALRosALAudioDevice::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -97,6 +100,7 @@ bool ALRosALAudioDevice::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -109,6 +113,7 @@ bool ALRosALAudioDevice::getFrontMicEnergy(
     res.value = fProxy->getFrontMicEnergy();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.getFrontMicEnergy failed with exception: %s", e.what());
     return false;
   }
 }
@@ -121,6 +126,7 @@ bool ALRosALAudioDevice::getLeftMicEnergy(
     res.value = fProxy->getLeftMicEnergy();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.getLeftMicEnergy failed with exception: %s", e.what());
     return false;
   }
 }
@@ -133,6 +139,7 @@ bool ALRosALAudioDevice::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -145,6 +152,7 @@ bool ALRosALAudioDevice::getOutputVolume(
     res.value = fProxy->getOutputVolume();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.getOutputVolume failed with exception: %s", e.what());
     return false;
   }
 }
@@ -157,6 +165,7 @@ bool ALRosALAudioDevice::getParameter(
     res.value = fProxy->getParameter(req.pParamName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.getParameter failed with exception: %s", e.what());
     return false;
   }
 }
@@ -169,6 +178,7 @@ bool ALRosALAudioDevice::getRearMicEnergy(
     res.value = fProxy->getRearMicEnergy();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.getRearMicEnergy failed with exception: %s", e.what());
     return false;
   }
 }
@@ -181,6 +191,7 @@ bool ALRosALAudioDevice::getRightMicEnergy(
     res.value = fProxy->getRightMicEnergy();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.getRightMicEnergy failed with exception: %s", e.what());
     return false;
   }
 }
@@ -193,6 +204,7 @@ bool ALRosALAudioDevice::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -205,6 +217,7 @@ bool ALRosALAudioDevice::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -217,6 +230,7 @@ bool ALRosALAudioDevice::playSine(
     fProxy->playSine(req.frequence, req.gain, req.pan, req.duration);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.playSine failed with exception: %s", e.what());
     return false;
   }
 }
@@ -229,6 +243,7 @@ bool ALRosALAudioDevice::resetAudio(
     fProxy->resetAudio();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.resetAudio failed with exception: %s", e.what());
     return false;
   }
 }
@@ -241,6 +256,7 @@ bool ALRosALAudioDevice::sendLocalBufferToOutput(
     res.value = fProxy->sendLocalBufferToOutput(req.nbOfFrames, req.pBuffer);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.sendLocalBufferToOutput failed with exception: %s", e.what());
     return false;
   }
 }
@@ -253,6 +269,7 @@ bool ALRosALAudioDevice::setFileAsInput(
     fProxy->setFileAsInput(req.pFileName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.setFileAsInput failed with exception: %s", e.what());
     return false;
   }
 }
@@ -265,6 +282,7 @@ bool ALRosALAudioDevice::setOutputVolume(
     fProxy->setOutputVolume(req.volume);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.setOutputVolume failed with exception: %s", e.what());
     return false;
   }
 }
@@ -277,6 +295,7 @@ bool ALRosALAudioDevice::setParameter(
     fProxy->setParameter(req.pParamName, req.pParamValue);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.setParameter failed with exception: %s", e.what());
     return false;
   }
 }
@@ -289,6 +308,7 @@ bool ALRosALAudioDevice::startMicrophonesRecording(
     fProxy->startMicrophonesRecording(req.pFileName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.startMicrophonesRecording failed with exception: %s", e.what());
     return false;
   }
 }
@@ -301,6 +321,7 @@ bool ALRosALAudioDevice::stopAudioOut(
     fProxy->stopAudioOut();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.stopAudioOut failed with exception: %s", e.what());
     return false;
   }
 }
@@ -313,6 +334,7 @@ bool ALRosALAudioDevice::stopMicrophonesRecording(
     fProxy->stopMicrophonesRecording();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.stopMicrophonesRecording failed with exception: %s", e.what());
     return false;
   }
 }
@@ -325,6 +347,7 @@ bool ALRosALAudioDevice::subscribeRemoteModule(
     res.value = fProxy->subscribeRemoteModule(req.pModule);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.subscribeRemoteModule failed with exception: %s", e.what());
     return false;
   }
 }
@@ -337,6 +360,7 @@ bool ALRosALAudioDevice::unSubscribeRemoteModule(
     res.value = fProxy->unSubscribeRemoteModule(req.pModule);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.unSubscribeRemoteModule failed with exception: %s", e.what());
     return false;
   }
 }
@@ -349,6 +373,7 @@ bool ALRosALAudioDevice::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.version failed with exception: %s", e.what());
     return false;
   }
 }
@@ -361,6 +386,7 @@ bool ALRosALAudioDevice::waitSynchronizer(
     fProxy->waitSynchronizer(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.waitSynchronizer failed with exception: %s", e.what());
     return false;
   }
 }

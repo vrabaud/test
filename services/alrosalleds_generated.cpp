@@ -55,6 +55,7 @@ bool ALRosALLeds::createGroup(
     fProxy->createGroup(req.groupName, req.ledNames);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.createGroup failed with exception: %s", e.what());
     return false;
   }
 }
@@ -67,6 +68,7 @@ bool ALRosALLeds::earLedsSetAngle(
     fProxy->earLedsSetAngle(req.degrees, req.duration, req.leaveOnAtEnd);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.earLedsSetAngle failed with exception: %s", e.what());
     return false;
   }
 }
@@ -79,6 +81,7 @@ bool ALRosALLeds::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -91,6 +94,7 @@ bool ALRosALLeds::fade(
     fProxy->fade(req.name, req.intensity, req.duration);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.fade failed with exception: %s", e.what());
     return false;
   }
 }
@@ -103,6 +107,7 @@ bool ALRosALLeds::fadeRGB(
     fProxy->fadeRGB(req.name, req.rgb, req.duration);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.fadeRGB failed with exception: %s", e.what());
     return false;
   }
 }
@@ -115,6 +120,7 @@ bool ALRosALLeds::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -127,6 +133,7 @@ bool ALRosALLeds::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -139,6 +146,7 @@ bool ALRosALLeds::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -151,6 +159,7 @@ bool ALRosALLeds::listGroup(
     res.value = fProxy->listGroup(req.groupName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.listGroup failed with exception: %s", e.what());
     return false;
   }
 }
@@ -163,6 +172,7 @@ bool ALRosALLeds::listGroups(
     res.value = fProxy->listGroups();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.listGroups failed with exception: %s", e.what());
     return false;
   }
 }
@@ -175,6 +185,7 @@ bool ALRosALLeds::listLED(
     res.value = fProxy->listLED(req.arg1);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.listLED failed with exception: %s", e.what());
     return false;
   }
 }
@@ -187,6 +198,7 @@ bool ALRosALLeds::listLEDs(
     res.value = fProxy->listLEDs();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.listLEDs failed with exception: %s", e.what());
     return false;
   }
 }
@@ -199,6 +211,7 @@ bool ALRosALLeds::off(
     fProxy->off(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.off failed with exception: %s", e.what());
     return false;
   }
 }
@@ -211,6 +224,7 @@ bool ALRosALLeds::on(
     fProxy->on(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.on failed with exception: %s", e.what());
     return false;
   }
 }
@@ -223,6 +237,7 @@ bool ALRosALLeds::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -235,6 +250,7 @@ bool ALRosALLeds::randomEyes(
     fProxy->randomEyes(req.duration);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.randomEyes failed with exception: %s", e.what());
     return false;
   }
 }
@@ -247,6 +263,7 @@ bool ALRosALLeds::rasta(
     fProxy->rasta(req.duration);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.rasta failed with exception: %s", e.what());
     return false;
   }
 }
@@ -259,6 +276,7 @@ bool ALRosALLeds::rotateEyes(
     fProxy->rotateEyes(req.rgb, req.timeForRotation, req.totalDuration);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.rotateEyes failed with exception: %s", e.what());
     return false;
   }
 }
@@ -271,6 +289,7 @@ bool ALRosALLeds::setIntensity(
     fProxy->setIntensity(req.name, req.intensity);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.setIntensity failed with exception: %s", e.what());
     return false;
   }
 }
@@ -283,6 +302,7 @@ bool ALRosALLeds::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.version failed with exception: %s", e.what());
     return false;
   }
 }

@@ -42,6 +42,7 @@ bool ALRosALPythonBridge::eval(
     res.value = fProxy->eval(req.stringToEvaluate);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALPythonBridge.eval failed with exception: %s", e.what());
     return false;
   }
 }
@@ -54,6 +55,7 @@ bool ALRosALPythonBridge::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALPythonBridge.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -66,6 +68,7 @@ bool ALRosALPythonBridge::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALPythonBridge.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -78,6 +81,7 @@ bool ALRosALPythonBridge::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALPythonBridge.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -90,6 +94,7 @@ bool ALRosALPythonBridge::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALPythonBridge.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -102,6 +107,7 @@ bool ALRosALPythonBridge::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALPythonBridge.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -114,6 +120,7 @@ bool ALRosALPythonBridge::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALPythonBridge.version failed with exception: %s", e.what());
     return false;
   }
 }

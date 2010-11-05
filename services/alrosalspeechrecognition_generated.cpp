@@ -62,6 +62,7 @@ bool ALRosALSpeechRecognition::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -74,6 +75,7 @@ bool ALRosALSpeechRecognition::getAvailableLanguages(
     res.value = fProxy->getAvailableLanguages();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.getAvailableLanguages failed with exception: %s", e.what());
     return false;
   }
 }
@@ -86,6 +88,7 @@ bool ALRosALSpeechRecognition::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -98,6 +101,7 @@ bool ALRosALSpeechRecognition::getCurrentPeriod(
     res.value = fProxy->getCurrentPeriod();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.getCurrentPeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -110,6 +114,7 @@ bool ALRosALSpeechRecognition::getCurrentPrecision(
     res.value = fProxy->getCurrentPrecision();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.getCurrentPrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -122,6 +127,7 @@ bool ALRosALSpeechRecognition::getLanguage(
     res.value = fProxy->getLanguage();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.getLanguage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -134,6 +140,7 @@ bool ALRosALSpeechRecognition::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -146,6 +153,7 @@ bool ALRosALSpeechRecognition::getMyPeriod(
     res.value = fProxy->getMyPeriod(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.getMyPeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -158,6 +166,7 @@ bool ALRosALSpeechRecognition::getMyPrecision(
     res.value = fProxy->getMyPrecision(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.getMyPrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -170,6 +179,7 @@ bool ALRosALSpeechRecognition::getOutputNames(
     res.value = fProxy->getOutputNames();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.getOutputNames failed with exception: %s", e.what());
     return false;
   }
 }
@@ -182,6 +192,7 @@ bool ALRosALSpeechRecognition::getParameter(
     res.value = fProxy->getParameter(req.paramName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.getParameter failed with exception: %s", e.what());
     return false;
   }
 }
@@ -194,6 +205,7 @@ bool ALRosALSpeechRecognition::getPhoneticTranscription(
     res.value = fProxy->getPhoneticTranscription(req.word);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.getPhoneticTranscription failed with exception: %s", e.what());
     return false;
   }
 }
@@ -206,6 +218,7 @@ bool ALRosALSpeechRecognition::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -218,6 +231,7 @@ bool ALRosALSpeechRecognition::loadVocabulary(
     fProxy->loadVocabulary(req.vocabularyFile);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.loadVocabulary failed with exception: %s", e.what());
     return false;
   }
 }
@@ -230,6 +244,7 @@ bool ALRosALSpeechRecognition::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -242,6 +257,7 @@ bool ALRosALSpeechRecognition::setAudioExpression(
     fProxy->setAudioExpression(req.setOrNot);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.setAudioExpression failed with exception: %s", e.what());
     return false;
   }
 }
@@ -254,6 +270,7 @@ bool ALRosALSpeechRecognition::setDebugMode(
     fProxy->setDebugMode(req.bSetOrUnset);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.setDebugMode failed with exception: %s", e.what());
     return false;
   }
 }
@@ -266,6 +283,7 @@ bool ALRosALSpeechRecognition::setLanguage(
     fProxy->setLanguage(req.languageName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.setLanguage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -278,6 +296,7 @@ bool ALRosALSpeechRecognition::setParameter(
     fProxy->setParameter(req.paramName, req.paramValue);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.setParameter failed with exception: %s", e.what());
     return false;
   }
 }
@@ -290,6 +309,7 @@ bool ALRosALSpeechRecognition::setVisualExpression(
     fProxy->setVisualExpression(req.setOrNot);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.setVisualExpression failed with exception: %s", e.what());
     return false;
   }
 }
@@ -302,6 +322,7 @@ bool ALRosALSpeechRecognition::setWordListAsVocabulary(
     fProxy->setWordListAsVocabulary(req.vocabulary);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.setWordListAsVocabulary failed with exception: %s", e.what());
     return false;
   }
 }
@@ -314,6 +335,7 @@ bool ALRosALSpeechRecognition::subscribeString(
     fProxy->subscribe(req.name, req.period, req.precision);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.subscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -326,6 +348,7 @@ bool ALRosALSpeechRecognition::subscribe(
     fProxy->subscribe(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.subscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -338,6 +361,7 @@ bool ALRosALSpeechRecognition::unsubscribe(
     fProxy->unsubscribe(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.unsubscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -350,6 +374,7 @@ bool ALRosALSpeechRecognition::updatePeriod(
     fProxy->updatePeriod(req.name, req.period);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.updatePeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -362,6 +387,7 @@ bool ALRosALSpeechRecognition::updatePrecision(
     fProxy->updatePrecision(req.name, req.precision);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.updatePrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -374,6 +400,7 @@ bool ALRosALSpeechRecognition::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSpeechRecognition.version failed with exception: %s", e.what());
     return false;
   }
 }

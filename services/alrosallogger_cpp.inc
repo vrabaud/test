@@ -17,12 +17,12 @@ bool ALRosALLogger::getMethodHelp(
   rosbridge::ALModuleGetMethodHelp::Request  &req,
   rosbridge::ALModuleGetMethodHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getMethodHelp(req.methodName);
     ALRosMethodHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.getMethodHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -32,12 +32,12 @@ bool ALRosALLogger::getModuleHelp(
   rosbridge::ALModuleGetModuleHelp::Request  &req,
   rosbridge::ALModuleGetModuleHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getModuleHelp();
     ALRosModuleHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.getModuleHelp failed with exception: %s", e.what());
     return false;
   }
 }

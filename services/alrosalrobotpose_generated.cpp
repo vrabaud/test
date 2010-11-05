@@ -41,6 +41,7 @@ bool ALRosALRobotPose::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRobotPose.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -53,6 +54,7 @@ bool ALRosALRobotPose::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRobotPose.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -65,6 +67,7 @@ bool ALRosALRobotPose::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRobotPose.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -77,6 +80,7 @@ bool ALRosALRobotPose::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRobotPose.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -89,6 +93,7 @@ bool ALRosALRobotPose::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRobotPose.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -101,6 +106,7 @@ bool ALRosALRobotPose::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRobotPose.version failed with exception: %s", e.what());
     return false;
   }
 }

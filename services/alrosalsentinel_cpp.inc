@@ -26,12 +26,12 @@ void ALRosALSentinel::bindCustomMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ro
 //  rosbridge::ALSentinelBatteryChargeCellVoltageMinChanged::Request  &req,
 //  rosbridge::ALSentinelBatteryChargeCellVoltageMinChanged::Response &res)
 //{
-
 //  try {
 //    fProxy->BatteryChargeCellVoltageMinChanged(req.dataName, req.data, req.message);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALSentinel.BatteryChargeCellVoltageMinChanged failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -41,12 +41,12 @@ void ALRosALSentinel::bindCustomMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ro
 //  rosbridge::ALSentinelBatteryChargeStatusChanged::Request  &req,
 //  rosbridge::ALSentinelBatteryChargeStatusChanged::Response &res)
 //{
-
 //  try {
 //    fProxy->BatteryChargeStatusChanged(req.dataName, req.data, req.message);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALSentinel.BatteryChargeStatusChanged failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -56,12 +56,12 @@ bool ALRosALSentinel::getMethodHelp(
   rosbridge::ALModuleGetMethodHelp::Request  &req,
   rosbridge::ALModuleGetMethodHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getMethodHelp(req.methodName);
     ALRosMethodHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.getMethodHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -71,12 +71,12 @@ bool ALRosALSentinel::getModuleHelp(
   rosbridge::ALModuleGetModuleHelp::Request  &req,
   rosbridge::ALModuleGetModuleHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getModuleHelp();
     ALRosModuleHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALSentinel.getModuleHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -86,12 +86,12 @@ bool ALRosALSentinel::getModuleHelp(
 //  rosbridge::ALSentinelOnAccX::Request  &req,
 //  rosbridge::ALSentinelOnAccX::Response &res)
 //{
-
 //  try {
 //    fProxy->onAccX(req.dataName, req.data, req.message);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALSentinel.onAccX failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -101,12 +101,12 @@ bool ALRosALSentinel::getModuleHelp(
 //  rosbridge::ALSentinelOnAccY::Request  &req,
 //  rosbridge::ALSentinelOnAccY::Response &res)
 //{
-
 //  try {
 //    fProxy->onAccY(req.dataName, req.data, req.message);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALSentinel.onAccY failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -116,12 +116,12 @@ bool ALRosALSentinel::getModuleHelp(
 //  rosbridge::ALSentinelOnAccZ::Request  &req,
 //  rosbridge::ALSentinelOnAccZ::Response &res)
 //{
-
 //  try {
 //    fProxy->onAccZ(req.dataName, req.data, req.message);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALSentinel.onAccZ failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -131,12 +131,12 @@ bool ALRosALSentinel::getModuleHelp(
 //  rosbridge::ALSentinelOnBatteryMeasure::Request  &req,
 //  rosbridge::ALSentinelOnBatteryMeasure::Response &res)
 //{
-
 //  try {
 //    fProxy->onBatteryMeasure(req.dataName, req.data, req.message);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALSentinel.onBatteryMeasure failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -146,12 +146,12 @@ bool ALRosALSentinel::getModuleHelp(
 //  rosbridge::ALSentinelOnMotorError::Request  &req,
 //  rosbridge::ALSentinelOnMotorError::Response &res)
 //{
-
 //  try {
 //    fProxy->onMotorError(req.dataName, req.data, req.message);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALSentinel.onMotorError failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -161,12 +161,12 @@ bool ALRosALSentinel::getModuleHelp(
 //  rosbridge::ALSentinelOnTemperatureMeasure::Request  &req,
 //  rosbridge::ALSentinelOnTemperatureMeasure::Response &res)
 //{
-
 //  try {
 //    fProxy->onTemperatureMeasure(req.dataName, req.data, req.message);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALSentinel.onTemperatureMeasure failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -176,12 +176,12 @@ bool ALRosALSentinel::getModuleHelp(
 //  rosbridge::ALSentinelPowerButtonOnPress::Request  &req,
 //  rosbridge::ALSentinelPowerButtonOnPress::Response &res)
 //{
-
 //  try {
 //    fProxy->powerButtonOnPress(req.dataName, req.data, req.message);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALSentinel.powerButtonOnPress failed with exception: %s", e.what());
 //    return false;
 //  }
 //}

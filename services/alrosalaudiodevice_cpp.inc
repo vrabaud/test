@@ -18,12 +18,12 @@ bool ALRosALAudioDevice::getMethodHelp(
   rosbridge::ALModuleGetMethodHelp::Request  &req,
   rosbridge::ALModuleGetMethodHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getMethodHelp(req.methodName);
     ALRosMethodHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.getMethodHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -33,12 +33,12 @@ bool ALRosALAudioDevice::getModuleHelp(
   rosbridge::ALModuleGetModuleHelp::Request  &req,
   rosbridge::ALModuleGetModuleHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getModuleHelp();
     ALRosModuleHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.getModuleHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -48,12 +48,12 @@ bool ALRosALAudioDevice::getModuleHelp(
 //  rosbridge::ALAudioDeviceSendRemoteBufferToOutput::Request  &req,
 //  rosbridge::ALAudioDeviceSendRemoteBufferToOutput::Response &res)
 //{
-
 //  try {
 //    res.value = fProxy->sendRemoteBufferToOutput(req.nbOfFrames, req.pBuffer);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALAudioDevice.sendRemoteBufferToOutput failed with exception: %s", e.what());
 //    return false;
 //  }
 //}

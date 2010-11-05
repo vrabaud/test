@@ -52,6 +52,7 @@ bool ALRosALSensors::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSensors.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -64,6 +65,7 @@ bool ALRosALSensors::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSensors.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -76,6 +78,7 @@ bool ALRosALSensors::getCurrentPeriod(
     res.value = fProxy->getCurrentPeriod();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSensors.getCurrentPeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -88,6 +91,7 @@ bool ALRosALSensors::getCurrentPrecision(
     res.value = fProxy->getCurrentPrecision();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSensors.getCurrentPrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -100,6 +104,7 @@ bool ALRosALSensors::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSensors.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -112,6 +117,7 @@ bool ALRosALSensors::getMyPeriod(
     res.value = fProxy->getMyPeriod(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSensors.getMyPeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -124,6 +130,7 @@ bool ALRosALSensors::getMyPrecision(
     res.value = fProxy->getMyPrecision(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSensors.getMyPrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -136,6 +143,7 @@ bool ALRosALSensors::getOutputNames(
     res.value = fProxy->getOutputNames();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSensors.getOutputNames failed with exception: %s", e.what());
     return false;
   }
 }
@@ -148,6 +156,7 @@ bool ALRosALSensors::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSensors.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -160,6 +169,7 @@ bool ALRosALSensors::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSensors.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -172,6 +182,7 @@ bool ALRosALSensors::run(
     fProxy->run();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSensors.run failed with exception: %s", e.what());
     return false;
   }
 }
@@ -184,6 +195,7 @@ bool ALRosALSensors::subscribeString(
     fProxy->subscribe(req.name, req.period, req.precision);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSensors.subscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -196,6 +208,7 @@ bool ALRosALSensors::subscribe(
     fProxy->subscribe(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSensors.subscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -208,6 +221,7 @@ bool ALRosALSensors::unsubscribe(
     fProxy->unsubscribe(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSensors.unsubscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -220,6 +234,7 @@ bool ALRosALSensors::updatePeriod(
     fProxy->updatePeriod(req.name, req.period);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSensors.updatePeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -232,6 +247,7 @@ bool ALRosALSensors::updatePrecision(
     fProxy->updatePrecision(req.name, req.precision);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSensors.updatePrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -244,6 +260,7 @@ bool ALRosALSensors::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSensors.version failed with exception: %s", e.what());
     return false;
   }
 }

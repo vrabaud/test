@@ -69,6 +69,7 @@ bool ALRosALVideoDevice::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -81,6 +82,7 @@ bool ALRosALVideoDevice::getAngPosFromImgPos(
     res.value = fProxy->getAngPosFromImgPos(req.imgPos);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.getAngPosFromImgPos failed with exception: %s", e.what());
     return false;
   }
 }
@@ -93,6 +95,7 @@ bool ALRosALVideoDevice::getAngSizeFromImgSize(
     res.value = fProxy->getAngSizeFromImgSize(req.imgSize);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.getAngSizeFromImgSize failed with exception: %s", e.what());
     return false;
   }
 }
@@ -105,6 +108,7 @@ bool ALRosALVideoDevice::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -117,6 +121,7 @@ bool ALRosALVideoDevice::getGVMColorSpace(
     res.value = fProxy->getGVMColorSpace(req.id);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.getGVMColorSpace failed with exception: %s", e.what());
     return false;
   }
 }
@@ -129,6 +134,7 @@ bool ALRosALVideoDevice::getGVMFrameRate(
     res.value = fProxy->getGVMFrameRate(req.id);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.getGVMFrameRate failed with exception: %s", e.what());
     return false;
   }
 }
@@ -141,6 +147,7 @@ bool ALRosALVideoDevice::getGVMResolution(
     res.value = fProxy->getGVMResolution(req.id);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.getGVMResolution failed with exception: %s", e.what());
     return false;
   }
 }
@@ -153,6 +160,7 @@ bool ALRosALVideoDevice::getImgInfoFromAngInfo(
     res.value = fProxy->getImgInfoFromAngInfo(req.angles);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.getImgInfoFromAngInfo failed with exception: %s", e.what());
     return false;
   }
 }
@@ -165,6 +173,7 @@ bool ALRosALVideoDevice::getImgInfoFromAngInfoWithRes(
     res.value = fProxy->getImgInfoFromAngInfoWithRes(req.angInfo, req.arg2);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.getImgInfoFromAngInfoWithRes failed with exception: %s", e.what());
     return false;
   }
 }
@@ -177,6 +186,7 @@ bool ALRosALVideoDevice::getImgPosFromAngPos(
     res.value = fProxy->getImgPosFromAngPos(req.angPos);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.getImgPosFromAngPos failed with exception: %s", e.what());
     return false;
   }
 }
@@ -189,6 +199,7 @@ bool ALRosALVideoDevice::getImgSizeFromAngSize(
     res.value = fProxy->getImgSizeFromAngSize(req.angSize);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.getImgSizeFromAngSize failed with exception: %s", e.what());
     return false;
   }
 }
@@ -201,6 +212,7 @@ bool ALRosALVideoDevice::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -213,6 +225,7 @@ bool ALRosALVideoDevice::getParam(
     res.value = fProxy->getParam(req.pParam);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.getParam failed with exception: %s", e.what());
     return false;
   }
 }
@@ -225,6 +238,7 @@ bool ALRosALVideoDevice::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -237,6 +251,7 @@ bool ALRosALVideoDevice::getVIMColorSpace(
     res.value = fProxy->getVIMColorSpace();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.getVIMColorSpace failed with exception: %s", e.what());
     return false;
   }
 }
@@ -249,6 +264,7 @@ bool ALRosALVideoDevice::getVIMFrameRate(
     res.value = fProxy->getVIMFrameRate();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.getVIMFrameRate failed with exception: %s", e.what());
     return false;
   }
 }
@@ -261,6 +277,7 @@ bool ALRosALVideoDevice::getVIMResolution(
     res.value = fProxy->getVIMResolution();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.getVIMResolution failed with exception: %s", e.what());
     return false;
   }
 }
@@ -273,6 +290,7 @@ bool ALRosALVideoDevice::isFrameGrabberOff(
     res.value = fProxy->isFrameGrabberOff();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.isFrameGrabberOff failed with exception: %s", e.what());
     return false;
   }
 }
@@ -285,6 +303,7 @@ bool ALRosALVideoDevice::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -297,6 +316,7 @@ bool ALRosALVideoDevice::recordVideo(
     res.value = fProxy->recordVideo(req.id, req.path, req.totalNumber, req.period);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.recordVideo failed with exception: %s", e.what());
     return false;
   }
 }
@@ -309,6 +329,7 @@ bool ALRosALVideoDevice::releaseDirectRawImage(
     res.value = fProxy->releaseDirectRawImage(req.id);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.releaseDirectRawImage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -321,6 +342,7 @@ bool ALRosALVideoDevice::releaseImage(
     res.value = fProxy->releaseImage(req.id);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.releaseImage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -333,6 +355,7 @@ bool ALRosALVideoDevice::setColorSpace(
     res.value = fProxy->setColorSpace(req.id, req.colorSpace);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.setColorSpace failed with exception: %s", e.what());
     return false;
   }
 }
@@ -345,6 +368,7 @@ bool ALRosALVideoDevice::setFrameRate(
     res.value = fProxy->setFrameRate(req.id, req.frameRate);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.setFrameRate failed with exception: %s", e.what());
     return false;
   }
 }
@@ -357,6 +381,7 @@ bool ALRosALVideoDevice::setParam(
     fProxy->setParam(req.param, req.newValue);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.setParam failed with exception: %s", e.what());
     return false;
   }
 }
@@ -369,6 +394,7 @@ bool ALRosALVideoDevice::setParamDefault(
     fProxy->setParamDefault(req.param);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.setParamDefault failed with exception: %s", e.what());
     return false;
   }
 }
@@ -381,6 +407,7 @@ bool ALRosALVideoDevice::setResolution(
     res.value = fProxy->setResolution(req.id, req.size);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.setResolution failed with exception: %s", e.what());
     return false;
   }
 }
@@ -393,6 +420,7 @@ bool ALRosALVideoDevice::sizesToResolution(
     res.value = fProxy->sizesToResolution(req.width, req.height);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.sizesToResolution failed with exception: %s", e.what());
     return false;
   }
 }
@@ -405,6 +433,7 @@ bool ALRosALVideoDevice::startFrameGrabber(
     res.value = fProxy->startFrameGrabber();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.startFrameGrabber failed with exception: %s", e.what());
     return false;
   }
 }
@@ -417,6 +446,7 @@ bool ALRosALVideoDevice::stopFrameGrabber(
     res.value = fProxy->stopFrameGrabber();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.stopFrameGrabber failed with exception: %s", e.what());
     return false;
   }
 }
@@ -429,6 +459,7 @@ bool ALRosALVideoDevice::stopVideo(
     res.value = fProxy->stopVideo(req.id);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.stopVideo failed with exception: %s", e.what());
     return false;
   }
 }
@@ -441,6 +472,7 @@ bool ALRosALVideoDevice::subscribe(
     res.value = fProxy->subscribe(req.gvmName, req.resolution, req.colorSpace, req.fps);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.subscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -453,6 +485,7 @@ bool ALRosALVideoDevice::unsubscribe(
     fProxy->unsubscribe(req.id);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.unsubscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -465,6 +498,7 @@ bool ALRosALVideoDevice::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.version failed with exception: %s", e.what());
     return false;
   }
 }

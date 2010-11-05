@@ -47,6 +47,7 @@ bool ALRosALFileManager::dataFileExists(
     res.value = fProxy->dataFileExists(req.fileName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFileManager.dataFileExists failed with exception: %s", e.what());
     return false;
   }
 }
@@ -59,6 +60,7 @@ bool ALRosALFileManager::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFileManager.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -71,6 +73,7 @@ bool ALRosALFileManager::fileExists(
     res.value = fProxy->fileExists(req.fileName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFileManager.fileExists failed with exception: %s", e.what());
     return false;
   }
 }
@@ -83,6 +86,7 @@ bool ALRosALFileManager::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFileManager.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -95,6 +99,7 @@ bool ALRosALFileManager::getFileCompletePath(
     res.value = fProxy->getFileCompletePath(req.prefs);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFileManager.getFileCompletePath failed with exception: %s", e.what());
     return false;
   }
 }
@@ -107,6 +112,7 @@ bool ALRosALFileManager::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFileManager.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -119,6 +125,7 @@ bool ALRosALFileManager::getSystemSharedFolderPath(
     res.value = fProxy->getSystemSharedFolderPath();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFileManager.getSystemSharedFolderPath failed with exception: %s", e.what());
     return false;
   }
 }
@@ -131,6 +138,7 @@ bool ALRosALFileManager::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFileManager.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -143,6 +151,7 @@ bool ALRosALFileManager::getUserSharedFolderPath(
     res.value = fProxy->getUserSharedFolderPath();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFileManager.getUserSharedFolderPath failed with exception: %s", e.what());
     return false;
   }
 }
@@ -155,6 +164,7 @@ bool ALRosALFileManager::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFileManager.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -167,6 +177,7 @@ bool ALRosALFileManager::setUserSharedFolderPath(
     fProxy->setUserSharedFolderPath(req.fileName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFileManager.setUserSharedFolderPath failed with exception: %s", e.what());
     return false;
   }
 }
@@ -179,6 +190,7 @@ bool ALRosALFileManager::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALFileManager.version failed with exception: %s", e.what());
     return false;
   }
 }

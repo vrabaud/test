@@ -51,6 +51,7 @@ bool ALRosALRedBallDetection::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallDetection.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -63,6 +64,7 @@ bool ALRosALRedBallDetection::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallDetection.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -75,6 +77,7 @@ bool ALRosALRedBallDetection::getCurrentPeriod(
     res.value = fProxy->getCurrentPeriod();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallDetection.getCurrentPeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -87,6 +90,7 @@ bool ALRosALRedBallDetection::getCurrentPrecision(
     res.value = fProxy->getCurrentPrecision();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallDetection.getCurrentPrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -99,6 +103,7 @@ bool ALRosALRedBallDetection::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallDetection.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -111,6 +116,7 @@ bool ALRosALRedBallDetection::getMyPeriod(
     res.value = fProxy->getMyPeriod(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallDetection.getMyPeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -123,6 +129,7 @@ bool ALRosALRedBallDetection::getMyPrecision(
     res.value = fProxy->getMyPrecision(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallDetection.getMyPrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -135,6 +142,7 @@ bool ALRosALRedBallDetection::getOutputNames(
     res.value = fProxy->getOutputNames();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallDetection.getOutputNames failed with exception: %s", e.what());
     return false;
   }
 }
@@ -147,6 +155,7 @@ bool ALRosALRedBallDetection::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallDetection.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -159,6 +168,7 @@ bool ALRosALRedBallDetection::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallDetection.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -171,6 +181,7 @@ bool ALRosALRedBallDetection::subscribeString(
     fProxy->subscribe(req.name, req.period, req.precision);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallDetection.subscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -183,6 +194,7 @@ bool ALRosALRedBallDetection::subscribe(
     fProxy->subscribe(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallDetection.subscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -195,6 +207,7 @@ bool ALRosALRedBallDetection::unsubscribe(
     fProxy->unsubscribe(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallDetection.unsubscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -207,6 +220,7 @@ bool ALRosALRedBallDetection::updatePeriod(
     fProxy->updatePeriod(req.name, req.period);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallDetection.updatePeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -219,6 +233,7 @@ bool ALRosALRedBallDetection::updatePrecision(
     fProxy->updatePrecision(req.name, req.precision);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallDetection.updatePrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -231,6 +246,7 @@ bool ALRosALRedBallDetection::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallDetection.version failed with exception: %s", e.what());
     return false;
   }
 }

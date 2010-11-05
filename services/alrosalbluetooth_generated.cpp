@@ -47,6 +47,7 @@ bool ALRosALBluetooth::connect(
     fProxy->connect();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBluetooth.connect failed with exception: %s", e.what());
     return false;
   }
 }
@@ -59,6 +60,7 @@ bool ALRosALBluetooth::connectString(
     fProxy->connect(req.devicename);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBluetooth.connect failed with exception: %s", e.what());
     return false;
   }
 }
@@ -71,6 +73,7 @@ bool ALRosALBluetooth::disconnect(
     fProxy->disconnect();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBluetooth.disconnect failed with exception: %s", e.what());
     return false;
   }
 }
@@ -83,6 +86,7 @@ bool ALRosALBluetooth::disconnectString(
     fProxy->disconnect(req.devicename);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBluetooth.disconnect failed with exception: %s", e.what());
     return false;
   }
 }
@@ -95,6 +99,7 @@ bool ALRosALBluetooth::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBluetooth.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -107,6 +112,7 @@ bool ALRosALBluetooth::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBluetooth.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -119,6 +125,7 @@ bool ALRosALBluetooth::getConnectedDeviceList(
     res.value = fProxy->getConnectedDeviceList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBluetooth.getConnectedDeviceList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -131,6 +138,7 @@ bool ALRosALBluetooth::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBluetooth.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -143,6 +151,7 @@ bool ALRosALBluetooth::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBluetooth.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -155,6 +164,7 @@ bool ALRosALBluetooth::isConnected(
     res.value = fProxy->isConnected(req.devicename);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBluetooth.isConnected failed with exception: %s", e.what());
     return false;
   }
 }
@@ -167,6 +177,7 @@ bool ALRosALBluetooth::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBluetooth.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -179,6 +190,7 @@ bool ALRosALBluetooth::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBluetooth.version failed with exception: %s", e.what());
     return false;
   }
 }

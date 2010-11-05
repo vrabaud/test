@@ -47,6 +47,7 @@ bool ALRosALLauncher::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLauncher.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -59,6 +60,7 @@ bool ALRosALLauncher::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLauncher.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -71,6 +73,7 @@ bool ALRosALLauncher::getGlobalModuleList(
     res.value = fProxy->getGlobalModuleList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLauncher.getGlobalModuleList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -83,6 +86,7 @@ bool ALRosALLauncher::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLauncher.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -95,6 +99,7 @@ bool ALRosALLauncher::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLauncher.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -107,6 +112,7 @@ bool ALRosALLauncher::isModulePresent(
     res.value = fProxy->isModulePresent(req.strPartOfModuleName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLauncher.isModulePresent failed with exception: %s", e.what());
     return false;
   }
 }
@@ -119,6 +125,7 @@ bool ALRosALLauncher::launchExecutable(
     res.value = fProxy->launchExecutable(req.moduleName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLauncher.launchExecutable failed with exception: %s", e.what());
     return false;
   }
 }
@@ -131,6 +138,7 @@ bool ALRosALLauncher::launchLocal(
     res.value = fProxy->launchLocal(req.moduleName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLauncher.launchLocal failed with exception: %s", e.what());
     return false;
   }
 }
@@ -143,6 +151,7 @@ bool ALRosALLauncher::launchPythonModule(
     res.value = fProxy->launchPythonModule(req.moduleName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLauncher.launchPythonModule failed with exception: %s", e.what());
     return false;
   }
 }
@@ -155,6 +164,7 @@ bool ALRosALLauncher::launchScript(
     res.value = fProxy->launchScript(req.moduleName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLauncher.launchScript failed with exception: %s", e.what());
     return false;
   }
 }
@@ -167,6 +177,7 @@ bool ALRosALLauncher::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLauncher.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -179,6 +190,7 @@ bool ALRosALLauncher::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLauncher.version failed with exception: %s", e.what());
     return false;
   }
 }

@@ -41,6 +41,7 @@ bool ALRosALPreferences::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALPreferences.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -53,6 +54,7 @@ bool ALRosALPreferences::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALPreferences.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -65,6 +67,7 @@ bool ALRosALPreferences::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALPreferences.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -77,6 +80,7 @@ bool ALRosALPreferences::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALPreferences.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -89,6 +93,7 @@ bool ALRosALPreferences::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALPreferences.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -101,6 +106,7 @@ bool ALRosALPreferences::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALPreferences.version failed with exception: %s", e.what());
     return false;
   }
 }

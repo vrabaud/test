@@ -43,6 +43,7 @@ bool ALRosALLaser::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLaser.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -55,6 +56,7 @@ bool ALRosALLaser::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLaser.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -67,6 +69,7 @@ bool ALRosALLaser::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLaser.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -79,6 +82,7 @@ bool ALRosALLaser::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLaser.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -91,6 +95,7 @@ bool ALRosALLaser::laserOFF(
     fProxy->laserOFF();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLaser.laserOFF failed with exception: %s", e.what());
     return false;
   }
 }
@@ -103,6 +108,7 @@ bool ALRosALLaser::laserON(
     fProxy->laserON();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLaser.laserON failed with exception: %s", e.what());
     return false;
   }
 }
@@ -115,6 +121,7 @@ bool ALRosALLaser::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLaser.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -127,6 +134,7 @@ bool ALRosALLaser::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLaser.version failed with exception: %s", e.what());
     return false;
   }
 }

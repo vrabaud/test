@@ -53,6 +53,7 @@ bool ALRosALInfrared::confRemoteRecordAddKey(
     res.value = fProxy->confRemoteRecordAddKey(req.Keyname);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALInfrared.confRemoteRecordAddKey failed with exception: %s", e.what());
     return false;
   }
 }
@@ -65,6 +66,7 @@ bool ALRosALInfrared::confRemoteRecordCancel(
     res.value = fProxy->confRemoteRecordCancel();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALInfrared.confRemoteRecordCancel failed with exception: %s", e.what());
     return false;
   }
 }
@@ -77,6 +79,7 @@ bool ALRosALInfrared::confRemoteRecordGetStatus(
     res.value = fProxy->confRemoteRecordGetStatus();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALInfrared.confRemoteRecordGetStatus failed with exception: %s", e.what());
     return false;
   }
 }
@@ -89,6 +92,7 @@ bool ALRosALInfrared::confRemoteRecordNext(
     res.value = fProxy->confRemoteRecordNext();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALInfrared.confRemoteRecordNext failed with exception: %s", e.what());
     return false;
   }
 }
@@ -101,6 +105,7 @@ bool ALRosALInfrared::confRemoteRecordSave(
     fProxy->confRemoteRecordSave();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALInfrared.confRemoteRecordSave failed with exception: %s", e.what());
     return false;
   }
 }
@@ -113,6 +118,7 @@ bool ALRosALInfrared::confRemoteRecordStart(
     fProxy->confRemoteRecordStart(req.Rm_name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALInfrared.confRemoteRecordStart failed with exception: %s", e.what());
     return false;
   }
 }
@@ -125,6 +131,7 @@ bool ALRosALInfrared::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALInfrared.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -137,6 +144,7 @@ bool ALRosALInfrared::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALInfrared.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -149,6 +157,7 @@ bool ALRosALInfrared::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALInfrared.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -161,6 +170,7 @@ bool ALRosALInfrared::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALInfrared.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -173,6 +183,7 @@ bool ALRosALInfrared::initReception(
     fProxy->initReception(req.RepeatThreshold);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALInfrared.initReception failed with exception: %s", e.what());
     return false;
   }
 }
@@ -185,6 +196,7 @@ bool ALRosALInfrared::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALInfrared.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -197,6 +209,7 @@ bool ALRosALInfrared::send32(
     fProxy->send32(req.Data_IR);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALInfrared.send32 failed with exception: %s", e.what());
     return false;
   }
 }
@@ -209,6 +222,7 @@ bool ALRosALInfrared::send32Int(
     fProxy->send32(req.Octet1, req.Octet2, req.Octet3, req.Octet4);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALInfrared.send32 failed with exception: %s", e.what());
     return false;
   }
 }
@@ -221,6 +235,7 @@ bool ALRosALInfrared::send8(
     fProxy->send8(req.Octet);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALInfrared.send8 failed with exception: %s", e.what());
     return false;
   }
 }
@@ -233,6 +248,7 @@ bool ALRosALInfrared::sendIpAddress(
     fProxy->sendIpAddress(req.IP);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALInfrared.sendIpAddress failed with exception: %s", e.what());
     return false;
   }
 }
@@ -245,6 +261,7 @@ bool ALRosALInfrared::sendRemoteKey(
     fProxy->sendRemoteKey(req.Remote, req.Key);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALInfrared.sendRemoteKey failed with exception: %s", e.what());
     return false;
   }
 }
@@ -257,6 +274,7 @@ bool ALRosALInfrared::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALInfrared.version failed with exception: %s", e.what());
     return false;
   }
 }

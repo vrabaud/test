@@ -20,12 +20,12 @@ void ALRosALMotionRecorder::bindCustomMethods(AL::ALPtr<AL::ALBroker> pNaoQiBrok
 //  rosbridge::ALMotionRecorderDataChanged::Request  &req,
 //  rosbridge::ALMotionRecorderDataChanged::Response &res)
 //{
-
 //  try {
 //    fProxy->dataChanged(req.dataName, req.data, req.message);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALMotionRecorder.dataChanged failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -35,12 +35,12 @@ bool ALRosALMotionRecorder::getMethodHelp(
   rosbridge::ALModuleGetMethodHelp::Request  &req,
   rosbridge::ALModuleGetMethodHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getMethodHelp(req.methodName);
     ALRosMethodHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALMotionRecorder.getMethodHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -50,12 +50,12 @@ bool ALRosALMotionRecorder::getModuleHelp(
   rosbridge::ALModuleGetModuleHelp::Request  &req,
   rosbridge::ALModuleGetModuleHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getModuleHelp();
     ALRosModuleHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALMotionRecorder.getModuleHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -65,12 +65,12 @@ bool ALRosALMotionRecorder::getModuleHelp(
 //  rosbridge::ALMotionRecorderStartPeriodicRecording::Request  &req,
 //  rosbridge::ALMotionRecorderStartPeriodicRecording::Response &res)
 //{
-
 //  try {
 //    fProxy->startPeriodicRecording(req.jointsToRecord, req.nbPoses, req.extensionAllowed, req.timeStep, req.jointsToReplay, req.replayData);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALMotionRecorder.startPeriodicRecording failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -80,12 +80,12 @@ bool ALRosALMotionRecorder::getModuleHelp(
 //  rosbridge::ALMotionRecorderStopAndGetRecording::Request  &req,
 //  rosbridge::ALMotionRecorderStopAndGetRecording::Response &res)
 //{
-
 //  try {
 //    res.value = fProxy->stopAndGetRecording();
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALMotionRecorder.stopAndGetRecording failed with exception: %s", e.what());
 //    return false;
 //  }
 //}

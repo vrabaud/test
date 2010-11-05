@@ -22,12 +22,12 @@ void ALRosALBluetooth::bindCustomMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, r
 //  rosbridge::ALBluetoothGetAssociatedDeviceList::Request  &req,
 //  rosbridge::ALBluetoothGetAssociatedDeviceList::Response &res)
 //{
-
 //  try {
 //    res.value = fProxy->getAssociatedDeviceList();
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALBluetooth.getAssociatedDeviceList failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -37,12 +37,12 @@ void ALRosALBluetooth::bindCustomMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, r
 //  rosbridge::ALBluetoothGetDeviceList::Request  &req,
 //  rosbridge::ALBluetoothGetDeviceList::Response &res)
 //{
-
 //  try {
 //    res.value = fProxy->getDeviceList();
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALBluetooth.getDeviceList failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -52,12 +52,12 @@ bool ALRosALBluetooth::getMethodHelp(
   rosbridge::ALModuleGetMethodHelp::Request  &req,
   rosbridge::ALModuleGetMethodHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getMethodHelp(req.methodName);
     ALRosMethodHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALBluetooth.getMethodHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -67,12 +67,12 @@ bool ALRosALBluetooth::getModuleHelp(
   rosbridge::ALModuleGetModuleHelp::Request  &req,
   rosbridge::ALModuleGetModuleHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getModuleHelp();
     ALRosModuleHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALBluetooth.getModuleHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -82,12 +82,12 @@ bool ALRosALBluetooth::getModuleHelp(
 //  rosbridge::ALBluetoothScan::Request  &req,
 //  rosbridge::ALBluetoothScan::Response &res)
 //{
-
 //  try {
 //    res.value = fProxy->scan();
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALBluetooth.scan failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -97,12 +97,12 @@ bool ALRosALBluetooth::getModuleHelp(
 //  rosbridge::ALBluetoothSend::Request  &req,
 //  rosbridge::ALBluetoothSend::Response &res)
 //{
-
 //  try {
 //    fProxy->send(req.devicename, req.PWMs, req.servos, req.GPIOs);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALBluetooth.send failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -112,12 +112,12 @@ bool ALRosALBluetooth::getModuleHelp(
 //  rosbridge::ALBluetoothSetAssociatedDeviceList::Request  &req,
 //  rosbridge::ALBluetoothSetAssociatedDeviceList::Response &res)
 //{
-
 //  try {
 //    fProxy->setAssociatedDeviceList(req.deviceList);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALBluetooth.setAssociatedDeviceList failed with exception: %s", e.what());
 //    return false;
 //  }
 //}

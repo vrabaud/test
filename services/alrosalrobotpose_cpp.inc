@@ -19,12 +19,12 @@ void ALRosALRobotPose::bindCustomMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, r
 //  rosbridge::ALRobotPoseGetActualPoseAndTime::Request  &req,
 //  rosbridge::ALRobotPoseGetActualPoseAndTime::Response &res)
 //{
-
 //  try {
 //    res.value = fProxy->getActualPoseAndTime();
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALRobotPose.getActualPoseAndTime failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -34,12 +34,12 @@ bool ALRosALRobotPose::getMethodHelp(
   rosbridge::ALModuleGetMethodHelp::Request  &req,
   rosbridge::ALModuleGetMethodHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getMethodHelp(req.methodName);
     ALRosMethodHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALRobotPose.getMethodHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -49,12 +49,12 @@ bool ALRosALRobotPose::getModuleHelp(
   rosbridge::ALModuleGetModuleHelp::Request  &req,
   rosbridge::ALModuleGetModuleHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getModuleHelp();
     ALRosModuleHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALRobotPose.getModuleHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -64,12 +64,12 @@ bool ALRosALRobotPose::getModuleHelp(
 //  rosbridge::ALRobotPoseGetPoseNames::Request  &req,
 //  rosbridge::ALRobotPoseGetPoseNames::Response &res)
 //{
-
 //  try {
 //    res.value = fProxy->getPoseNames();
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALRobotPose.getPoseNames failed with exception: %s", e.what());
 //    return false;
 //  }
 //}

@@ -47,6 +47,7 @@ bool ALRosALRedBallTracker::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallTracker.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -59,6 +60,7 @@ bool ALRosALRedBallTracker::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallTracker.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -71,6 +73,7 @@ bool ALRosALRedBallTracker::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallTracker.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -83,6 +86,7 @@ bool ALRosALRedBallTracker::getPosition(
     res.value = fProxy->getPosition();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallTracker.getPosition failed with exception: %s", e.what());
     return false;
   }
 }
@@ -95,6 +99,7 @@ bool ALRosALRedBallTracker::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallTracker.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -107,6 +112,7 @@ bool ALRosALRedBallTracker::isActive(
     res.value = fProxy->isActive();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallTracker.isActive failed with exception: %s", e.what());
     return false;
   }
 }
@@ -119,6 +125,7 @@ bool ALRosALRedBallTracker::isNewData(
     res.value = fProxy->isNewData();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallTracker.isNewData failed with exception: %s", e.what());
     return false;
   }
 }
@@ -131,6 +138,7 @@ bool ALRosALRedBallTracker::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallTracker.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -143,6 +151,7 @@ bool ALRosALRedBallTracker::setWholeBodyOn(
     fProxy->setWholeBodyOn(req.pWholeBodyOn);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallTracker.setWholeBodyOn failed with exception: %s", e.what());
     return false;
   }
 }
@@ -155,6 +164,7 @@ bool ALRosALRedBallTracker::startTracker(
     fProxy->startTracker();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallTracker.startTracker failed with exception: %s", e.what());
     return false;
   }
 }
@@ -167,6 +177,7 @@ bool ALRosALRedBallTracker::stopTracker(
     fProxy->stopTracker();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallTracker.stopTracker failed with exception: %s", e.what());
     return false;
   }
 }
@@ -179,6 +190,7 @@ bool ALRosALRedBallTracker::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALRedBallTracker.version failed with exception: %s", e.what());
     return false;
   }
 }

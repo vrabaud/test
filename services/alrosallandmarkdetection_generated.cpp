@@ -52,6 +52,7 @@ bool ALRosALLandMarkDetection::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLandMarkDetection.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -64,6 +65,7 @@ bool ALRosALLandMarkDetection::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLandMarkDetection.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -76,6 +78,7 @@ bool ALRosALLandMarkDetection::getCurrentPeriod(
     res.value = fProxy->getCurrentPeriod();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLandMarkDetection.getCurrentPeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -88,6 +91,7 @@ bool ALRosALLandMarkDetection::getCurrentPrecision(
     res.value = fProxy->getCurrentPrecision();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLandMarkDetection.getCurrentPrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -100,6 +104,7 @@ bool ALRosALLandMarkDetection::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLandMarkDetection.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -112,6 +117,7 @@ bool ALRosALLandMarkDetection::getMyPeriod(
     res.value = fProxy->getMyPeriod(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLandMarkDetection.getMyPeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -124,6 +130,7 @@ bool ALRosALLandMarkDetection::getMyPrecision(
     res.value = fProxy->getMyPrecision(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLandMarkDetection.getMyPrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -136,6 +143,7 @@ bool ALRosALLandMarkDetection::getOutputNames(
     res.value = fProxy->getOutputNames();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLandMarkDetection.getOutputNames failed with exception: %s", e.what());
     return false;
   }
 }
@@ -148,6 +156,7 @@ bool ALRosALLandMarkDetection::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLandMarkDetection.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -160,6 +169,7 @@ bool ALRosALLandMarkDetection::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLandMarkDetection.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -172,6 +182,7 @@ bool ALRosALLandMarkDetection::run(
     fProxy->run();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLandMarkDetection.run failed with exception: %s", e.what());
     return false;
   }
 }
@@ -184,6 +195,7 @@ bool ALRosALLandMarkDetection::subscribeString(
     fProxy->subscribe(req.name, req.period, req.precision);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLandMarkDetection.subscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -196,6 +208,7 @@ bool ALRosALLandMarkDetection::subscribe(
     fProxy->subscribe(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLandMarkDetection.subscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -208,6 +221,7 @@ bool ALRosALLandMarkDetection::unsubscribe(
     fProxy->unsubscribe(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLandMarkDetection.unsubscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -220,6 +234,7 @@ bool ALRosALLandMarkDetection::updatePeriod(
     fProxy->updatePeriod(req.name, req.period);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLandMarkDetection.updatePeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -232,6 +247,7 @@ bool ALRosALLandMarkDetection::updatePrecision(
     fProxy->updatePrecision(req.name, req.precision);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLandMarkDetection.updatePrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -244,6 +260,7 @@ bool ALRosALLandMarkDetection::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLandMarkDetection.version failed with exception: %s", e.what());
     return false;
   }
 }

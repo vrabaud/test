@@ -51,6 +51,7 @@ bool ALRosALSonar::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSonar.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -63,6 +64,7 @@ bool ALRosALSonar::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSonar.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -75,6 +77,7 @@ bool ALRosALSonar::getCurrentPeriod(
     res.value = fProxy->getCurrentPeriod();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSonar.getCurrentPeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -87,6 +90,7 @@ bool ALRosALSonar::getCurrentPrecision(
     res.value = fProxy->getCurrentPrecision();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSonar.getCurrentPrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -99,6 +103,7 @@ bool ALRosALSonar::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSonar.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -111,6 +116,7 @@ bool ALRosALSonar::getMyPeriod(
     res.value = fProxy->getMyPeriod(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSonar.getMyPeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -123,6 +129,7 @@ bool ALRosALSonar::getMyPrecision(
     res.value = fProxy->getMyPrecision(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSonar.getMyPrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -135,6 +142,7 @@ bool ALRosALSonar::getOutputNames(
     res.value = fProxy->getOutputNames();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSonar.getOutputNames failed with exception: %s", e.what());
     return false;
   }
 }
@@ -147,6 +155,7 @@ bool ALRosALSonar::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSonar.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -159,6 +168,7 @@ bool ALRosALSonar::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSonar.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -171,6 +181,7 @@ bool ALRosALSonar::subscribeString(
     fProxy->subscribe(req.name, req.period, req.precision);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSonar.subscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -183,6 +194,7 @@ bool ALRosALSonar::subscribe(
     fProxy->subscribe(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSonar.subscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -195,6 +207,7 @@ bool ALRosALSonar::unsubscribe(
     fProxy->unsubscribe(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSonar.unsubscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -207,6 +220,7 @@ bool ALRosALSonar::updatePeriod(
     fProxy->updatePeriod(req.name, req.period);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSonar.updatePeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -219,6 +233,7 @@ bool ALRosALSonar::updatePrecision(
     fProxy->updatePrecision(req.name, req.precision);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSonar.updatePrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -231,6 +246,7 @@ bool ALRosALSonar::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSonar.version failed with exception: %s", e.what());
     return false;
   }
 }

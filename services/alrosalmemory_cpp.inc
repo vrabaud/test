@@ -34,7 +34,8 @@ void ALRosALMemory::bindCustomMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ros:
 //    fProxy->dataChanged(req.dataName, req.data, req.message);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALMemory.dataChanged failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -86,7 +87,8 @@ bool ALRosALMemory::getDataInt(
 //    res.value = fProxy->getData(req.name);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALMemory.getData failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -113,7 +115,8 @@ bool ALRosALMemory::getDataListName(
 //    res.value = fProxy->getDataOnChange(req.name, req.duration);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALMemory.getDataOnChange failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -127,7 +130,8 @@ bool ALRosALMemory::getDataListName(
 //    res.value = fProxy->getListData(req.name);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALMemory.getListData failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -141,7 +145,8 @@ bool ALRosALMemory::getMethodHelp(
     AL::ALValue data = fProxy->getMethodHelp(req.methodName);
     ALRosMethodHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.getMethodHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -155,7 +160,8 @@ bool ALRosALMemory::getModuleHelp(
     AL::ALValue data = fProxy->getModuleHelp();
     ALRosModuleHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.getModuleHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -169,7 +175,8 @@ bool ALRosALMemory::getModuleHelp(
 //    fProxy->insertData(req.name, req.data);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALMemory.insertData failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -183,7 +190,8 @@ bool ALRosALMemory::getModuleHelp(
 //    fProxy->insertListData(req.listOfInsertData);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALMemory.insertListData failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -197,7 +205,8 @@ bool ALRosALMemory::getModuleHelp(
 //    fProxy->insertObject(req.name, req.buffer, req.bufferSize);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALMemory.insertObject failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -211,7 +220,8 @@ bool ALRosALMemory::getModuleHelp(
 //    fProxy->raiseEvent(req.name, req.data);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALMemory.raiseEvent failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -225,7 +235,8 @@ bool ALRosALMemory::getModuleHelp(
 //    fProxy->raiseMicroEvent(req.name, req.data);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALMemory.raiseMicroEvent failed with exception: %s", e.what());
 //    return false;
 //  }
 //}

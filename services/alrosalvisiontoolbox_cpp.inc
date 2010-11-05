@@ -18,12 +18,12 @@ bool ALRosALVisionToolbox::getMethodHelp(
   rosbridge::ALModuleGetMethodHelp::Request  &req,
   rosbridge::ALModuleGetMethodHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getMethodHelp(req.methodName);
     ALRosMethodHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALVisionToolbox.getMethodHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -33,12 +33,12 @@ bool ALRosALVisionToolbox::getModuleHelp(
   rosbridge::ALModuleGetModuleHelp::Request  &req,
   rosbridge::ALModuleGetModuleHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getModuleHelp();
     ALRosModuleHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALVisionToolbox.getModuleHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -48,12 +48,12 @@ bool ALRosALVisionToolbox::getModuleHelp(
 //  rosbridge::ALVisionToolboxStopVideoRecord::Request  &req,
 //  rosbridge::ALVisionToolboxStopVideoRecord::Response &res)
 //{
-
 //  try {
 //    res.value = fProxy->stopVideoRecord();
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALVisionToolbox.stopVideoRecord failed with exception: %s", e.what());
 //    return false;
 //  }
 //}

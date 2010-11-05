@@ -20,12 +20,12 @@ void ALRosALSoundDetection::bindCustomMethods(AL::ALPtr<AL::ALBroker> pNaoQiBrok
 //  rosbridge::ALSoundDetectionGetDescription::Request  &req,
 //  rosbridge::ALSoundDetectionGetDescription::Response &res)
 //{
-
 //  try {
 //    res.value = fProxy->getDescription(req.type, req.nameDesc);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALSoundDetection.getDescription failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -35,12 +35,12 @@ void ALRosALSoundDetection::bindCustomMethods(AL::ALPtr<AL::ALBroker> pNaoQiBrok
 //  rosbridge::ALSoundDetectionGetEvents::Request  &req,
 //  rosbridge::ALSoundDetectionGetEvents::Response &res)
 //{
-
 //  try {
 //    res.value = fProxy->getEvents(req.type);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALSoundDetection.getEvents failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -50,12 +50,12 @@ bool ALRosALSoundDetection::getMethodHelp(
   rosbridge::ALModuleGetMethodHelp::Request  &req,
   rosbridge::ALModuleGetMethodHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getMethodHelp(req.methodName);
     ALRosMethodHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.getMethodHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -65,12 +65,12 @@ bool ALRosALSoundDetection::getModuleHelp(
   rosbridge::ALModuleGetModuleHelp::Request  &req,
   rosbridge::ALModuleGetModuleHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getModuleHelp();
     ALRosModuleHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.getModuleHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -80,12 +80,12 @@ bool ALRosALSoundDetection::getModuleHelp(
 //  rosbridge::ALExtractorGetSubscribersInfo::Request  &req,
 //  rosbridge::ALExtractorGetSubscribersInfo::Response &res)
 //{
-
 //  try {
 //    res.value = fProxy->getSubscribersInfo();
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALSoundDetection.getSubscribersInfo failed with exception: %s", e.what());
 //    return false;
 //  }
 //}

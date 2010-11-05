@@ -42,6 +42,7 @@ bool ALRosALMotionRecorder::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotionRecorder.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -54,6 +55,7 @@ bool ALRosALMotionRecorder::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotionRecorder.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -66,6 +68,7 @@ bool ALRosALMotionRecorder::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotionRecorder.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -78,6 +81,7 @@ bool ALRosALMotionRecorder::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotionRecorder.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -90,6 +94,7 @@ bool ALRosALMotionRecorder::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotionRecorder.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -102,6 +107,7 @@ bool ALRosALMotionRecorder::startInteractiveRecording(
     fProxy->startInteractiveRecording(req.jointsToRecord, req.nbPoses, req.extensionAllowed, req.mode);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotionRecorder.startInteractiveRecording failed with exception: %s", e.what());
     return false;
   }
 }
@@ -114,6 +120,7 @@ bool ALRosALMotionRecorder::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMotionRecorder.version failed with exception: %s", e.what());
     return false;
   }
 }

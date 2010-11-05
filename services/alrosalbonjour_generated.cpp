@@ -42,6 +42,7 @@ bool ALRosALBonjour::declare(
     fProxy->declare();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBonjour.declare failed with exception: %s", e.what());
     return false;
   }
 }
@@ -54,6 +55,7 @@ bool ALRosALBonjour::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBonjour.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -66,6 +68,7 @@ bool ALRosALBonjour::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBonjour.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -78,6 +81,7 @@ bool ALRosALBonjour::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBonjour.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -90,6 +94,7 @@ bool ALRosALBonjour::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBonjour.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -102,6 +107,7 @@ bool ALRosALBonjour::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBonjour.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -114,6 +120,7 @@ bool ALRosALBonjour::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALBonjour.version failed with exception: %s", e.what());
     return false;
   }
 }

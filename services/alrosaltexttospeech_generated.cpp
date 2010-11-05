@@ -57,6 +57,7 @@ bool ALRosALTextToSpeech::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -69,6 +70,7 @@ bool ALRosALTextToSpeech::getAvailableLanguages(
     res.value = fProxy->getAvailableLanguages();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.getAvailableLanguages failed with exception: %s", e.what());
     return false;
   }
 }
@@ -81,6 +83,7 @@ bool ALRosALTextToSpeech::getAvailableVoices(
     res.value = fProxy->getAvailableVoices();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.getAvailableVoices failed with exception: %s", e.what());
     return false;
   }
 }
@@ -93,6 +96,7 @@ bool ALRosALTextToSpeech::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -105,6 +109,7 @@ bool ALRosALTextToSpeech::getLanguage(
     res.value = fProxy->getLanguage();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.getLanguage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -117,6 +122,7 @@ bool ALRosALTextToSpeech::getLanguageEncoding(
     res.value = fProxy->getLanguageEncoding(req.pLanguage);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.getLanguageEncoding failed with exception: %s", e.what());
     return false;
   }
 }
@@ -129,6 +135,7 @@ bool ALRosALTextToSpeech::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -141,6 +148,7 @@ bool ALRosALTextToSpeech::getParameter(
     res.value = fProxy->getParameter(req.pParameterName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.getParameter failed with exception: %s", e.what());
     return false;
   }
 }
@@ -153,6 +161,7 @@ bool ALRosALTextToSpeech::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -165,6 +174,7 @@ bool ALRosALTextToSpeech::getVoice(
     res.value = fProxy->getVoice();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.getVoice failed with exception: %s", e.what());
     return false;
   }
 }
@@ -177,6 +187,7 @@ bool ALRosALTextToSpeech::getVolume(
     res.value = fProxy->getVolume();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.getVolume failed with exception: %s", e.what());
     return false;
   }
 }
@@ -189,6 +200,7 @@ bool ALRosALTextToSpeech::loadVoicePreference(
     fProxy->loadVoicePreference(req.pPreferenceName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.loadVoicePreference failed with exception: %s", e.what());
     return false;
   }
 }
@@ -201,6 +213,7 @@ bool ALRosALTextToSpeech::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -213,6 +226,7 @@ bool ALRosALTextToSpeech::say(
     res.value = fProxy->say(req.stringToSay);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.say failed with exception: %s", e.what());
     return false;
   }
 }
@@ -225,6 +239,7 @@ bool ALRosALTextToSpeech::sayToFile(
     res.value = fProxy->sayToFile(req.pStringToSay, req.pFileName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.sayToFile failed with exception: %s", e.what());
     return false;
   }
 }
@@ -237,6 +252,7 @@ bool ALRosALTextToSpeech::sayToFileAndPlay(
     res.value = fProxy->sayToFileAndPlay(req.pStringToSay);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.sayToFileAndPlay failed with exception: %s", e.what());
     return false;
   }
 }
@@ -249,6 +265,7 @@ bool ALRosALTextToSpeech::setLanguage(
     fProxy->setLanguage(req.pLanguage);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.setLanguage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -261,6 +278,7 @@ bool ALRosALTextToSpeech::setParameter(
     fProxy->setParameter(req.pEffectName, req.pEffectValue);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.setParameter failed with exception: %s", e.what());
     return false;
   }
 }
@@ -273,6 +291,7 @@ bool ALRosALTextToSpeech::setVoice(
     fProxy->setVoice(req.pVoiceID);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.setVoice failed with exception: %s", e.what());
     return false;
   }
 }
@@ -285,6 +304,7 @@ bool ALRosALTextToSpeech::setVolume(
     fProxy->setVolume(req.volume);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.setVolume failed with exception: %s", e.what());
     return false;
   }
 }
@@ -297,6 +317,7 @@ bool ALRosALTextToSpeech::stopAll(
     fProxy->stopAll();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.stopAll failed with exception: %s", e.what());
     return false;
   }
 }
@@ -309,6 +330,7 @@ bool ALRosALTextToSpeech::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.version failed with exception: %s", e.what());
     return false;
   }
 }

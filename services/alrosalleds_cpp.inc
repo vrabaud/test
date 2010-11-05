@@ -19,12 +19,12 @@ void ALRosALLeds::bindCustomMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ros::N
 //  rosbridge::ALLedsFadeListRGB::Request  &req,
 //  rosbridge::ALLedsFadeListRGB::Response &res)
 //{
-
 //  try {
 //    fProxy->fadeListRGB(req.name, req.rgbList, req.timeList);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALLeds.fadeListRGB failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -34,12 +34,12 @@ void ALRosALLeds::bindCustomMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ros::N
 //  rosbridge::ALLedsGetIntensity::Request  &req,
 //  rosbridge::ALLedsGetIntensity::Response &res)
 //{
-
 //  try {
 //    res.value = fProxy->getIntensity(req.name);
 //
 //    return true;
-//  } catch(const ALError&) {
+//  } catch(const ALError& e) {
+//    ROS_ERROR("ALLeds.getIntensity failed with exception: %s", e.what());
 //    return false;
 //  }
 //}
@@ -49,12 +49,12 @@ bool ALRosALLeds::getMethodHelp(
   rosbridge::ALModuleGetMethodHelp::Request  &req,
   rosbridge::ALModuleGetMethodHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getMethodHelp(req.methodName);
     ALRosMethodHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.getMethodHelp failed with exception: %s", e.what());
     return false;
   }
 }
@@ -64,12 +64,12 @@ bool ALRosALLeds::getModuleHelp(
   rosbridge::ALModuleGetModuleHelp::Request  &req,
   rosbridge::ALModuleGetModuleHelp::Response &res)
 {
-
   try {
     AL::ALValue data = fProxy->getModuleHelp();
     ALRosModuleHelpHelper(data, res);
     return true;
-  } catch(const ALError&) {
+  } catch(const ALError& e) {
+    ROS_ERROR("ALLeds.getModuleHelp failed with exception: %s", e.what());
     return false;
   }
 }

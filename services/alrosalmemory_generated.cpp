@@ -61,6 +61,7 @@ bool ALRosALMemory::declareEventString(
     fProxy->declareEvent(req.eventName, req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.declareEvent failed with exception: %s", e.what());
     return false;
   }
 }
@@ -73,6 +74,7 @@ bool ALRosALMemory::declareEvent(
     fProxy->declareEvent(req.eventName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.declareEvent failed with exception: %s", e.what());
     return false;
   }
 }
@@ -85,6 +87,7 @@ bool ALRosALMemory::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -97,6 +100,7 @@ bool ALRosALMemory::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -109,6 +113,7 @@ bool ALRosALMemory::getEventList(
     res.value = fProxy->getEventList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.getEventList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -121,6 +126,7 @@ bool ALRosALMemory::getExtractorEvent(
     res.value = fProxy->getExtractorEvent(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.getExtractorEvent failed with exception: %s", e.what());
     return false;
   }
 }
@@ -133,6 +139,7 @@ bool ALRosALMemory::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -145,6 +152,7 @@ bool ALRosALMemory::getMicroEventList(
     res.value = fProxy->getMicroEventList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.getMicroEventList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -157,6 +165,7 @@ bool ALRosALMemory::getType(
     res.value = fProxy->getType(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.getType failed with exception: %s", e.what());
     return false;
   }
 }
@@ -169,6 +178,7 @@ bool ALRosALMemory::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -181,6 +191,7 @@ bool ALRosALMemory::insertDataInt(
     fProxy->insertData(req.name, req.data);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.insertData failed with exception: %s", e.what());
     return false;
   }
 }
@@ -193,6 +204,7 @@ bool ALRosALMemory::insertDataFloat(
     fProxy->insertData(req.name, req.data);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.insertData failed with exception: %s", e.what());
     return false;
   }
 }
@@ -205,6 +217,7 @@ bool ALRosALMemory::insertDataString(
     fProxy->insertData(req.name, req.data);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.insertData failed with exception: %s", e.what());
     return false;
   }
 }
@@ -217,6 +230,7 @@ bool ALRosALMemory::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -229,6 +243,7 @@ bool ALRosALMemory::removeData(
     fProxy->removeData(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.removeData failed with exception: %s", e.what());
     return false;
   }
 }
@@ -241,6 +256,7 @@ bool ALRosALMemory::removeMicroEvent(
     fProxy->removeMicroEvent(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.removeMicroEvent failed with exception: %s", e.what());
     return false;
   }
 }
@@ -253,6 +269,7 @@ bool ALRosALMemory::subscribeToEvent(
     fProxy->subscribeToEvent(req.name, req.moduleName, req.callback);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.subscribeToEvent failed with exception: %s", e.what());
     return false;
   }
 }
@@ -265,6 +282,7 @@ bool ALRosALMemory::subscribeToEventString(
     fProxy->subscribeToEvent(req.name, req.moduleName, req.message, req.callback);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.subscribeToEvent failed with exception: %s", e.what());
     return false;
   }
 }
@@ -277,6 +295,7 @@ bool ALRosALMemory::subscribeToMicroEvent(
     fProxy->subscribeToMicroEvent(req.name, req.moduleName, req.message, req.callback);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.subscribeToMicroEvent failed with exception: %s", e.what());
     return false;
   }
 }
@@ -289,6 +308,7 @@ bool ALRosALMemory::unregisterModuleReference(
     fProxy->unregisterModuleReference(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.unregisterModuleReference failed with exception: %s", e.what());
     return false;
   }
 }
@@ -301,6 +321,7 @@ bool ALRosALMemory::unsubscribeOnDataChange(
     fProxy->unsubscribeOnDataChange(req.name, req.moduleName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.unsubscribeOnDataChange failed with exception: %s", e.what());
     return false;
   }
 }
@@ -313,6 +334,7 @@ bool ALRosALMemory::unsubscribeToEvent(
     fProxy->unsubscribeToEvent(req.name, req.moduleName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.unsubscribeToEvent failed with exception: %s", e.what());
     return false;
   }
 }
@@ -325,6 +347,7 @@ bool ALRosALMemory::unsubscribeToMicroEvent(
     fProxy->unsubscribeToMicroEvent(req.name, req.moduleName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.unsubscribeToMicroEvent failed with exception: %s", e.what());
     return false;
   }
 }
@@ -337,6 +360,7 @@ bool ALRosALMemory::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.version failed with exception: %s", e.what());
     return false;
   }
 }
@@ -349,6 +373,7 @@ bool ALRosALMemory::waitOnCondition(
     fProxy->waitOnCondition(req.dataName, req.condition);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.waitOnCondition failed with exception: %s", e.what());
     return false;
   }
 }
@@ -361,6 +386,7 @@ bool ALRosALMemory::waitSynchronizer(
     fProxy->waitSynchronizer(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.waitSynchronizer failed with exception: %s", e.what());
     return false;
   }
 }

@@ -53,6 +53,7 @@ bool ALRosALSoundDetection::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -65,6 +66,7 @@ bool ALRosALSoundDetection::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -77,6 +79,7 @@ bool ALRosALSoundDetection::getCurrentPeriod(
     res.value = fProxy->getCurrentPeriod();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.getCurrentPeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -89,6 +92,7 @@ bool ALRosALSoundDetection::getCurrentPrecision(
     res.value = fProxy->getCurrentPrecision();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.getCurrentPrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -101,6 +105,7 @@ bool ALRosALSoundDetection::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -113,6 +118,7 @@ bool ALRosALSoundDetection::getMyPeriod(
     res.value = fProxy->getMyPeriod(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.getMyPeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -125,6 +131,7 @@ bool ALRosALSoundDetection::getMyPrecision(
     res.value = fProxy->getMyPrecision(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.getMyPrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -137,6 +144,7 @@ bool ALRosALSoundDetection::getOutputNames(
     res.value = fProxy->getOutputNames();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.getOutputNames failed with exception: %s", e.what());
     return false;
   }
 }
@@ -149,6 +157,7 @@ bool ALRosALSoundDetection::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -161,6 +170,7 @@ bool ALRosALSoundDetection::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -173,6 +183,7 @@ bool ALRosALSoundDetection::setDebugMode(
     fProxy->setDebugMode(req.bSetOrUnset);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.setDebugMode failed with exception: %s", e.what());
     return false;
   }
 }
@@ -185,6 +196,7 @@ bool ALRosALSoundDetection::setParameter(
     fProxy->setParameter(req.type, req.paraDetect, req.param);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.setParameter failed with exception: %s", e.what());
     return false;
   }
 }
@@ -197,6 +209,7 @@ bool ALRosALSoundDetection::subscribeString(
     fProxy->subscribe(req.name, req.period, req.precision);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.subscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -209,6 +222,7 @@ bool ALRosALSoundDetection::subscribe(
     fProxy->subscribe(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.subscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -221,6 +235,7 @@ bool ALRosALSoundDetection::unsubscribe(
     fProxy->unsubscribe(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.unsubscribe failed with exception: %s", e.what());
     return false;
   }
 }
@@ -233,6 +248,7 @@ bool ALRosALSoundDetection::updatePeriod(
     fProxy->updatePeriod(req.name, req.period);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.updatePeriod failed with exception: %s", e.what());
     return false;
   }
 }
@@ -245,6 +261,7 @@ bool ALRosALSoundDetection::updatePrecision(
     fProxy->updatePrecision(req.name, req.precision);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.updatePrecision failed with exception: %s", e.what());
     return false;
   }
 }
@@ -257,6 +274,7 @@ bool ALRosALSoundDetection::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.version failed with exception: %s", e.what());
     return false;
   }
 }

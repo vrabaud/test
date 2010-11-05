@@ -54,6 +54,7 @@ bool ALRosALLogger::debug(
     fProxy->debug(req.moduleName, req.message);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.debug failed with exception: %s", e.what());
     return false;
   }
 }
@@ -66,6 +67,7 @@ bool ALRosALLogger::error(
     fProxy->error(req.moduleName, req.message);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.error failed with exception: %s", e.what());
     return false;
   }
 }
@@ -78,6 +80,7 @@ bool ALRosALLogger::exit(
     fProxy->exit();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.exit failed with exception: %s", e.what());
     return false;
   }
 }
@@ -90,6 +93,7 @@ bool ALRosALLogger::fatal(
     fProxy->fatal(req.moduleName, req.message);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.fatal failed with exception: %s", e.what());
     return false;
   }
 }
@@ -102,6 +106,7 @@ bool ALRosALLogger::getBrokerName(
     res.value = fProxy->getBrokerName();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.getBrokerName failed with exception: %s", e.what());
     return false;
   }
 }
@@ -114,6 +119,7 @@ bool ALRosALLogger::getMethodList(
     res.value = fProxy->getMethodList();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.getMethodList failed with exception: %s", e.what());
     return false;
   }
 }
@@ -126,6 +132,7 @@ bool ALRosALLogger::getUsage(
     res.value = fProxy->getUsage(req.name);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.getUsage failed with exception: %s", e.what());
     return false;
   }
 }
@@ -138,6 +145,7 @@ bool ALRosALLogger::info(
     fProxy->info(req.moduleName, req.message);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.info failed with exception: %s", e.what());
     return false;
   }
 }
@@ -150,6 +158,7 @@ bool ALRosALLogger::logInFile(
     fProxy->logInFile(req.fileName);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.logInFile failed with exception: %s", e.what());
     return false;
   }
 }
@@ -162,6 +171,7 @@ bool ALRosALLogger::logInStd(
     fProxy->logInStd();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.logInStd failed with exception: %s", e.what());
     return false;
   }
 }
@@ -174,6 +184,7 @@ bool ALRosALLogger::logInSys(
     fProxy->logInSys();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.logInSys failed with exception: %s", e.what());
     return false;
   }
 }
@@ -186,6 +197,7 @@ bool ALRosALLogger::lowDebug(
     fProxy->lowDebug(req.moduleName, req.message);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.lowDebug failed with exception: %s", e.what());
     return false;
   }
 }
@@ -198,6 +210,7 @@ bool ALRosALLogger::lowInfo(
     fProxy->lowInfo(req.moduleName, req.message);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.lowInfo failed with exception: %s", e.what());
     return false;
   }
 }
@@ -210,6 +223,7 @@ bool ALRosALLogger::ping(
     res.value = fProxy->ping();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.ping failed with exception: %s", e.what());
     return false;
   }
 }
@@ -222,6 +236,7 @@ bool ALRosALLogger::separator(
     fProxy->separator();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.separator failed with exception: %s", e.what());
     return false;
   }
 }
@@ -234,6 +249,7 @@ bool ALRosALLogger::setFilter(
     fProxy->setFilter(req.filter);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.setFilter failed with exception: %s", e.what());
     return false;
   }
 }
@@ -246,6 +262,7 @@ bool ALRosALLogger::setVerbosity(
     fProxy->setVerbosity(req.verbosity);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.setVerbosity failed with exception: %s", e.what());
     return false;
   }
 }
@@ -258,6 +275,7 @@ bool ALRosALLogger::version(
     res.value = fProxy->version();
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.version failed with exception: %s", e.what());
     return false;
   }
 }
@@ -270,6 +288,7 @@ bool ALRosALLogger::warn(
     fProxy->warn(req.moduleName, req.message);
     return true;
   } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.warn failed with exception: %s", e.what());
     return false;
   }
 }

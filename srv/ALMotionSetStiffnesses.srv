@@ -2,7 +2,7 @@
 # Sets the stiffness of one or more joints. This is a non-blocking call.
 
 # Names of joints, chains, "Body", "BodyJoints" or "BodyActuators".
-string names
+string[] names
 # One or more stiffnesses between zero and one.
 float32[] stiffnesses
 ---

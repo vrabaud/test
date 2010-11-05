@@ -78,7 +78,7 @@ generate_t001chain_config() {
     echo "rospack failed (lflags)"
     return
   fi
-  ros_def=$(rospack cflags-only-other $name | sed "s/^-D//")
+  ros_def=$(rospack cflags-only-other $name | sed "s/^-D//" | sed "s/ -D/;/g" | sed "s/ //g")
   ros_include=$(rospack cflags-only-I $name | sed "s/ \+/;/g")
   ros_dir_targets=$(rospack libs-only-L $name)
 

@@ -1,0 +1,18 @@
+# Generated for NaoQi method DCM.set
+# Call this function to send a timed-command list to an actuator
+
+# the actuator name (with or without the base name)
+string name
+
+# Is the kind of update
+#      "Merge" : Just add new timed command.
+#      "ClearAll"    :  Delete all timed command before adding these one.
+#      "ClearAfter"  : Delete all command that are after the time of the 1st one on the list (the soonest)
+#      "ClearBefore" : Delete all command that are before the time of the last one on the list (the oldest)
+string type
+
+#  a list of x timed-command
+rosbridge/DCMActuatorCommand[] commands
+---
+
+

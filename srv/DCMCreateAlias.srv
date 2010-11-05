@@ -1,0 +1,12 @@
+# Generated for NaoQi method DCM.createAlias
+# Create or change an alias (list of actuators)
+
+# Alias name and description
+string alias
+string[] keys
+---
+# Same as request, but with the name removed if the actuator is not found
+string alias
+string[] keys
+
+

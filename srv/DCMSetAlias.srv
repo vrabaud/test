@@ -1,0 +1,33 @@
+# Generated for NaoQi method DCM.setAlias
+# Call this function to send timed-command list to an alias (list of actuators)
+
+#  pParams[0] has the command array name (with or without the base name)
+string name
+
+#  pParams[1] Is the kind of update 
+#     "Merge" : Just add new timed command.
+#     "ClearAll" :  Delete all timed command before adding these one.
+#     "ClearAfter" : Delete all command that are after the time of the 1st one on the list (the soonest)
+#     "ClearBefore" : Delete all command that are before the time of the last one on the list (the oldest)
+string updatetype
+
+#  pParams[2] Type of command : must be "time-separate" (time-mixed version not implemented for ROS)
+string commandtype
+
+#  pParams[3] is the importance level of all these commands
+int32 importance
+
+#  pParams[4] is a list of T time.
+#  pParams[4][0] If the 1st time
+#  pParams[4][1] If the 2nd time
+#  pParams[4][2] ...
+#  pParams[4][T] T time
+int32[] times
+
+#  pParams[5][x] is a list of x command list. Each x is an actuator member of the command array
+#  pParams[5][x][0] 1st command for this actuator, and at the 1st time
+#  pParams[5][x][1] 2nd command for this actuator, and at the 2nd time
+#  pParams[5][x][2] ...
+#  pParams[5][x][T] T command
+rosbridge/DCMSeries[] commands
+

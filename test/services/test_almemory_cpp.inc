@@ -27,7 +27,7 @@
   //msg.data = ;
   //msg.message = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -38,7 +38,7 @@
   //msg.name = ;
   //msg.duration = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -48,7 +48,7 @@
 //  rosbridge::ALMemoryGetData msg;
   //msg.name = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -58,7 +58,7 @@
 //  rosbridge::ALMemoryGetDataListName msg;
 
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -69,7 +69,7 @@
   //msg.name = ;
   //msg.duration = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -79,7 +79,7 @@
 //  rosbridge::ALMemoryGetListData msg;
   //msg.name = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -89,7 +89,7 @@
 //  rosbridge::ALModuleGetMethodHelp msg;
   //msg.methodName = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -99,7 +99,7 @@
 //  rosbridge::ALModuleGetModuleHelp msg;
 
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -110,7 +110,7 @@
   //msg.name = ;
   //msg.data = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -120,7 +120,7 @@
 //  rosbridge::ALMemoryInsertListData msg;
   //msg.listOfInsertData = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -132,7 +132,7 @@
   //msg.buffer = ;
   //msg.bufferSize = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -143,7 +143,7 @@
   //msg.name = ;
   //msg.data = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -154,7 +154,7 @@
   //msg.name = ;
   //msg.data = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 

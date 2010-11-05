@@ -17,7 +17,7 @@
   //msg.data = ;
   //msg.message = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -27,7 +27,7 @@
 //  rosbridge::ALModuleGetMethodHelp msg;
   //msg.methodName = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -37,7 +37,7 @@
 //  rosbridge::ALModuleGetModuleHelp msg;
 
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 

@@ -15,7 +15,7 @@
 //  rosbridge::ALModuleGetMethodHelp msg;
   //msg.methodName = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -25,7 +25,7 @@
 //  rosbridge::ALModuleGetModuleHelp msg;
 
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -36,7 +36,7 @@
   //msg.nbOfFrames = ;
   //msg.pBuffer = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 

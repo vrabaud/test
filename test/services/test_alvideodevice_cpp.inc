@@ -17,7 +17,7 @@
 //  rosbridge::ALVisionVideoInputGetDirectRawImageRemote msg;
   //msg.id = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -27,7 +27,7 @@
 //  rosbridge::ALVisionVideoInputGetImageRemote msg;
   //msg.id = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -37,7 +37,7 @@
 //  rosbridge::ALModuleGetMethodHelp msg;
   //msg.methodName = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -47,7 +47,7 @@
 //  rosbridge::ALModuleGetModuleHelp msg;
 
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -57,7 +57,7 @@
 //  rosbridge::ALVisionVideoInputResolutionToSizes msg;
   //msg.resolution = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 

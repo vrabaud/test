@@ -16,7 +16,7 @@
 //  rosbridge::ALModuleGetMethodHelp msg;
   //msg.methodName = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -26,7 +26,7 @@
 //  rosbridge::ALModuleGetModuleHelp msg;
 
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -37,7 +37,7 @@
   //msg.length_min_l = ;
   //msg.length_max_l = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -48,7 +48,7 @@
   //msg.angle_min_f = ;
   //msg.angle_max_f = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 

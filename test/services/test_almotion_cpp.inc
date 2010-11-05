@@ -34,7 +34,7 @@
   //msg.timeLists = ;
   //msg.isAbsolute = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -46,7 +46,7 @@
   //msg.times = ;
   //msg.controlPoints = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -58,7 +58,7 @@
   //msg.targetAngles = ;
   //msg.maxSpeedFraction = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -70,7 +70,7 @@
   //msg.changes = ;
   //msg.fractionMaxSpeed = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -81,7 +81,7 @@
   //msg.names = ;
   //msg.useSensors = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -91,7 +91,7 @@
 //  rosbridge::ALMotionGetLimits msg;
   //msg.name = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -101,7 +101,7 @@
 //  rosbridge::ALModuleGetMethodHelp msg;
   //msg.methodName = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -111,7 +111,7 @@
 //  rosbridge::ALModuleGetModuleHelp msg;
 
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -121,7 +121,7 @@
 //  rosbridge::ALMotionGetRobotConfig msg;
 
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -131,7 +131,7 @@
 //  rosbridge::ALMotionGetStiffnesses msg;
   //msg.jointName = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -141,7 +141,7 @@
 //  rosbridge::ALMotionGetTaskList msg;
 
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -151,7 +151,7 @@
 //  rosbridge::ALMotionGetWalkArmsEnable msg;
 
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -166,7 +166,7 @@
   //msg.durations = ;
   //msg.isAbsolute = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -178,7 +178,7 @@
   //msg.angles = ;
   //msg.fractionMaxSpeed = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -188,7 +188,7 @@
 //  rosbridge::ALMotionSetMotionConfig msg;
   //msg.config = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -199,7 +199,7 @@
   //msg.names = ;
   //msg.stiffnesses = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -211,7 +211,7 @@
   //msg.stiffnessLists = ;
   //msg.timeLists = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -226,7 +226,7 @@
   //msg.duration = ;
   //msg.isAbsolute = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 
@@ -237,7 +237,7 @@
   //msg.effectorName = ;
   //msg.targetCoordinate = ;
 
-//  int result = client.call(msg);
+//  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
 //}
 

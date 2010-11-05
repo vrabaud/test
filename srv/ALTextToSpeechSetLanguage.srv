@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALTextToSpeech.setLanguage
+# Changes the language used by the Text-to-Speech engine. It automatically changes the voice used since each of them is related to a unique language. If you want that change to take effect automatically after reboot of your robot, refer to the robot web page (setting page).
+
+# Language name. Must belong to the languages available in TTS (can be obtained with the getAvailableLanguages method).  It should be an identifier std::string.
+string pLanguage
+---
+
+

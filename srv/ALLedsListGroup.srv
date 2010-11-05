@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALLeds.listGroup
+# Lists the devices in the group.
+
+# The name of the Group.
+string groupName
+---
+# A vector of string device names.
+string[] value
+
+

@@ -1,0 +1,14 @@
+# Generated for NaoQi method ALMemory.subscribeToMicroEvent
+# Allows modules to subscribe to a piece of data, in order to get notified when the data changes. Subscribers are called whenever the data has been set, even if the new value is the same as the previous one.
+
+# Name of the data.
+string name
+# Name of the module.
+string moduleName
+# message passed to the module when a notification is sent.
+string message
+# name of function to call when a data is changed (default is dataChanged)
+string callback
+---
+
+

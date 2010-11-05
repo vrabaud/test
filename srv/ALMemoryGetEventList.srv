@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALMemory.getEventList
+# return all application event
+
+---
+# return an array of data's string name.
+string[] value
+
+

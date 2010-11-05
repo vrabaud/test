@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALRedBallTracker.setWholeBodyOn
+# if true, the tracking will be through a Whole Body Process.
+
+# The whole Body state
+bool pWholeBodyOn
+---
+
+

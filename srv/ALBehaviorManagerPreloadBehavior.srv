@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALBehaviorManager.preloadBehavior
+# Load a behavior from its directory name
+
+# The behavior directory name
+string name
+---
+# Returns true if it was successfully loaded.
+bool value
+
+

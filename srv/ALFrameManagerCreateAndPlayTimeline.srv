@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALFrameManager.createAndPlayTimeline
+# Creates and play completely a timeline
+
+# The choregraphe project (in plain text for the moment).
+string xmlFile
+---
+# return a unique identifier for the created box that contains the timeline. You must call deleteBehavior on it at some point.
+string value
+
+

@@ -8,19 +8,15 @@
 #define ROSBRIDGE_ALROSGATHERER_H
 
 #include <alcore/alptr.h>
-#include <alvalue/alvalue.h>
+#include <alcommon/alproxy.h>
 #include <string>
 #include <vector>
 
 namespace AL
 {
   class ALBroker;
-  class ALMemoryProxy;
-  class ALMotionProxy;
+  class ALProxy;
 
-  /**
-   * DESCRIBE YOUR CLASS HERE
-   */
   class ALRosGatherer
   {
     public:
@@ -35,25 +31,12 @@ namespace AL
      */
     virtual ~ALRosGatherer();
 
-    std::vector<float> getValues() const;
-    const std::vector<std::string>& getMotorNames() const;
-    const std::vector<std::string>& getKeys() const;
+    std::vector<float> getValues() ;
+    std::vector<std::string> getMotorNames();
     void init(AL::ALPtr<AL::ALBroker> broker);
 
   private:
-    ALValue xPrepareGetListDataRequest(const std::vector<std::string>& pKeys);
-    std::vector<std::string> xPrepareKeys(const std::vector<std::string>& pJointNames);
-    void xGetCoreDataFromMemory(std::vector<float>& dataOut) const;
-    void xGetCoreDataFromMotion(std::vector<float>& dataOut) const;
-
-    ALPtr<ALMemoryProxy> fMemory;
-    ALPtr<ALMotionProxy> fMotion;
-
-    unsigned int fNumMotors;
-    std::vector<std::string> fMotorNames;
-    std::vector<std::string> fKeys;
-    AL::ALValue fDataRequest;
-    bool fIsDCMActive;
+    ALPtr<ALProxy> fDataGathererProxy;
   };
 
 }

@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALAudioPlayer.goTo
+# Goes to a given position in a file which is playing.
+
+# Id of the process which is playing the file
+int32 playId
+# Position in the file (in second)
+float32 position
+---
+
+

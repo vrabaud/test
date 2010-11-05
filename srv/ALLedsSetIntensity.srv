@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALLeds.setIntensity
+# Sets the intensity of a LED or Group of LEDs.
+
+# The name of the LED or Group.
+string name
+# The intensity of the LED or Group (a value between 0 and 1).
+float32 intensity
+---
+
+

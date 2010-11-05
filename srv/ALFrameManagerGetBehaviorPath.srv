@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALFrameManager.getBehaviorPath
+# Returns a playing behavior absolute path.
+
+# The id of the behavior.
+string id
+---
+# Returns the absolute path of given behavior.
+string value
+
+

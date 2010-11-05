@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALVisionVideoInput.stopFrameGrabber
+# Advanced method that close video source device.
+
+---
+# true if success
+int32 value
+
+

@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALVisionToolbox.startVideoRecord
+# Start recording a video. The .avi video is stored on the robot in the /home/nao/naoqi/share/naoqi/vision folder. The record should be stopped by calling stopVideoRecord(). Resolution: 320*240, MJPG format, frame rate ~10-15 fps. Please note that only one record at a time can be made.
+
+# Name of the video file to be recorded.
+string videoName
+---
+
+

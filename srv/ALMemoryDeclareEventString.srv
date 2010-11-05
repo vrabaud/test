@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMemory.declareEventString
+# Declare event to allow subscribe on the event
+
+# Event name
+string eventName
+# Name of extractor that create event
+string name
+---
+
+

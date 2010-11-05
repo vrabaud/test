@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALInfrared.sendRemoteKey
+# Simulate a remote control (Nao as a remote control).
+
+# IR remote control name.
+string Remote
+# IR remote control key name.
+string Key
+---
+
+

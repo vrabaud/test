@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALInfrared.confRemoteRecordCancel
+# Kill irrecord (LIRC program to record IR remote controls).
+
+---
+# Returns "#BEGIN#" to tell the web page to start from the beginning.
+string value
+
+

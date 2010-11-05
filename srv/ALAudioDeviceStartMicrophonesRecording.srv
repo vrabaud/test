@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALAudioDevice.startMicrophonesRecording
+# This method allows to record the signal collected on the nao's microphones. You can choose to record only the front microphone in a ogg file, or the 4 microphones in a wav file. In this last case the format of the file is 4 channels, 16 bits little endian, 48 KHz
+
+# Name of the file where to record the sound.
+string pFileName
+---
+
+

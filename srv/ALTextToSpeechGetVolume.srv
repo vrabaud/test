@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALTextToSpeech.getVolume
+# Fetches the current volume the text to speech.
+
+---
+# Volume (integer between 0 and 100).
+float32 value
+
+

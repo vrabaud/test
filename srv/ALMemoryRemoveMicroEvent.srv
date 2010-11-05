@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALMemory.removeMicroEvent
+# Remove micro event from ALMemory. Unsubscribe subscribers.
+
+# Name of the data to remove.
+string name
+---
+
+

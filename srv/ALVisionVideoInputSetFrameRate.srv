@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALVisionVideoInput.setFrameRate
+# Set the required frame rate.
+
+# Name under which the G.V.M. is known from ALVideoDevice.
+string id
+# images per seconds { 5, 10, 15, 30 }
+int32 frameRate
+---
+# true if success
+bool value
+
+

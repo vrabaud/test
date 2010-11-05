@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALExtractor.updatePeriod
+# Updates the period if relevant.
+
+# Name of the module which has subscribed.
+string name
+# Refresh period (in milliseconds).
+int32 period
+---
+
+

@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALLogger.setFilter
+# Creates a filter. Only messages containing the string will be logged. Use an empty string to remove the filter.
+
+# The string that defines the filter.
+string filter
+---
+
+

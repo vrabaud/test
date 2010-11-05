@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALSentinel.setPowerLimit
+# Change the power threshold; below it, Nao will sit down and remove power from his motors.
+
+# power limit in percent, default: 0.07; 0.00 to disable this feature.
+float32 powerLimit
+---
+
+

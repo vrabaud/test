@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALTextToSpeech.say
+# Performs the text-to-speech operations : it takes a std::string as input and outputs a sound in both speakers. It logs an error if the std::string is empty. String encoding must be UTF8.. Asynchronous.
+
+# Text to say, encoded in UTF-8.
+string stringToSay
+---
+# A string that summarises the usage of the method.
+int32 value
+
+

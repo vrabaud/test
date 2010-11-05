@@ -1,5 +1,4 @@
 /build-*
-/srv/*.srv
 /services/*generated*
 /srv_gen
 /msg_gen

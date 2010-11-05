@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALVisionVideoInput.unsubscribe
+# Used to unregister a G.V.M. from ALVideoDevice.
+
+# Name under which the G.V.M. is known from ALVideoDevice.
+string id
+---
+
+

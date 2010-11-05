@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALAudioPlayer.loadFile
+# Loads a file for ulterior playback
+
+# Path of the sound file (either mp3 or wav)
+string fileName
+---
+# Id of the file which has been loaded. This file can then be played with the play function
+int32 value
+
+

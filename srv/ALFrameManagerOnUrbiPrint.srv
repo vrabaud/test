@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALFrameManager.onUrbiPrint
+# Print Urbi message in Choregraphe or logger. Should not be called manually.
+
+# Message to print
+string message
+---
+
+

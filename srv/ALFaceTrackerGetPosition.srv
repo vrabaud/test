@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALFaceTracker.getPosition
+# Return the position of the face in NAO_SPACE.
+
+---
+# An Array containing the face position [x, y, z].
+float32[] value
+
+

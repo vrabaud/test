@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALTextToSpeech.getLanguageEncoding
+# Returns the encoding that should be used with the specified language.
+
+# Language name (as a std::string). Must belong to the languages available in TTS.
+string pLanguage
+---
+# Encoding of the specified language.
+string value
+
+

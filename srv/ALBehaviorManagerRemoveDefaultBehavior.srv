@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALBehaviorManager.removeDefaultBehavior
+# Remove the given behavior from the default behaviors
+
+# The behavior directory name
+string name
+---
+
+

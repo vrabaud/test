@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALAudioDevice.setOutputVolume
+# Sets the output sound level of the system.
+
+# Volume [0-100].
+int32 volume
+---
+
+

@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALAudioDevice.getOutputVolume
+# Gets the output sound level of the system.
+
+---
+# outputVolume of the system
+int32 value
+
+

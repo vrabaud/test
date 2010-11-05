@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALFaceDetection.enableTracking
+# (BETA) Choose to enable or disable tracking. Enabling tracking usually allows you to follow a face for a longer period of time. However, it can lead to more false detections.
+
+# True/False
+bool enable
+---
+
+

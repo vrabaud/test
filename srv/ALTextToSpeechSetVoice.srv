@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALTextToSpeech.setVoice
+# Changes the voice used by the text-to-speech engine. The voice identifier must belong to the installed voices, that can be listed using the 'getAvailableVoices' method. If the voice is not available, it remains unchanged. No exception is thrown in this case.
+
+# The voice (as a std::string).
+string pVoiceID
+---
+
+

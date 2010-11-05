@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALExtractor.updatePrecision
+# Updates the precision if relevant.
+
+# Name of the module which has subscribed.
+string name
+# Precision of the extractor.
+float32 precision
+---
+
+

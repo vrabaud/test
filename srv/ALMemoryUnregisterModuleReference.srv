@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALMemory.unregisterModuleReference
+# Informs ALMemory that a module doesn't exists anymore.
+
+# Name of the destructed module.
+string name
+---
+
+

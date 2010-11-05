@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALSentinel.enableHeatMonitoring
+# Enable or Disable heat monitoring.
+
+# true to enable, false to disable, default: true
+bool enable
+---
+
+

@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALExtractor.subscribe
+# Subscribes to the extractor. This causes the extractor to start writing information to memory using the keys described by getOutputNames(). These can be accessed in memory using ALMemory.getData("keyName"). In many cases you can avoid calling subscribe on the extractor by just calling ALMemory.subscribeToEvent() supplying a callback method. This will automatically subscribe to the extractor for you.
+
+# Name of the module which subscribes.
+string name
+---
+
+

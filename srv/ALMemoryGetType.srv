@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMemory.getType
+# Return variable type
+
+# Name of the variable
+string name
+---
+# String type: Data, ShmData, Event, MicroEvent
+string value
+
+

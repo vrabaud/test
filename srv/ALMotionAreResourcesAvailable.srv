@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMotion.areResourcesAvailable
+# Returns true if the resources are available.
+
+# A vector of resource names such as joints
+string[] resourceNames
+---
+# True if the resources are available
+bool value
+
+

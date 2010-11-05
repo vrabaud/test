@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALAudioDevice.getRightMicEnergy
+# Returns the energy of the right microphone signal
+
+---
+# energy of the right microphone signal
+float32 value
+
+

@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALLeds.fadeRGB
+# Sets the intensity of a led. If the name matches an RGB led, all channels are set to the same value.
+
+# The name of the LED or Group.
+string name
+# The RGB value led, RGB as seen in hexa-decimal: 0x00RRGGBB.
+int32 rgb
+# Time used to fade in seconds.
+float32 duration
+---
+
+

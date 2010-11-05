@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALAudioDevice.setParameter
+# This method sets the specified internal parameter ('outputSampleRate' or 'inputBufferSize')
+
+# Name of the parameter to set ('outputSampleRate' or 'inputBufferSize').
+string pParamName
+# The value to which the specified parameter should be set.
+int32 pParamValue
+---
+
+

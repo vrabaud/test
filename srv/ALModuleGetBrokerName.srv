@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALModule.getBrokerName
+# Gets the name of the parent broker.
+
+---
+# The name of the parent broker.
+string value
+
+

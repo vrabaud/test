@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALSentinel.presentation
+# Launch a small presentation of Nao: name, ip, battery. It's the default behavior launched when user press on the chest
+
+# if true, Nao will quickly check that his joints are moving properly.
+bool enableFastCheckJoints
+---
+
+

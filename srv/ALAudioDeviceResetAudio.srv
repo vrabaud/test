@@ -1,0 +1,6 @@
+# Generated for NaoQi method ALAudioDevice.resetAudio
+# reset ALSA driver. Use this method only when no audio module is subscribed to ALAudioDevice
+
+---
+
+

@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALVisionVideoInput.getImgInfoFromAngInfo
+# Returns normalized image info from angles info in radians (as returned by vision extractors).
+
+# camera angle values in radians.
+float32[] angles
+---
+# corresponding normalized position info.
+float32[] value
+
+

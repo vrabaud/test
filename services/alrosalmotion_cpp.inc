@@ -251,17 +251,17 @@ bool ALRosALMotion::setStiffnesses(
 }
 
 
-//bool ALRosALMotion::stiffnessInterpolation(
-//  rosbridge::ALMotionStiffnessInterpolation::Request  &req,
-//  rosbridge::ALMotionStiffnessInterpolation::Response &res)
-//{
-//  try {
-//    fProxy->stiffnessInterpolation(req.names, req.stiffnessLists, req.timeLists);
-//    return true;
-//  } catch(const ALError&) {
-//    return false;
-//  }
-//}
+bool ALRosALMotion::stiffnessInterpolation(
+  rosbridge::ALMotionStiffnessInterpolation::Request  &req,
+  rosbridge::ALMotionStiffnessInterpolation::Response &res)
+{
+  try {
+    fProxy->stiffnessInterpolation(req.names, req.stiffnessLists, req.timeLists);
+    return true;
+  } catch(const ALError&) {
+    return false;
+  }
+}
 
 
 //bool ALRosALMotion::transformInterpolation(

@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMotion.getRobotPosition
+# Gets the World Absolute Robot Position.
+
+# If true, use the sensor values
+bool useSensors
+---
+# A vector containing the World Absolute Robot Position. (Absolute Position X, Absolute Position Y, Absolute Angle Z)
+float32[] value
+
+

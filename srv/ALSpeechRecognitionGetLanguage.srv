@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALSpeechRecognition.getLanguage
+# Returns the current language used by the speech recognition system.
+
+---
+# Current language used by the speech recognition engine.
+string value
+
+

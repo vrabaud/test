@@ -1,0 +1,6 @@
+# Generated for NaoQi method ALFaceTracker.stopTracker
+# Start the tracker by Unsubscribing to Event FaceDetected from ALFaceDetection module.
+
+---
+
+

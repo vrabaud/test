@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALVisionVideoInput.getImgInfoFromAngInfoWithRes
+# Returns image info from angles info in radians (as returned by vision extractors). Express image info in the requested resolution.
+
+# camera angle values in radians.
+float32[] angInfo
+# arg
+int32 arg2
+---
+# corresponding position info.
+float32[] value
+
+

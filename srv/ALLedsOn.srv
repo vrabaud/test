@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALLeds.on
+# Switch to a maximum intensity a LED or Group of LEDs.
+
+# The name of the LED or Group.
+string name
+---
+
+

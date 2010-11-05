@@ -1,0 +1,14 @@
+# Generated for NaoQi method ALFrameManager.onUrbiError
+# Transmit Urbi error to Choregraphe or logger. Should not be called manually.
+
+# Name of the box raising the error
+string boxname
+# Name of the method
+string methodname
+# Location of the error
+string location
+# Error string
+string error
+---
+
+

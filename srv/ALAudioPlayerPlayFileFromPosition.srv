@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALAudioPlayer.playFileFromPosition
+# Plays a wav or mp3 file from a given position in the file.. Asynchronous.
+
+# Name of the sound file
+string fileName
+# Position in second where the playing has to begin
+float32 position
+---
+# A string that summarises the usage of the method.
+int32 value
+
+

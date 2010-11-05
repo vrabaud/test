@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALFrameManager.exitBehavior
+# Exit the reading of a timeline contained in a given box
+
+# The id of the box.
+string id
+---
+
+

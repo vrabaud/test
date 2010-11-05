@@ -1,0 +1,14 @@
+# Generated for NaoQi method ALMotion.updateTrackerTarget
+# Update the target to follow by the head of NAO.
+
+# The target position wy in SPACE_NAO
+float32 pTargetPositionWy
+# The target position wz in  SPACE_NAO
+float32 pTargetPositionWz
+# The time in Ms since the target was detected
+int32 pTimeSinceDetectionMs
+# If true, the target is follow in cartesian space by the Head with whole Body constraints.
+bool pUseOfWholeBody
+---
+
+

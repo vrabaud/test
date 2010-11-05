@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALFaceDetection.isTrackingEnabled
+# (BETA) Returns if tracking is enabled.
+
+---
+# True/False
+bool value
+
+

@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALRedBallTracker.isActive
+# Return true if the red Ball Tracker is running.
+
+---
+# true if the red Ball Tracker is running.
+bool value
+
+

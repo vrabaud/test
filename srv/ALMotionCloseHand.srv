@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALMotion.closeHand
+# Closes the hand, then cuts motor current to conserve energy. This is a blocking call.
+
+# The name of the hand. Could be: "RHand" or "LHand"
+string handName
+---
+
+

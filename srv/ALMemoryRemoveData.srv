@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALMemory.removeData
+# Allows programs and modules to retrieve data stored in ALMemory.
+
+# Name of the data to be remove.
+string name
+---
+
+

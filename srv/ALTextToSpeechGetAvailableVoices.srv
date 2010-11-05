@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALTextToSpeech.getAvailableVoices
+# Outputs the available voices. The returned list contains the voice IDs.
+
+---
+# Array of std::string containing the voices installed on the system.
+string[] value
+
+

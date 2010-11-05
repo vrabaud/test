@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALLogger.setVerbosity
+# set verbosity: debug, info, warning, error, fatal, silent. Default is info
+
+# verbosity value
+string verbosity
+---
+
+

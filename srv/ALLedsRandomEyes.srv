@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALLeds.randomEyes
+# Launch a random animation in eyes
+
+# Approximate duration of the animation in seconds.
+float32 duration
+---
+
+

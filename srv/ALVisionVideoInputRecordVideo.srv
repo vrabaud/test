@@ -1,0 +1,16 @@
+# Generated for NaoQi method ALVisionVideoInput.recordVideo
+# BETA - background record of an .arv raw format video from the images processed by a G.V.M.
+
+# Name under which the G.V.M. is known from the V.I.M.
+string id
+# path/name of the video to be recorded
+string path
+# number of images to be recorded. 0xFFFFFFFF for "unlimited"
+int32 totalNumber
+# one image recorded every pPeriod images
+int32 period
+---
+# true if success
+bool value
+
+

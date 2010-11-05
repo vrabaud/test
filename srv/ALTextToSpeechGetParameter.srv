@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALTextToSpeech.getParameter
+# Returns the value of one of the voice parameters. The available parameters are: "pitchShift", "doubleVoice","doubleVoiceLevel" and "doubleVoiceTimeShift"
+
+# Name of the parameter.
+string pParameterName
+---
+# Value of the specified parameter
+float32 value
+
+

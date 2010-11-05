@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALAudioDevice.waitSynchronizer
+# Waits for a signal.
+
+# Condition name
+string name
+---
+
+

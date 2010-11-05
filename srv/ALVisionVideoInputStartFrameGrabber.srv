@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALVisionVideoInput.startFrameGrabber
+# Advanced method that opens and initialize video source device if it was not before.
+
+---
+# true if success
+int32 value
+
+

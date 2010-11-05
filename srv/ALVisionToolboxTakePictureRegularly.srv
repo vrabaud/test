@@ -1,0 +1,16 @@
+# Generated for NaoQi method ALVisionToolbox.takePictureRegularly
+# Shoot regularly a picture to follow Nao's evolution in his environment
+
+# how many seconds between two pictures?
+float32 secondsBetweenTwoShots
+# path and the root of the name for the picture
+string pathAndNameRoot
+# do we need to overwrite the picture, or do we add a timestamp to the name?
+bool overwriteImage
+# such as jpeg, bmp, png, etc.
+string imageRecordFormat
+# resolution for the image (e.g. kQQVGA, kQVGA)
+int32 resolution
+---
+
+

@@ -71,9 +71,9 @@ bool setStiffnesses(
   rosbridge::ALMotionSetStiffnesses::Request  &req,
   rosbridge::ALMotionSetStiffnesses::Response &res);
 
-//bool stiffnessInterpolation(
-//  rosbridge::ALMotionStiffnessInterpolation::Request  &req,
-//  rosbridge::ALMotionStiffnessInterpolation::Response &res);
+bool stiffnessInterpolation(
+  rosbridge::ALMotionStiffnessInterpolation::Request  &req,
+  rosbridge::ALMotionStiffnessInterpolation::Response &res);
 
 //bool transformInterpolation(
 //  rosbridge::ALMotionTransformInterpolation::Request  &req,

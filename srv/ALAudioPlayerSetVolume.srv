@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALAudioPlayer.setVolume
+# Sets the volume of the player
+
+# Id of the process that is playing the file you want to put louder or less loud
+int32 id
+# Volume - range 0.0 to 1.0
+float32 volume
+---
+
+

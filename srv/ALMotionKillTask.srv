@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMotion.killTask
+# Kills a motion task.
+
+# TaskID of the motion task you want to kill.
+int32 motionTaskID
+---
+# Return true if the specified motionTaskId has been killed.
+bool value
+
+

@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALVisionVideoInput.getImgSizeFromAngSize
+# Returns normalized image position from camera angles in radians.
+
+# camera angle values in radians.
+float32[] angSize
+---
+# corresponding normalized position in the image [0.0 - 1.0]
+float32[] value
+
+

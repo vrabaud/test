@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALRedBallTracker.getPosition
+# Return the position of the red ball in NAO_SPACE.
+
+---
+# An Array containing the red ball position [x, y, z].
+float32[] value
+
+

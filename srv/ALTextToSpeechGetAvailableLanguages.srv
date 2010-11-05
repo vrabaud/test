@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALTextToSpeech.getAvailableLanguages
+# Outputs the languages installed on the system.
+
+---
+# Array of std::string that contains the languages installed on the system.
+string[] value
+
+

@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALInfrared.confRemoteRecordAddKey
+# Called during polling in order to update further information.
+
+# Name of the next remote control key to reccord.
+string Keyname
+---
+# Returns the last message given by irrecord (LIRC program to record IR remote controls).
+string value
+
+

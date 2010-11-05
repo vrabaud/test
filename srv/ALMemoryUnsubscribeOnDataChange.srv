@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMemory.unsubscribeOnDataChange
+# Allows modules to unsubscribe from a piece of data and stop getting notified when the data changes.
+
+# Name of the data.
+string name
+# Name of the module.
+string moduleName
+---
+
+

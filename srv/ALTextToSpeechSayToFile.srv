@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALTextToSpeech.sayToFile
+# Performs the text-to-speech operations: it takes a std::string as input and outputs the corresponding audio signal in the specified file.. Asynchronous.
+
+# Text to say, encoded in UTF-8.
+string pStringToSay
+# RAW file where to store the generated signal. The signal is encoded with a sample rate of 22050Hz, format S16_LE, 2 channels.
+string pFileName
+---
+# A string that summarises the usage of the method.
+int32 value
+
+

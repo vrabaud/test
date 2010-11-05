@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALMotion.getSummary
+# Returns a string representation of the Model's state
+
+---
+# A formated string
+string value
+
+

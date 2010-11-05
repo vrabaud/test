@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALFrameManager.getTimelineFps
+# Gets the FPS of a given timeline
+
+# The id of the timeline.
+string id
+---
+# Returns the timeline's FPS.
+int32 value
+
+

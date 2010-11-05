@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALLogger.info
+# Log a info message.
+
+# Name of the module.
+string moduleName
+# Log Message.
+string message
+---
+
+

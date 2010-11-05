@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALAudioPlayer.play
+# Starts the playback of a file preloaded with the loadFile function.. Asynchronous.
+
+# Id returned by the loadFile function
+int32 id
+---
+# Id of the file which has been loaded. This file can then be played with the play function
+int32 value
+
+

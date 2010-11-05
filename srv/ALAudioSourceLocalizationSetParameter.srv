@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALAudioSourceLocalization.setParameter
+# Set the specified parameter.
+
+# Name of the parameter. For now only one paramter can be set: "EnergyComputation" that activates the computation of the located source signal energy. This energy is added in the "ALAudioSourceLocalization/SoundLocated" event - Please refer to the red doc for details.
+string param
+# True : activates energy computation.
+bool value
+---
+
+

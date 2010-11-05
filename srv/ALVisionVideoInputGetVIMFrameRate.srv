@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALVisionVideoInput.getVIMFrameRate
+# Get the frame rate of the video source image.
+
+---
+# { 5, 10, 15, 30 }   -1: can't access video source
+int32 value
+
+

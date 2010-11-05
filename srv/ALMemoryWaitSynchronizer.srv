@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALMemory.waitSynchronizer
+# Waits for a signal.
+
+# Condition name
+string name
+---
+
+

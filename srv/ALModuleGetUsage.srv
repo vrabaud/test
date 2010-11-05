@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALModule.getUsage
+# Gets the method usage string. This summarise how to use the method.
+
+# The name of the method.
+string name
+---
+# A string that summarises the usage of the method.
+string value
+
+

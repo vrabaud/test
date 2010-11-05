@@ -1,0 +1,14 @@
+# Generated for NaoQi method ALAudioPlayer.playInLoopInt
+# Plays a wav or mp3 file in loop, with specific volume and audio balance. Asynchronous.
+
+# Path of the sound file
+int32 fileName
+# volume of the sound file (must be between 0.0 and 1.0)
+float32 volume
+# audio balance of the sound file (-1.0 : left / 1.0 : right)
+float32 pan
+---
+# Id of the file which has been loaded. This file can then be played with the play function
+int32 value
+
+

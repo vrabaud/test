@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMemory.insertDataFloat
+# Allows any program to insert data into ALMemory. Overloaded method for type optimization
+
+# Name of the data to be inserted.
+string name
+# Value of the data
+float32 data
+---
+
+

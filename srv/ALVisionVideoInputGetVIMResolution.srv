@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALVisionVideoInput.getVIMResolution
+# Get the resolution of the video source image.
+
+---
+# { 0 = kQQVGA, 1 = kQVGA, 2 = kVGA }  -1: can't access video source
+int32 value
+
+

@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALMotion.killTasksUsingResources
+# Kills all tasks that use any of the resources given.
+
+# A vector of resource joint names
+string[] resourceNames
+---
+
+

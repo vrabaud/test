@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALInfrared.confRemoteRecordNext
+# Called when the user click on NEXT.
+
+---
+# Returns the last message given by irrecord (lirc program to record IR remote control).
+string value
+
+

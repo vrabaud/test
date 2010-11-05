@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALFaceTracker.isNewData
+# Return true if a new face was detected since the last getPosition().
+
+---
+# true if a new face was detected since the last getPosition().
+bool value
+
+

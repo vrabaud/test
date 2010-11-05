@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALVisionVideoInput.releaseImage
+# Release image buffer locked by getImageLocal().
+
+# Name under which the G.V.M. is known from ALVideoDevice.
+string id
+---
+# true if success
+int32 value
+
+

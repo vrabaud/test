@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALAudioPlayer.setPanorama
+# sets the audio panorama : -1 for left speaker / 1 for right speaker
+
+# arg
+float32 arg1
+---
+
+

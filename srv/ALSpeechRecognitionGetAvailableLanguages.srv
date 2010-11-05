@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALSpeechRecognition.getAvailableLanguages
+# Returns the list of the languages installed on the system.
+
+---
+# Array of strings that contains the list of the installed languages.
+string[] value
+
+

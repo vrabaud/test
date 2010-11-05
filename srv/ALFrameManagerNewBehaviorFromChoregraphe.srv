@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALFrameManager.newBehaviorFromChoregraphe
+# Creates a new behavior, from the current Choregraphe behavior (uploaded to /tmp/currentChoregrapheBehavior/behavior.xar).
+
+---
+# return a unique identifier for the created behavior
+string value
+
+

@@ -1,0 +1,14 @@
+# Generated for NaoQi method ALMotion.stepTo
+# Makes Nao do a single step. This is a blocking call.
+
+# name of the leg to move('LLeg'or 'RLeg')
+string legName
+# Position along X axis of the leg relative to the other Leg in meters. Must be less than MaxStepX
+float32 x
+# Position along Y axis of the leg relative to the other Leg in meters. Must be less than MaxStepY
+float32 y
+# Orientation round Z axis of the leg relative to the other leg in radians. Must be less than MaxStepX
+float32 theta
+---
+
+

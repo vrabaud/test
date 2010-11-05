@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALMemory.subscribeToEvent
+# Subscribe to event and automaticaly launch module function that generate the event. WARNING THERE IS NO MESSAGE parameter
+
+# Event name
+string name
+# subscriber name
+string moduleName
+# name of function to call when a data is changed (default is dataChanged)
+string callback
+---
+
+

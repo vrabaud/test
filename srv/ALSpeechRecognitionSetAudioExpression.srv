@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALSpeechRecognition.setAudioExpression
+# Enables or disables the playing of sounds indicating the state of the recognition engine.
+
+# Enable (true) or disable it (false).
+bool setOrNot
+---
+
+

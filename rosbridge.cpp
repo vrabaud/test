@@ -16,6 +16,7 @@
 #include <alrospublisher.h>
 #include <alrossubscriber.h>
 #include <alcommon/albroker.h>
+#include <alcommon/alproxy.h>
 
 RosBridge::RosBridge(AL::ALPtr<AL::ALBroker> pBroker)
   : ALModule(pBroker, "RosBridge")
@@ -51,7 +52,7 @@ void RosBridge::mainPublisher(ros::NodeHandle *n)
 
   printf("Ready...\n");
 
-  ros::Rate loop_rate(20);
+  ros::Rate loop_rate(50);
   while (ros::ok()) {
     rosPublisher.publish(rosGatherer.getValues());
     loop_rate.sleep();

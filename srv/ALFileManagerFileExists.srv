@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALFileManager.fileExists
+# Try to find if this file does exist on robot or not.
+
+# Name of the module associate to the preference.
+string fileName
+---
+# True upon success
+bool value
+
+

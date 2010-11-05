@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALFrameManager.newBehavior
+# Creates a new behavior, from a box found in an xml file. Note that you have to give the xml file contents, so this method is not very user friendly. You have to open the file, and send the string that matches the file contents if you are working from a file. You probably want to use newBehaviorFromFile instead.
+
+# The path to reach the box to instantiate in the project ("" if root).
+string path
+# The choregraphe project (in plain text for the moment).
+string xmlFile
+---
+# return a unique identifier for the created box.
+string value
+
+

@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALBluetooth.connectString
+# Connect to a specific device.
+
+# the device name, this will be used to refer to the device later
+string devicename
+---
+
+

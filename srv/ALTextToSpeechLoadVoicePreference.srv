@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALTextToSpeech.loadVoicePreference
+# Loads a set of voice parameters defined in a xml file contained in the preferences folder.The name of the xml file must begin with ALTextToSpeech_Voice_
+
+# Name of the voice preference.
+string pPreferenceName
+---
+
+

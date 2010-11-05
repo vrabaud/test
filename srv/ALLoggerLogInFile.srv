@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALLogger.logInFile
+# Allows the logger to store logs in a file. Warning: this is not recomended on Nao.
+
+# The fileName to use. Relative to the user naoqi folder.
+string fileName
+---
+
+

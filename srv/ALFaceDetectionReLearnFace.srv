@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALFaceDetection.reLearnFace
+# use in a new learning process     the latest images where a face has been wrongly recognized
+
+# ID of the person to save
+string pId
+---
+# true if the operation succeeds
+bool value
+
+

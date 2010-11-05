@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALLogger.lowInfo
+# DEPRECIATED: Log a low priority information message. Use info instead.
+
+# Name of the module.
+string moduleName
+# Log Message.
+string message
+---
+
+

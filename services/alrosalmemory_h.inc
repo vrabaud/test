@@ -6,9 +6,10 @@
 */
 
 //#include <rosbridge/ALMemoryDataChanged.h>
-//#include <rosbridge/ALMemoryGetDataString.h>
-//#include <rosbridge/ALMemoryGetData.h>
-//#include <rosbridge/ALMemoryGetDataListName.h>
+#include <rosbridge/ALMemoryGetDataString.h>
+#include <rosbridge/ALMemoryGetDataFloat.h>
+#include <rosbridge/ALMemoryGetDataInt.h>
+#include <rosbridge/ALMemoryGetDataListName.h>
 //#include <rosbridge/ALMemoryGetDataOnChange.h>
 //#include <rosbridge/ALMemoryGetListData.h>
 #include <rosbridge/ALModuleGetMethodHelp.h>

@@ -1,0 +1,14 @@
+# Generated for NaoQi method ALMotion.setWalkTargetVelocity
+# Makes Nao walk at the given velocity. This is a non-blocking call.
+
+# Fraction of MaxStepX. Use negative for backwards. [-1.0 to 1.0]
+float32 x
+# Fraction of MaxStepY. Use negative for right. [-1.0 to 1.0]
+float32 y
+# Fraction of MaxStepTheta. Use negative for clockwise [-1.0 to 1.0]
+float32 theta
+# Fraction of MaxStepFrequency [0.0 to 1.0]
+float32 frequency
+---
+
+

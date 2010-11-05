@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMotion.getJointNames
+# Gets the names of all the joints in the collection.
+
+# Name of a chain, "Body", "BodyJoints" or "BodyActuators".
+string name
+---
+# Vector of strings, one for each joint in the collection
+string[] value
+
+

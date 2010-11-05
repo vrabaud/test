@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALTextToSpeech.getVoice
+# Returns the voice currently used by the text-to-speech engine.
+
+---
+# Name of the current voice
+string value
+
+

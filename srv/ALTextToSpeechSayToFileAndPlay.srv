@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALTextToSpeech.sayToFileAndPlay
+# This method performs the text-to-speech operations: it takes a std::string, outputs the synthesis resulting audio signal in a file, and then plays the audio file. The file is deleted afterwards. It is useful when you want to perform a short synthesis, when few CPU is available. Do not use it if you want a low-latency synthesis or to synthesize a long std::string.. Asynchronous.
+
+# Text to say, encoded in UTF-8.
+string pStringToSay
+---
+# A string that summarises the usage of the method.
+int32 value
+
+

@@ -1,0 +1,14 @@
+# Generated for NaoQi method ALMotionRecorder.startInteractiveRecording
+# Start recording the motion in an interactive mode
+
+# Names of joints that must be recorded
+string[] jointsToRecord
+# Default number of poses to record
+int32 nbPoses
+# Set to true to ignore nbPoses and keep recording new poses as long as record is not manually stopped
+bool extensionAllowed
+# Indicates which interactive mode must be used. 1 : Use rigth bumper to enslave and left bumper to store the pose
+int32 mode
+---
+
+

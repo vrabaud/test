@@ -1,0 +1,8 @@
+# Generated for NaoQi method DCM.special
+# Special DCM commands
+
+# one string and could be Reset, Version, Chain, Diagnostic, Config
+string result
+---
+
+

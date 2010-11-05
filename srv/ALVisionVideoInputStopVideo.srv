@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALVisionVideoInput.stopVideo
+# BETA - stop writing the video sequence
+
+# Name under which the G.V.M. is known from ALVideoDevice.
+string id
+---
+# true if success
+bool value
+
+

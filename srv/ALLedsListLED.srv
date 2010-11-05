@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALLeds.listLED
+# Lists the devices aliased by a short LED name.
+
+# arg
+string arg1
+---
+# A vector of device names.
+string[] value
+
+

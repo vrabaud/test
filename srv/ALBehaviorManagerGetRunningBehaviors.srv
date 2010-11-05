@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALBehaviorManager.getRunningBehaviors
+# Get running behaviors
+
+---
+# Return running behaviors
+string[] value
+
+

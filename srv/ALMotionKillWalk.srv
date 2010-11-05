@@ -1,0 +1,6 @@
+# Generated for NaoQi method ALMotion.killWalk
+# Emergency Stop on Walk task: This method will end the walk task brutally, without attempting to return to a balanced state. If Nao has one foot in the air, he could easily fall.
+
+---
+
+

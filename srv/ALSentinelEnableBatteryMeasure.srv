@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALSentinel.enableBatteryMeasure
+# check the battery information, voltage and alarm flag
+
+# true of false to respectively enable or disable (default: true)
+bool enable
+---
+
+

@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALAudioPlayer.playInLoop
+# Starts the playback in loop of a file preloaded with the loadFile function. Asynchronous.
+
+# Path of the sound file
+int32 fileName
+---
+# Id of the file which has been loaded. This file can then be played with the play function
+int32 value
+
+

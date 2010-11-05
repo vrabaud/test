@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMotion.wbEnableBalanceConstraint
+# UserFriendly Whole Body API: enable to keep balance in support polygon.
+
+# Enable Nao to keep balance.
+bool isEnable
+# Name of the support leg: "Legs", "LLeg", "RLeg".
+string supportLeg
+---
+
+

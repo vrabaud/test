@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALMotion.walkTo
+# Makes Nao walk to the given relative Position. This is a blocking call.
+
+# Distance along the X axis in meters.
+float32 x
+# Distance along the Y axis in meters.
+float32 y
+# Rotation around the Z axis in radians [-3.1415 to 3.1415].
+float32 theta
+---
+
+

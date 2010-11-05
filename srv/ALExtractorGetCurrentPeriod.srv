@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALExtractor.getCurrentPeriod
+# Gets the current period.
+
+---
+# Refresh period (in milliseconds).
+int32 value
+
+

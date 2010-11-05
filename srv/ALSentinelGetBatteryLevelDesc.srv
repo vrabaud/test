@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALSentinel.getBatteryLevelDesc
+# Get a text presentation of the battery level ('My battery is...').
+
+---
+# the sentence describing the battery level
+string value
+
+

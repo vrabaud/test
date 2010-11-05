@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALLeds.fade
+# Sets the intensity of a LED or Group of LEDs within a given time.
+
+# The name of the LED or Group.
+string name
+# The intensity of the LED or Group (a value between 0 and 1).
+float32 intensity
+# The duration of the fade in seconds
+float32 duration
+---
+
+

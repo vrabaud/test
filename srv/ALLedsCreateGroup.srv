@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALLeds.createGroup
+# Makes a group name for ease of setting multiple LEDs.
+
+# The name of the group.
+string groupName
+# A vector of the names of the LEDs in the group.
+string[] ledNames
+---
+
+

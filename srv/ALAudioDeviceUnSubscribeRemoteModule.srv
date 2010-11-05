@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALAudioDevice.unSubscribeRemoteModule
+# This function unsubscribes a remote module (identified by its name) from the ALAudioDevice module
+
+# Name of the remote module to unsuscribe from ALAudioDevice
+string pModule
+---
+# True if module has been unsubscribed successfully - False otherwise
+bool value
+
+

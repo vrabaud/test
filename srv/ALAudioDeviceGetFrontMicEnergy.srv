@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALAudioDevice.getFrontMicEnergy
+# Returns the energy of the front microphone signal
+
+---
+# energy of the front microphone signal
+float32 value
+
+

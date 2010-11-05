@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMotion.getMass
+# Gets the mass of a joint, chain, "Body" or "BodyJoints".
+
+# Name of the body which we want the mass. "Body", "BodyJoints" and "Com" give the total mass of nao. For the chain, it gives the total mass of the chain.
+string pName
+---
+# The mass in kg.
+float32 value
+
+

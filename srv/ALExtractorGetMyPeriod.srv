@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALExtractor.getMyPeriod
+# Gets the period for a specific subscription.
+
+# Name of the module which has subscribed.
+string name
+---
+# Refresh period (in milliseconds).
+int32 value
+
+

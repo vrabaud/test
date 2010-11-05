@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALExtractor.getMyPrecision
+# Gets the precision for a specific subscription.
+
+# name of the module which has subscribed
+string name
+---
+# precision of the extractor
+float32 value
+
+

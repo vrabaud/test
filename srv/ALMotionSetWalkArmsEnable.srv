@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMotion.setWalkArmsEnable
+# Sets if Arms Motions are enabled during the Walk Process.
+
+# if true Left Arm motions are controlled by the Walk Task
+bool leftArmEnable
+# if true Right Arm mMotions are controlled by the Walk Task
+bool rightArmEnable
+---
+
+

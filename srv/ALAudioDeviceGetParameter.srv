@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALAudioDevice.getParameter
+# This method returns the specified internal parameter ('outputSampleRate' or 'inputBufferSize'). The value -1 is returned if the specified parameter is not valid.
+
+# Name of the parameter to get ('outputSampleRate' or 'inputBufferSize').
+string pParamName
+---
+# value of the specified parameter
+int32 value
+
+

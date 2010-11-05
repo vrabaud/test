@@ -11,17 +11,25 @@ void bindCustomMethods(ALPtr<ALBroker> pNaoQiBroker, ros::NodeHandle& pRosNode);
 //  rosbridge::ALMemoryDataChanged::Request  &req,
 //  rosbridge::ALMemoryDataChanged::Response &res);
 
-//bool getDataString(
-//  rosbridge::ALMemoryGetDataString::Request  &req,
-//  rosbridge::ALMemoryGetDataString::Response &res);
+bool getDataString(
+  rosbridge::ALMemoryGetDataString::Request  &req,
+  rosbridge::ALMemoryGetDataString::Response &res);
+
+bool getDataFloat(
+  rosbridge::ALMemoryGetDataFloat::Request  &req,
+  rosbridge::ALMemoryGetDataFloat::Response &res);
+
+bool getDataInt(
+  rosbridge::ALMemoryGetDataInt::Request  &req,
+  rosbridge::ALMemoryGetDataInt::Response &res);
 
 //bool getData(
 //  rosbridge::ALMemoryGetData::Request  &req,
 //  rosbridge::ALMemoryGetData::Response &res);
 
-//bool getDataListName(
-//  rosbridge::ALMemoryGetDataListName::Request  &req,
-//  rosbridge::ALMemoryGetDataListName::Response &res);
+bool getDataListName(
+  rosbridge::ALMemoryGetDataListName::Request  &req,
+  rosbridge::ALMemoryGetDataListName::Response &res);
 
 //bool getDataOnChange(
 //  rosbridge::ALMemoryGetDataOnChange::Request  &req,

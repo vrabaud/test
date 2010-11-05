@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALFrameManager.gotoAndPlay
+# Goes to a certain frame and continue playing
+
+# The id of the box containing the box.
+string id
+# The frame we want the timeline to go to.
+int32 frame
+---
+
+

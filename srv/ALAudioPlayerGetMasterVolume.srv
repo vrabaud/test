@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALAudioPlayer.getMasterVolume
+# Returns the master volume of the player
+
+---
+# Volume of the player - range 0.0 to 1.0.
+float32 value
+
+

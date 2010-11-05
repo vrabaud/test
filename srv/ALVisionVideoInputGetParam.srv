@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALVisionVideoInput.getParam
+# Get the value of a video source specific parameter.
+
+# Parameter's reference among kCameraBrightnessID,
+int32 pParam
+---
+# Parameter's value.
+int32 value
+
+

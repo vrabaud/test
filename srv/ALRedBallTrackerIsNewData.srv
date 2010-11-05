@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALRedBallTracker.isNewData
+# Return true if a new Red Ball was detected since the last getPosition().
+
+---
+# true if a new Red Ball was detected since the last getPosition().
+bool value
+
+

@@ -1,0 +1,14 @@
+# Generated for NaoQi method ALMotion.getCOM
+# Gets the COM of a joint, chain, "Body" or "BodyJoints".
+
+# Name of the body which we want the mass. In chain name case, this function give the com of the chain.
+string pName
+# Task space {SPACE_TORSO = 0, SPACE_WORLD = 1, SPACE_NAO = 2}.
+int32 pSpace
+# If true, the sensor values will be used to determine the position.
+bool pUseSensorValues
+---
+# The COM position (meter).
+float32[] value
+
+

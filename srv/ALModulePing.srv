@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALModule.ping
+# Just a ping. Always returns true
+
+---
+# returns true
+bool value
+
+

@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMemory.waitOnCondition
+# Allows modules to subscribe to a piece of data, in order to get notified when the data changes. Subscribers are called whenever the data has been set, even if the new value is the same as the previous one.
+
+# Name of the data.
+string dataName
+# message passed to the module when a notification is sent.
+string condition
+---
+
+

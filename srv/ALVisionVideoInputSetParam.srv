@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALVisionVideoInput.setParam
+# Sets the value of a specific parameter for the video source.
+
+# Parameter's reference among:
+int32 param
+# Parameter's new value.
+int32 newValue
+---
+
+

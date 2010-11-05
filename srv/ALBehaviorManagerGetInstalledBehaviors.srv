@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALBehaviorManager.getInstalledBehaviors
+# Get installed behaviors names
+
+---
+# Returns the behaviors list.
+string[] value
+
+

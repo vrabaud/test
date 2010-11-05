@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALInfrared.initReception
+# Init IR reception (connect as a client to the LIRC daemon).
+
+# Give the keep-pressing threshold after which the repetition of a key is taken into consideration.
+int32 RepeatThreshold
+---
+
+

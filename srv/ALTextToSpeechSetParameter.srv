@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALTextToSpeech.setParameter
+# Changes the parameters of the voice. The available parameters are:
+
+# Name of the parameter.
+string pEffectName
+# Value of the parameter.
+float32 pEffectValue
+---
+
+

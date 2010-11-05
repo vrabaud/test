@@ -1,0 +1,10 @@
+# Generated for NaoQi method DCM.getTime
+# Return the DCM time
+
+# optional time in ms (signed) to add/remove
+int32 offset
+---
+# An integer (could be signed) with the DCM time
+int32 value
+
+

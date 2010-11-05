@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALLeds.rasta
+# Launch a green/yellow/red rasta animation on all body.
+
+# Approximate duration of the animation in seconds.
+float32 duration
+---
+
+

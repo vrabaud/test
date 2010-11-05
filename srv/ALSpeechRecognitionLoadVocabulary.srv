@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALSpeechRecognition.loadVocabulary
+# Loads the vocabulary to recognized contained in a .lxd file. This method is not available with the ASR engine language set to Chinese. For more informations see the red documentation
+
+# Name of the lxd file containing the vocabulary
+string vocabularyFile
+---
+
+

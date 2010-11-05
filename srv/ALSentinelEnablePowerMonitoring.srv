@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALSentinel.enablePowerMonitoring
+# Enable or Disable power monitoring.
+
+# true to enable, false to disable, default: true
+bool enable
+---
+
+

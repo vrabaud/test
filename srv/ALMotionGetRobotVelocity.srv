@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALMotion.getRobotVelocity
+# Gets the World Absolute Robot Velocity.
+
+---
+# A vector containing the World Absolute Robot Velocity. (Absolute Velocity Translation X, Absolute Velocity Translation Y, Absolute Velocity Rotation WZ)
+float32[] value
+
+

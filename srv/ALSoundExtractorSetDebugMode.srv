@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALSoundExtractor.setDebugMode
+# enable/disable the printing of some debug information
+
+# enable the functionnality when true.
+bool bSetOrUnset
+---
+
+

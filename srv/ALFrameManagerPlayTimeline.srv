@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALFrameManager.playTimeline
+# Starts playing a timeline contained in a given box. If the box is a flow diagram, it will look for the first onStart input of type Bang, and stimulate it !
+
+# The id of the box.
+string id
+---
+
+

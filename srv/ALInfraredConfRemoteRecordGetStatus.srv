@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALInfrared.confRemoteRecordGetStatus
+# Called when the user validate a new key name.
+
+---
+# Returns the last message given by irrecord (LIRC program to record IR remote controls).
+string value
+
+

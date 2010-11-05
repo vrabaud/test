@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALAudioPlayer.pause
+# Pause a play back
+
+# Id of the process that is playing the file you want to put in pause
+int32 id
+---
+
+

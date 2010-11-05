@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALLeds.earLedsSetAngle
+# An animation to show a direction with the ears.
+
+# The angle you want to show in degrees (int). 0 is up, 90 is forwards, 180 is down and 270 is back.
+int32 degrees
+# The duration in seconds of the animation.
+float32 duration
+# If true the last led is left on at the end of the animation.
+bool leaveOnAtEnd
+---
+
+

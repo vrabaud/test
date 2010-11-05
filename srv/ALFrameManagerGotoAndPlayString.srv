@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALFrameManager.gotoAndPlayString
+# Goes to a certain frame and continue playing
+
+# The id of the box containing the box.
+string id
+# The behavior frame name we want the timeline to go to. If will jump to the starting index of the name given.
+string frame
+---
+
+

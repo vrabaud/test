@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALVisionVideoInput.getGVMFrameRate
+# Get the frame rate of the requested G.V.M.
+
+# Name under which the G.V.M. is known from ALVideoDevice.
+string id
+---
+# { 5, 10, 15, 30 }  -1: can't access video source
+int32 value
+
+

@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALBehaviorManager.isBehaviorInstalled
+# Tell if supplied name corresponds to a valid behavior
+
+# The behavior directory name
+string name
+---
+# Returns true if it is a valid behavior
+bool value
+
+

@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALBehaviorManager.removeBehavior
+# Remove a behavior from the filesystem
+
+# The behavior directory name
+string name
+---
+# Return true if succeeded, else false
+bool value
+
+

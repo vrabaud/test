@@ -21,7 +21,7 @@
 #include <rosbridge/ALMotionSetAngles.h>
 //#include <rosbridge/ALMotionSetMotionConfig.h>
 #include <rosbridge/ALMotionSetStiffnesses.h>
-//#include <rosbridge/ALMotionStiffnessInterpolation.h>
+#include <rosbridge/ALMotionStiffnessInterpolation.h>
 //#include <rosbridge/ALMotionTransformInterpolation.h>
 #include <rosbridge/ALMotionWbSetEffectorControl.h>
 

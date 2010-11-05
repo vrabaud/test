@@ -1,0 +1,6 @@
+# Generated for NaoQi method ALInfrared.confRemoteRecordSave
+# Rewrite the LIRC daemon configuration file (lircd.conf) with everyremotes configuration concatenated, and reload it in LIRC daemons
+
+---
+
+

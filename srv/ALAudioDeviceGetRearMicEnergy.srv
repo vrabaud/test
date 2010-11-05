@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALAudioDevice.getRearMicEnergy
+# Returns the energy of the rear microphone signal
+
+---
+# energy of the rear microphone signal
+float32 value
+
+

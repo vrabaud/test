@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALVisionToolbox.logTPRInstanceInfo
+# Print in the logger the info for an instance of takePictureRegurarly()
+
+# number of the instance we want to  get info on
+int32 instanceNumber
+---
+
+

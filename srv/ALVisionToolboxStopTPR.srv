@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALVisionToolbox.stopTPR
+# Stop an instance of takePictureRegularly()
+
+# path and name root of the file we want to stop recording
+string pathAndNameRoot
+# formats of the file we want to stop recording
+string imageRecordFormat
+---
+
+

@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALFaceDetection.enableRecognition
+# enable/disable the recognition stageProcess will be faster when disabled when you don't need to recognize people
+
+# True/False
+bool enable
+---
+
+

@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALLauncher.launchScript
+# runs a script connected the current broker
+
+# the name of the script to launch (python)
+string moduleName
+---
+# true if ok
+bool value
+
+

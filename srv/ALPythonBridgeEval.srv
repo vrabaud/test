@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALPythonBridge.eval
+# eval script
+
+# string to eval
+string stringToEvaluate
+---
+# if the evaluation has gone wrong
+string value
+
+

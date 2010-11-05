@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALSentinel.enableDefaultActionDoubleClick
+# enable or disable the "ouch" action after two pushes.
+
+# true of false to respectively enable or disable
+bool enable
+---
+
+

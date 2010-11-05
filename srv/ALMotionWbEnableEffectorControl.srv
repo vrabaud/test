@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMotion.wbEnableEffectorControl
+# UserFriendly Whole Body API: enable whole body cartesian control of an effector.
+
+# Name of the effector : "Head", "LArm" or "RArm". Nao goes to posture init. He manages his balance and keep foot fix. "Head" is controlled in rotation. "LArm" and "RArm" are controlled in position.
+string effectorName
+# Active / Disactive Effector Control.
+bool isEnabled
+---
+
+

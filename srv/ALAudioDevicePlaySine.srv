@@ -1,0 +1,14 @@
+# Generated for NaoQi method ALAudioDevice.playSine
+# Play a sine wave which specified caracteristics.
+
+# Frequence in Hertz
+int32 frequence
+# Volume Gain between 0 and 100
+int32 gain
+# Stereo Pan set to either {-1,0,+1}
+int32 pan
+# Duration of the sine wave in seconds
+int32 duration
+---
+
+

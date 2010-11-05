@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALLauncher.getGlobalModuleList
+# get the list of modules loaded on the robot and connected on the robot
+
+---
+# array of present modules
+string[] value
+
+

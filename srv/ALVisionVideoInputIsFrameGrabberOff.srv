@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALVisionVideoInput.isFrameGrabberOff
+# Advanced method that asks if the framegrabber is off.
+
+---
+# true if off
+int32 value
+
+

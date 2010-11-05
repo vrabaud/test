@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALFrameManager.completeBehavior
+# It will play a behavior and block until the behavior is finished. Note that it can block forever if the behavior output is never called.
+
+# The id of the box.
+string id
+---
+
+

@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALSpeechRecognition.getPhoneticTranscription
+# This function allows you to get the phonetic transcription(s) used by the speech recognition engine when it is asked to recognize a word. Note that when the ASR engine language is set to Chinese, no phonetic transcription can be retrieved.
+
+# Word to phoneticize.
+string word
+---
+# Phonetic transcription(s) of the word
+string[] value
+
+

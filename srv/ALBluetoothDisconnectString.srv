@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALBluetooth.disconnectString
+# Disconnect a bluetooth device
+
+# the device name to disconnect
+string devicename
+---
+
+

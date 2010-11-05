@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALLauncher.launchPythonModule
+# Import a python module
+
+# the name of the module to launch
+string moduleName
+---
+# true if ok
+bool value
+
+

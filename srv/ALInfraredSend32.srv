@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALInfrared.send32
+# Send 4 octets by IR.
+
+# 4 octets to send through IR.
+string Data_IR
+---
+
+

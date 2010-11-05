@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMotion.wbFootState
+# UserFriendly Whole Body API: set the foot state: fixed foot, constrained in a plane or free.
+
+# Name of the foot state. "Fixed" set the foot fixed. "Plane" constrained the Foot in the plane. "Free" set the foot free.
+string stateName
+# Name of the foot. "LLeg", "RLeg" or "Legs".
+string supportLeg
+---
+
+

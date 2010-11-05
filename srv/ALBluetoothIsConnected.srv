@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALBluetooth.isConnected
+# Is a device connected?
+
+# the device name
+string devicename
+---
+# return true is the device is connected
+bool value
+
+

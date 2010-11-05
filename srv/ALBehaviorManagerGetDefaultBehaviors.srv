@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALBehaviorManager.getDefaultBehaviors
+# Get default behaviors
+
+---
+# Return default behaviors
+string[] value
+
+

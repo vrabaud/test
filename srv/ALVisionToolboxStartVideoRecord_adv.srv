@@ -1,0 +1,16 @@
+# Generated for NaoQi method ALVisionToolbox.startVideoRecord_adv
+# Start recording a video, with advanced options. Please note that only one record at a time can be made.
+
+# Name of the video file to be recorded.
+string videoName
+# Record frame rate [0.1-50.0]. Warning: MJPG format requires framerate greater than 2.0.
+float32 framerate
+# ARV = raw YUV422 format; IYUV = raw avi, MJPG = compressed avi.
+string format
+# Resolution index. 0 = 160*120, 1 = 320*240, 2 = 640*480
+int32 resIndex
+# Number of frames to record. If less than 0, it records until stopVideoRecord() is called.
+int32 numFrames
+---
+
+

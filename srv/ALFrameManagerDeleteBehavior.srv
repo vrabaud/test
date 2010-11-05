@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALFrameManager.deleteBehavior
+# Deletes a behavior (meaning a box). Stop the whole behavior contained in this box first.
+
+# The id of the box to delete.
+string id
+---
+
+

@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALVisionVideoInput.getVIMColorSpace
+# Get the color space of the video source image.
+
+---
+# { 0 = kYuv, 9 = kYUV422, 10 = kYUV, 11 = kRGB, 12 = kHSY, 13 = kBGR }  -1 can't access video source
+int32 value
+
+

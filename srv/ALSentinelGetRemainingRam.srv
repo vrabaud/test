@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALSentinel.getRemainingRam
+# get the remaining physical memory value (one shot)
+
+---
+# the remaining RAM in kb
+int32 value
+
+

@@ -1,0 +1,6 @@
+# Generated for NaoQi method ALVisionToolbox.takePicture
+# Shoot 3 successives pictures and place them in the /home/nao/naoqi/share/naoqi/vision folder. If halfPress has not been called before, it will take longer between click and shoot.
+
+---
+
+

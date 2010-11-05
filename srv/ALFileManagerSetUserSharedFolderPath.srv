@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALFileManager.setUserSharedFolderPath
+# Set a new value of the user shared folder path.
+
+# Name of the module associate to the preference.
+string fileName
+---
+
+

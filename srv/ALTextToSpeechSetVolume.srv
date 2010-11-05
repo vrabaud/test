@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALTextToSpeech.setVolume
+# Sets the volume of text-to-speech output.
+
+# Volume (between 0.0 and 1.0).
+float32 volume
+---
+
+

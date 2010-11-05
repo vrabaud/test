@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALLeds.rotateEyes
+# Launch a rotation using the leds of the eyes.
+
+# the RGB value led, RGB as seen in hexa-decimal: 0x00RRGGBB.
+int32 rgb
+# Approximate time to make one turn.
+float32 timeForRotation
+# Approximate duration of the animation in seconds.
+float32 totalDuration
+---
+
+

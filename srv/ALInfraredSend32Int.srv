@@ -1,0 +1,14 @@
+# Generated for NaoQi method ALInfrared.send32Int
+# Send 4 octets by IR.
+
+# Octet 1 to send through IR.
+int32 Octet1
+# Octet 2 to send through IR.
+int32 Octet2
+# Octet 3 to send through IR.
+int32 Octet3
+# Octet 4 to send through IR.
+int32 Octet4
+---
+
+

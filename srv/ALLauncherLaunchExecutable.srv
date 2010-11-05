@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALLauncher.launchExecutable
+# runs an executable and connect it to current broker (executable)
+
+# the name of the modulePack to launch or the name of the script file to execute
+string moduleName
+---
+# true if ok
+bool value
+
+

@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALFaceDetection.learnFace
+# Add a new face in the database.
+
+# ID of the person to save
+string pId
+---
+# true if the operation succeeds
+bool value
+
+

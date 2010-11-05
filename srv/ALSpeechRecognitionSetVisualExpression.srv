@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALSpeechRecognition.setVisualExpression
+# Enables or disables the leds animations showing the state of the recognition engine during the recognition process.
+
+# Enable (true) or disable it (false).
+bool setOrNot
+---
+
+

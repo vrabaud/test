@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALModule.version
+# Returns the version of the module.
+
+---
+# A string containing the version of the module.
+string value
+
+

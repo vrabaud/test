@@ -1,0 +1,16 @@
+# Generated for NaoQi method ALVisionVideoInput.subscribe
+# Register to ALVideoDevice (formerly Video Input Module/V.I.M.). When a General Video Module(G.V.M.) registers to ALVideoDevice, a buffer of the requested image format is added to the buffers list.
+
+# Name of the registering G.V.M.
+string gvmName
+# Resolution requested. { 0 = kQQVGA, 1 = kQVGA, 2 = kVGA }
+int32 resolution
+# Colorspace requested. { 0 = kYuv, 9 = kYUV422, 10 = kYUV, 11 = kRGB, 12 = kHSY, 13 = kBGR }
+int32 colorSpace
+# Fps (frames per second) requested. { 5, 10, 15, 30 }
+int32 fps
+---
+# Name under which the G.V.M. is known from ALVideoDevice, 0 if failed.
+string value
+
+

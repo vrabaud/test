@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALFrameManager.newBehaviorFromFile
+# Creates a new behavior, from a box found in an xml file stored in the robot.
+
+# Path to Xml file, ex : "/home/youhou/mybehavior.xar".
+string xmlFilePath
+# The path to reach the box to instantiate in the project ("" if root).
+string path
+---
+# return a unique identifier for the created box, that can be used by playBehavior
+string value
+
+

@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALSentinel.enableDefaultActionSimpleClick
+# enable or disable the "hello, i'm nao..." after one short push of the Power button. In both cases the ALMemory ALSentinel/SimpleClickOccured key will be set to true, so users can read/registerOnChange it, then reset to false after handling the event.
+
+# true of false to respectively enable or disable
+bool enable
+---
+
+

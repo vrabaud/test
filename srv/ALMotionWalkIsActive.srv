@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALMotion.walkIsActive
+# Return True if Walk is Active.
+
+---
+# True Arm Motions are controlled by the Walk Task.
+bool value
+
+

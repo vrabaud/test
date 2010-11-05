@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALInfrared.sendIpAddress
+# Send an IP by IR.
+
+# IP adress to send through IR.
+string IP
+---
+
+

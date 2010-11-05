@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALInfrared.confRemoteRecordStart
+# Start remote record process.
+
+# Name of the remote control to reccord.
+string Rm_name
+---
+
+

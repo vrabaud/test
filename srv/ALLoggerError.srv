@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALLogger.error
+# Log an error.
+
+# Name of the module.
+string moduleName
+# Log Message.
+string message
+---
+
+

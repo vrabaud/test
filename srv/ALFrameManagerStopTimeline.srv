@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALFrameManager.stopTimeline
+# Stops playing a timeline contained in a given box, at the current frame
+
+# The id of the box.
+string id
+---
+
+

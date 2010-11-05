@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALAudioDevice.subscribeRemoteModule
+# This function allows a remote module to subscribe to the ALAudioDevice module.
+
+# Name of the remote module
+string pModule
+---
+# True if module has subscribed successfully - False otherwise
+bool value
+
+

@@ -1,0 +1,6 @@
+# Generated for NaoQi method ALFaceTracker.startTracker
+# Start the tracker by Subscribing to Event FaceDetected from ALFaceDetection module.
+
+---
+
+

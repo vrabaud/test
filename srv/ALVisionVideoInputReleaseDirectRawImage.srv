@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALVisionVideoInput.releaseDirectRawImage
+# Release image buffer locked by getDirectRawImageLocal().
+
+# Name under which the G.V.M. is known from the V.I.M.
+string id
+---
+# true if success
+int32 value
+
+

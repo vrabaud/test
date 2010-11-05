@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALSentinel.enableCheckRemainingRam
+# check the remaining physical memory
+
+# true of false to respectively enable or disable (default: true)
+bool enable
+---
+
+

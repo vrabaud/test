@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALLogger.fatal
+# Log a fatal error.
+
+# Name of the module.
+string moduleName
+# Log Message.
+string message
+---
+
+

@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALFrameManager.getMotionLength
+# Returns in seconds, the duration of a given movement stored in a box. Returns 0 if the behavior has no motion layers.
+
+# The id of the box.
+string id
+---
+# Returns the time in seconds.
+float32 value
+
+

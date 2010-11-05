@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALLeds.listLEDs
+# Lists the short LED names.
+
+---
+# A vector of LED names.
+string[] value
+
+

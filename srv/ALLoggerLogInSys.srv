@@ -1,0 +1,6 @@
+# Generated for NaoQi method ALLogger.logInSys
+# Allows the logger to output logs to the system log. If unavailable std will be used.
+
+---
+
+

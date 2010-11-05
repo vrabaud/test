@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALFileManager.getUserSharedFolderPath
+# Get the current user shared folder path.
+
+---
+# User shared folder path string.
+string value
+
+

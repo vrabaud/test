@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALVisionVideoInput.setColorSpace
+# Set the colorspace of the output image.
+
+# Name under which the G.V.M. is known from ALVideoDevice.
+string id
+# { 0 = kYuv, 9 = kYUV422, 10 = kYUV, 11 = kRGB, 12 = kHSY, 13 = kBGR }
+int32 colorSpace
+---
+# true if success
+bool value
+
+

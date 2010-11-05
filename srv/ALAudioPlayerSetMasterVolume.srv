@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALAudioPlayer.setMasterVolume
+# Sets the master volume of the player
+
+# Volume - range 0.0 to 1.0
+float32 volume
+---
+
+

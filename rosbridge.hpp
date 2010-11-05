@@ -15,7 +15,6 @@ namespace ros {
   class NodeHandle;
 };
 
-
 class RosBridge : public AL::ALModule
 {
 public:

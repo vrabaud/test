@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALSpeechRecognition.getParameter
+# Gets a parameter of the speech recognition engine. Note that when the ASR engine language is set to Chinese, no parameter can be retrieved
+
+# Name of the parameter.
+string paramName
+---
+# Value of the parameter.
+float32 value
+
+

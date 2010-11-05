@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALVisionToolbox.isItDark
+# Tell if it is dark around.
+
+---
+# [0;4] outdoor - [5;100] indoor bright - [101;127] shadowed place
+int32 value
+
+

@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALLauncher.isModulePresent
+# Tests the existence of an active module in the global system (in same executable or in another executable of the distributed system)
+
+# a part of the name of the module to test existence
+string strPartOfModuleName
+---
+# the returned value is true if this module is present
+bool value
+
+

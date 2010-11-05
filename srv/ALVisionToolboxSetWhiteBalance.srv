@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALVisionToolbox.setWhiteBalance
+# Set white balance by using Nao's white hands as reference.
+
+# Camera we want to set white balance to : [0] top - [1] bottom - [2] both
+int32 camera
+---
+
+

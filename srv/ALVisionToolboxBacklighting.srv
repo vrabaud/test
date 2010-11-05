@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALVisionToolbox.backlighting
+# Indicates if we might be in backlighting conditions.
+
+---
+# range from 0(no backlight) to 100
+int32 value
+
+

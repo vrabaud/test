@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALExtractor.unsubscribe
+# Unsubscribes from the extractor.
+
+# Name of the module which had subscribed.
+string name
+---
+
+

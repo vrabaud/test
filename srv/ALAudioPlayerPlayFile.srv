@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALAudioPlayer.playFile
+# Plays a wav or mp3 file. Asynchronous.
+
+# Path of the sound file
+string fileName
+---
+# A string that summarises the usage of the method.
+int32 value
+
+

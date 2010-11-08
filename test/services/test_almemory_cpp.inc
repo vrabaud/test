@@ -23,9 +23,9 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMemoryDataChanged>(std::string("NaoQi/ALMemory/dataChanged"));
 //  rosbridge::ALMemoryDataChanged msg;
-  //msg.dataName = ;
-  //msg.data = ;
-  //msg.message = ;
+  //msg.request.dataName = ;
+  //msg.request.data = ;
+  //msg.request.message = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -35,8 +35,8 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMemoryGetDataString>(std::string("NaoQi/ALMemory/getDataString"));
 //  rosbridge::ALMemoryGetDataString msg;
-  //msg.name = ;
-  //msg.duration = ;
+  //msg.request.name = ;
+  //msg.request.duration = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -46,7 +46,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMemoryGetData>(std::string("NaoQi/ALMemory/getData"));
 //  rosbridge::ALMemoryGetData msg;
-  //msg.name = ;
+  //msg.request.name = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -66,8 +66,8 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMemoryGetDataOnChange>(std::string("NaoQi/ALMemory/getDataOnChange"));
 //  rosbridge::ALMemoryGetDataOnChange msg;
-  //msg.name = ;
-  //msg.duration = ;
+  //msg.request.name = ;
+  //msg.request.duration = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -77,7 +77,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMemoryGetListData>(std::string("NaoQi/ALMemory/getListData"));
 //  rosbridge::ALMemoryGetListData msg;
-  //msg.name = ;
+  //msg.request.name = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -87,7 +87,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALModuleGetMethodHelp>(std::string("NaoQi/ALMemory/getMethodHelp"));
 //  rosbridge::ALModuleGetMethodHelp msg;
-  //msg.methodName = ;
+  //msg.request.methodName = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -107,8 +107,8 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMemoryInsertDataObject>(std::string("NaoQi/ALMemory/insertDataObject"));
 //  rosbridge::ALMemoryInsertDataObject msg;
-  //msg.name = ;
-  //msg.data = ;
+  //msg.request.name = ;
+  //msg.request.data = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -118,7 +118,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMemoryInsertListData>(std::string("NaoQi/ALMemory/insertListData"));
 //  rosbridge::ALMemoryInsertListData msg;
-  //msg.listOfInsertData = ;
+  //msg.request.listOfInsertData = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -128,9 +128,9 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMemoryInsertObject>(std::string("NaoQi/ALMemory/insertObject"));
 //  rosbridge::ALMemoryInsertObject msg;
-  //msg.name = ;
-  //msg.buffer = ;
-  //msg.bufferSize = ;
+  //msg.request.name = ;
+  //msg.request.buffer = ;
+  //msg.request.bufferSize = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -140,8 +140,8 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMemoryRaiseEvent>(std::string("NaoQi/ALMemory/raiseEvent"));
 //  rosbridge::ALMemoryRaiseEvent msg;
-  //msg.name = ;
-  //msg.data = ;
+  //msg.request.name = ;
+  //msg.request.data = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -151,8 +151,8 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMemoryRaiseMicroEvent>(std::string("NaoQi/ALMemory/raiseMicroEvent"));
 //  rosbridge::ALMemoryRaiseMicroEvent msg;
-  //msg.name = ;
-  //msg.data = ;
+  //msg.request.name = ;
+  //msg.request.data = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);

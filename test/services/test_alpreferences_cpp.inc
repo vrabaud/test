@@ -15,7 +15,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALModuleGetMethodHelp>(std::string("NaoQi/ALPreferences/getMethodHelp"));
 //  rosbridge::ALModuleGetMethodHelp msg;
-  //msg.methodName = ;
+  //msg.request.methodName = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -35,8 +35,8 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALPreferencesReadPrefFile>(std::string("NaoQi/ALPreferences/readPrefFile"));
 //  rosbridge::ALPreferencesReadPrefFile msg;
-  //msg.fileName = ;
-  //msg.autoGenerateMemoryNames = ;
+  //msg.request.fileName = ;
+  //msg.request.autoGenerateMemoryNames = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -46,7 +46,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALPreferencesSaveToMemory>(std::string("NaoQi/ALPreferences/saveToMemory"));
 //  rosbridge::ALPreferencesSaveToMemory msg;
-  //msg.prefs = ;
+  //msg.request.prefs = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -56,9 +56,9 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALPreferencesWritePrefFile>(std::string("NaoQi/ALPreferences/writePrefFile"));
 //  rosbridge::ALPreferencesWritePrefFile msg;
-  //msg.fileName = ;
-  //msg.prefs = ;
-  //msg.ignoreMemoryNames = ;
+  //msg.request.fileName = ;
+  //msg.request.prefs = ;
+  //msg.request.ignoreMemoryNames = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);

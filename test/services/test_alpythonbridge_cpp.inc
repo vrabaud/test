@@ -14,7 +14,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALPythonBridgeEvalFull>(std::string("NaoQi/ALPythonBridge/evalFull"));
 //  rosbridge::ALPythonBridgeEvalFull msg;
-  //msg.stringToEvaluate = ;
+  //msg.request.stringToEvaluate = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -24,7 +24,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALPythonBridgeEvalReturn>(std::string("NaoQi/ALPythonBridge/evalReturn"));
 //  rosbridge::ALPythonBridgeEvalReturn msg;
-  //msg.stringToEvaluate = ;
+  //msg.request.stringToEvaluate = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -34,7 +34,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALModuleGetMethodHelp>(std::string("NaoQi/ALPythonBridge/getMethodHelp"));
 //  rosbridge::ALModuleGetMethodHelp msg;
-  //msg.methodName = ;
+  //msg.request.methodName = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);

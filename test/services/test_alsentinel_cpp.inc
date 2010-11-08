@@ -21,9 +21,9 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALSentinelBatteryChargeCellVoltageMinChanged>(std::string("NaoQi/ALSentinel/BatteryChargeCellVoltageMinChanged"));
 //  rosbridge::ALSentinelBatteryChargeCellVoltageMinChanged msg;
-  //msg.dataName = ;
-  //msg.data = ;
-  //msg.message = ;
+  //msg.request.dataName = ;
+  //msg.request.data = ;
+  //msg.request.message = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -33,9 +33,9 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALSentinelBatteryChargeStatusChanged>(std::string("NaoQi/ALSentinel/BatteryChargeStatusChanged"));
 //  rosbridge::ALSentinelBatteryChargeStatusChanged msg;
-  //msg.dataName = ;
-  //msg.data = ;
-  //msg.message = ;
+  //msg.request.dataName = ;
+  //msg.request.data = ;
+  //msg.request.message = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -45,7 +45,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALModuleGetMethodHelp>(std::string("NaoQi/ALSentinel/getMethodHelp"));
 //  rosbridge::ALModuleGetMethodHelp msg;
-  //msg.methodName = ;
+  //msg.request.methodName = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -65,9 +65,9 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALSentinelOnAccX>(std::string("NaoQi/ALSentinel/onAccX"));
 //  rosbridge::ALSentinelOnAccX msg;
-  //msg.dataName = ;
-  //msg.data = ;
-  //msg.message = ;
+  //msg.request.dataName = ;
+  //msg.request.data = ;
+  //msg.request.message = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -77,9 +77,9 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALSentinelOnAccY>(std::string("NaoQi/ALSentinel/onAccY"));
 //  rosbridge::ALSentinelOnAccY msg;
-  //msg.dataName = ;
-  //msg.data = ;
-  //msg.message = ;
+  //msg.request.dataName = ;
+  //msg.request.data = ;
+  //msg.request.message = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -89,9 +89,9 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALSentinelOnAccZ>(std::string("NaoQi/ALSentinel/onAccZ"));
 //  rosbridge::ALSentinelOnAccZ msg;
-  //msg.dataName = ;
-  //msg.data = ;
-  //msg.message = ;
+  //msg.request.dataName = ;
+  //msg.request.data = ;
+  //msg.request.message = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -101,9 +101,9 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALSentinelOnBatteryMeasure>(std::string("NaoQi/ALSentinel/onBatteryMeasure"));
 //  rosbridge::ALSentinelOnBatteryMeasure msg;
-  //msg.dataName = ;
-  //msg.data = ;
-  //msg.message = ;
+  //msg.request.dataName = ;
+  //msg.request.data = ;
+  //msg.request.message = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -113,9 +113,9 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALSentinelOnMotorError>(std::string("NaoQi/ALSentinel/onMotorError"));
 //  rosbridge::ALSentinelOnMotorError msg;
-  //msg.dataName = ;
-  //msg.data = ;
-  //msg.message = ;
+  //msg.request.dataName = ;
+  //msg.request.data = ;
+  //msg.request.message = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -125,9 +125,9 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALSentinelOnTemperatureMeasure>(std::string("NaoQi/ALSentinel/onTemperatureMeasure"));
 //  rosbridge::ALSentinelOnTemperatureMeasure msg;
-  //msg.dataName = ;
-  //msg.data = ;
-  //msg.message = ;
+  //msg.request.dataName = ;
+  //msg.request.data = ;
+  //msg.request.message = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -137,9 +137,9 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALSentinelPowerButtonOnPress>(std::string("NaoQi/ALSentinel/powerButtonOnPress"));
 //  rosbridge::ALSentinelPowerButtonOnPress msg;
-  //msg.dataName = ;
-  //msg.data = ;
-  //msg.message = ;
+  //msg.request.dataName = ;
+  //msg.request.data = ;
+  //msg.request.message = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);

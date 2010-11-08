@@ -37,7 +37,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALModuleGetMethodHelp>(std::string("NaoQi/ALBluetooth/getMethodHelp"));
 //  rosbridge::ALModuleGetMethodHelp msg;
-  //msg.methodName = ;
+  //msg.request.methodName = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -67,10 +67,10 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALBluetoothSend>(std::string("NaoQi/ALBluetooth/send"));
 //  rosbridge::ALBluetoothSend msg;
-  //msg.devicename = ;
-  //msg.PWMs = ;
-  //msg.servos = ;
-  //msg.GPIOs = ;
+  //msg.request.devicename = ;
+  //msg.request.PWMs = ;
+  //msg.request.servos = ;
+  //msg.request.GPIOs = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -80,7 +80,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALBluetoothSetAssociatedDeviceList>(std::string("NaoQi/ALBluetooth/setAssociatedDeviceList"));
 //  rosbridge::ALBluetoothSetAssociatedDeviceList msg;
-  //msg.deviceList = ;
+  //msg.request.deviceList = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);

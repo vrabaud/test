@@ -14,7 +14,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALModuleGetMethodHelp>(std::string("NaoQi/ALVisionRecognition/getMethodHelp"));
 //  rosbridge::ALModuleGetMethodHelp msg;
-  //msg.methodName = ;
+  //msg.request.methodName = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -44,8 +44,8 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALVisionRecognitionSetParam>(std::string("NaoQi/ALVisionRecognition/setParam"));
 //  rosbridge::ALVisionRecognitionSetParam msg;
-  //msg.paramName = ;
-  //msg.paramValue = ;
+  //msg.request.paramName = ;
+  //msg.request.paramValue = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);

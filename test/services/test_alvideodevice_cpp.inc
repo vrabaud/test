@@ -15,7 +15,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALVisionVideoInputGetDirectRawImageRemote>(std::string("NaoQi/ALVideoDevice/getDirectRawImageRemote"));
 //  rosbridge::ALVisionVideoInputGetDirectRawImageRemote msg;
-  //msg.id = ;
+  //msg.request.id = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -25,7 +25,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALVisionVideoInputGetImageRemote>(std::string("NaoQi/ALVideoDevice/getImageRemote"));
 //  rosbridge::ALVisionVideoInputGetImageRemote msg;
-  //msg.id = ;
+  //msg.request.id = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -35,7 +35,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALModuleGetMethodHelp>(std::string("NaoQi/ALVideoDevice/getMethodHelp"));
 //  rosbridge::ALModuleGetMethodHelp msg;
-  //msg.methodName = ;
+  //msg.request.methodName = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -55,7 +55,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALVisionVideoInputResolutionToSizes>(std::string("NaoQi/ALVideoDevice/resolutionToSizes"));
 //  rosbridge::ALVisionVideoInputResolutionToSizes msg;
-  //msg.resolution = ;
+  //msg.request.resolution = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);

@@ -13,7 +13,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALModuleGetMethodHelp>(std::string("NaoQi/ALAudioDevice/getMethodHelp"));
 //  rosbridge::ALModuleGetMethodHelp msg;
-  //msg.methodName = ;
+  //msg.request.methodName = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -33,8 +33,8 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALAudioDeviceSendRemoteBufferToOutput>(std::string("NaoQi/ALAudioDevice/sendRemoteBufferToOutput"));
 //  rosbridge::ALAudioDeviceSendRemoteBufferToOutput msg;
-  //msg.nbOfFrames = ;
-  //msg.pBuffer = ;
+  //msg.request.nbOfFrames = ;
+  //msg.request.pBuffer = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);

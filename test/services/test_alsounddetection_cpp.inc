@@ -15,8 +15,8 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALSoundDetectionGetDescription>(std::string("NaoQi/ALSoundDetection/getDescription"));
 //  rosbridge::ALSoundDetectionGetDescription msg;
-  //msg.type = ;
-  //msg.nameDesc = ;
+  //msg.request.type = ;
+  //msg.request.nameDesc = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -26,7 +26,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALSoundDetectionGetEvents>(std::string("NaoQi/ALSoundDetection/getEvents"));
 //  rosbridge::ALSoundDetectionGetEvents msg;
-  //msg.type = ;
+  //msg.request.type = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -36,7 +36,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALModuleGetMethodHelp>(std::string("NaoQi/ALSoundDetection/getMethodHelp"));
 //  rosbridge::ALModuleGetMethodHelp msg;
-  //msg.methodName = ;
+  //msg.request.methodName = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);

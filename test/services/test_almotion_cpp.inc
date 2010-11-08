@@ -29,10 +29,10 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMotionAngleInterpolation>(std::string("NaoQi/ALMotion/angleInterpolation"));
 //  rosbridge::ALMotionAngleInterpolation msg;
-  //msg.names = ;
-  //msg.angleLists = ;
-  //msg.timeLists = ;
-  //msg.isAbsolute = ;
+  //msg.request.names = ;
+  //msg.request.angleLists = ;
+  //msg.request.timeLists = ;
+  //msg.request.isAbsolute = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -42,9 +42,9 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMotionAngleInterpolationBezier>(std::string("NaoQi/ALMotion/angleInterpolationBezier"));
 //  rosbridge::ALMotionAngleInterpolationBezier msg;
-  //msg.jointNames = ;
-  //msg.times = ;
-  //msg.controlPoints = ;
+  //msg.request.jointNames = ;
+  //msg.request.times = ;
+  //msg.request.controlPoints = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -54,9 +54,9 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMotionAngleInterpolationWithSpeed>(std::string("NaoQi/ALMotion/angleInterpolationWithSpeed"));
 //  rosbridge::ALMotionAngleInterpolationWithSpeed msg;
-  //msg.names = ;
-  //msg.targetAngles = ;
-  //msg.maxSpeedFraction = ;
+  //msg.request.names = ;
+  //msg.request.targetAngles = ;
+  //msg.request.maxSpeedFraction = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -66,9 +66,9 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMotionChangeAngles>(std::string("NaoQi/ALMotion/changeAngles"));
 //  rosbridge::ALMotionChangeAngles msg;
-  //msg.names = ;
-  //msg.changes = ;
-  //msg.fractionMaxSpeed = ;
+  //msg.request.names = ;
+  //msg.request.changes = ;
+  //msg.request.fractionMaxSpeed = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -78,8 +78,8 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMotionGetAngles>(std::string("NaoQi/ALMotion/getAngles"));
 //  rosbridge::ALMotionGetAngles msg;
-  //msg.names = ;
-  //msg.useSensors = ;
+  //msg.request.names = ;
+  //msg.request.useSensors = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -89,7 +89,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMotionGetLimits>(std::string("NaoQi/ALMotion/getLimits"));
 //  rosbridge::ALMotionGetLimits msg;
-  //msg.name = ;
+  //msg.request.name = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -99,7 +99,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALModuleGetMethodHelp>(std::string("NaoQi/ALMotion/getMethodHelp"));
 //  rosbridge::ALModuleGetMethodHelp msg;
-  //msg.methodName = ;
+  //msg.request.methodName = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -129,7 +129,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMotionGetStiffnesses>(std::string("NaoQi/ALMotion/getStiffnesses"));
 //  rosbridge::ALMotionGetStiffnesses msg;
-  //msg.jointName = ;
+  //msg.request.jointName = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -159,12 +159,12 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMotionPositionInterpolation>(std::string("NaoQi/ALMotion/positionInterpolation"));
 //  rosbridge::ALMotionPositionInterpolation msg;
-  //msg.chainName = ;
-  //msg.space = ;
-  //msg.path = ;
-  //msg.axisMask = ;
-  //msg.durations = ;
-  //msg.isAbsolute = ;
+  //msg.request.chainName = ;
+  //msg.request.space = ;
+  //msg.request.path = ;
+  //msg.request.axisMask = ;
+  //msg.request.durations = ;
+  //msg.request.isAbsolute = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -174,9 +174,9 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMotionSetAngles>(std::string("NaoQi/ALMotion/setAngles"));
 //  rosbridge::ALMotionSetAngles msg;
-  //msg.names = ;
-  //msg.angles = ;
-  //msg.fractionMaxSpeed = ;
+  //msg.request.names = ;
+  //msg.request.angles = ;
+  //msg.request.fractionMaxSpeed = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -186,7 +186,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMotionSetMotionConfig>(std::string("NaoQi/ALMotion/setMotionConfig"));
 //  rosbridge::ALMotionSetMotionConfig msg;
-  //msg.config = ;
+  //msg.request.config = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -196,8 +196,8 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMotionSetStiffnesses>(std::string("NaoQi/ALMotion/setStiffnesses"));
 //  rosbridge::ALMotionSetStiffnesses msg;
-  //msg.names = ;
-  //msg.stiffnesses = ;
+  //msg.request.names = ;
+  //msg.request.stiffnesses = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -207,9 +207,9 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMotionStiffnessInterpolation>(std::string("NaoQi/ALMotion/stiffnessInterpolation"));
 //  rosbridge::ALMotionStiffnessInterpolation msg;
-  //msg.names = ;
-  //msg.stiffnessLists = ;
-  //msg.timeLists = ;
+  //msg.request.names = ;
+  //msg.request.stiffnessLists = ;
+  //msg.request.timeLists = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -219,12 +219,12 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMotionTransformInterpolation>(std::string("NaoQi/ALMotion/transformInterpolation"));
 //  rosbridge::ALMotionTransformInterpolation msg;
-  //msg.chainName = ;
-  //msg.space = ;
-  //msg.path = ;
-  //msg.axisMask = ;
-  //msg.duration = ;
-  //msg.isAbsolute = ;
+  //msg.request.chainName = ;
+  //msg.request.space = ;
+  //msg.request.path = ;
+  //msg.request.axisMask = ;
+  //msg.request.duration = ;
+  //msg.request.isAbsolute = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -234,8 +234,8 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMotionWbSetEffectorControl>(std::string("NaoQi/ALMotion/wbSetEffectorControl"));
 //  rosbridge::ALMotionWbSetEffectorControl msg;
-  //msg.effectorName = ;
-  //msg.targetCoordinate = ;
+  //msg.request.effectorName = ;
+  //msg.request.targetCoordinate = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);

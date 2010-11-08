@@ -15,9 +15,9 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMotionRecorderDataChanged>(std::string("NaoQi/ALMotionRecorder/dataChanged"));
 //  rosbridge::ALMotionRecorderDataChanged msg;
-  //msg.dataName = ;
-  //msg.data = ;
-  //msg.message = ;
+  //msg.request.dataName = ;
+  //msg.request.data = ;
+  //msg.request.message = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -27,7 +27,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALModuleGetMethodHelp>(std::string("NaoQi/ALMotionRecorder/getMethodHelp"));
 //  rosbridge::ALModuleGetMethodHelp msg;
-  //msg.methodName = ;
+  //msg.request.methodName = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -47,12 +47,12 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALMotionRecorderStartPeriodicRecording>(std::string("NaoQi/ALMotionRecorder/startPeriodicRecording"));
 //  rosbridge::ALMotionRecorderStartPeriodicRecording msg;
-  //msg.jointsToRecord = ;
-  //msg.nbPoses = ;
-  //msg.extensionAllowed = ;
-  //msg.timeStep = ;
-  //msg.jointsToReplay = ;
-  //msg.replayData = ;
+  //msg.request.jointsToRecord = ;
+  //msg.request.nbPoses = ;
+  //msg.request.extensionAllowed = ;
+  //msg.request.timeStep = ;
+  //msg.request.jointsToReplay = ;
+  //msg.request.replayData = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);

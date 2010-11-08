@@ -13,9 +13,9 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALFrameManagerDataChanged>(std::string("NaoQi/ALFrameManager/dataChanged"));
 //  rosbridge::ALFrameManagerDataChanged msg;
-  //msg.dataName = ;
-  //msg.data = ;
-  //msg.message = ;
+  //msg.request.dataName = ;
+  //msg.request.data = ;
+  //msg.request.message = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);
@@ -25,7 +25,7 @@
 //  ros::NodeHandle n;
 //  ros::ServiceClient client = n.serviceClient<rosbridge::ALModuleGetMethodHelp>(std::string("NaoQi/ALFrameManager/getMethodHelp"));
 //  rosbridge::ALModuleGetMethodHelp msg;
-  //msg.methodName = ;
+  //msg.request.methodName = ;
 
 //  bool result = client.call(msg);
 //  ASSERT_EQ(result, true);

@@ -12,6 +12,23 @@ include("bootstrap.cmake")
 use(NAOQI-PLUGINS-TOOLS)
 set(ROSBRIDGE_IS_REMOTE ON CACHE BOOL "" FORCE)
 
+set(ROS_ROOT $ENV{ROS_ROOT})
+if (NOT ROS_ROOT STREQUAL "")
+  #this is the simpliest method I found
+  message(STATUS "ROS: generating message")
+  execute_process(
+    COMMAND sh -c "PYTHONPATH=${ROS_ROOT}/core/roslib/src python ${ROS_ROOT}/core/roscpp/scripts/genmsg_cpp.py msg/*.msg"
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+  message(STATUS "ROS: generating service")
+  execute_process(
+    COMMAND sh -c "PYTHONPATH=${ROS_ROOT}/core/roslib/src python ${ROS_ROOT}/core/roscpp/scripts/gensrv_cpp.py srv/*.srv"
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+
+
+
+  #add_dependencies(${lib} rosbuild_precompile)
+endif()
+
 create_module(rosbridge)
 
 #configure_src_module(albluetooth ${albluetooth_SRCS})

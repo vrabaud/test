@@ -96,6 +96,9 @@ insta stacks/common/yaml_cpp/yaml-cpp
 insta stacks/common_msgs/sensor_msgs
 
 insta stacks/ctaf/gscam
+insta stacks/geometry/bullet
+insta stacks/geometry/tf
+
 
 cp ros/config/rosconsole.config                            dist/config/
 cp stacks/image_common/image_transport/default_plugins.xml dist

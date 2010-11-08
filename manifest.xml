@@ -1,16 +1,13 @@
 <package>
   <description brief="RosBridge">
-    blabla
+    Bridge between Naoqi and Ros
   </description>
-  <author>Jeremy Leibs, Blaise Gassend</author>
-  <license>LGPL</license>
-  <review status="Doc Reviewed" notes="Jan 14 2010"/>
-  <url>http://www.ros.org/wiki/microstrain_3dmgx2_imu</url>
+  <author>Cedric GESTES/gestes@aldebaran-robotics.com, Chris Kilner/ckilner@aldebaran-robotics.com</author>
+  <license>GPL</license>
+  <review status="unreviewed"/>
+  <url>http://www.ros.org/wiki/nao</url>
   <depend package="roscpp"/>
-  <!-- <export> -->
-  <!--   <cpp cflags="-I${prefix}/msg/cpp -I${prefix}/srv/cpp -I${prefix}/include" lflags="-L${prefix}/lib -Wl,-rpath,${prefix}/lib -l3dmgx2" /> -->
-  <!-- </export> -->
-  <platform os="ubuntu" version="9.04"/>
-  <platform os="ubuntu" version="9.10"/>
-  <platform os="ubuntu" version="10.04"/>
+  <export>
+    <cpp cflags="" lflags="-" />
+  </export>
 </package>

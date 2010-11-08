@@ -1,0 +1,22 @@
+Index: tf/CMakeLists.txt
+===================================================================
+--- stacks/geometry/tf/CMakeLists.txt	(revision 33167)
++++ stacks/geometry/tf/CMakeLists.txt	(working copy)
+@@ -60,7 +60,7 @@
+ rosbuild_add_gtest_build_flags(test/testListener)
+ target_link_libraries(test/testListener tf)
+ rosbuild_add_rostest(test/test_broadcaster.launch)
+-
++
+ rosbuild_add_executable(test/testBroadcaster test/testBroadcaster.cpp)
+ target_link_libraries(test/testBroadcaster tf)
+ rosbuild_add_executable(bin/static_transform_publisher src/static_transform_publisher.cpp)
+@@ -68,7 +68,7 @@
+
+
+ find_package(PythonLibs REQUIRED)
+-include_directories(${PYTHON_INCLUDE_PATH})
++include_directories("${OE_CROSS_DIR}/staging/geode-linux/usr/include/python2.6/")
+
+ # # If on Darwin, create a symlink _foo.so -> _foo.dylib, because the
+ # # MacPorts version of Python won't find _foo.dylib for 'import _foo'

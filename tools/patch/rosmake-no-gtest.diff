@@ -1,0 +1,14 @@
+Index: tools/rosmake/src/rosmake/rosmake.py
+===================================================================
+--- ros/tools/rosmake/src/rosmake/rosmake.py	(revision 11460)
++++ ros/tools/rosmake/src/rosmake/rosmake.py	(working copy)
+@@ -900,7 +900,8 @@
+           if options.target == "clean":
+               prebuild_result = self.assert_prebuild_built(["tools/rospack"])
+           else:
+-              prebuild_result = self.assert_prebuild_built(["tools/rospack", "3rdparty/gtest", "core/genmsg_cpp"])
++              #prebuild_result = self.assert_prebuild_built(["tools/rospack", "3rdparty/gtest", "core/genmsg_cpp"])
++              prebuild_result = self.assert_prebuild_built(["tools/rospack", "core/genmsg_cpp"])
+           if not prebuild_result:
+               self.printer.print_all("Failed to finish prebuild, aborting")
+               self.printer.running = False

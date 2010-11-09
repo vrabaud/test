@@ -57,6 +57,7 @@ EOF
   patch -N -p0 < "$TOOLSDIR"/patch/rosmake-no-gtest.diff
   patch -N -p0 < "$TOOLSDIR"/patch/tf-no-python.diff
   patch -N -p0 < "$TOOLSDIR"/patch/yaml-cpp-cross-comp.diff
+  patch -N -p0 < "$TOOLSDIR"/patch/gscam-cross-comp.diff
   popd
 }
 
@@ -64,10 +65,14 @@ EOF
 #convert the ros checkout to a toolchain sdk compatible with naoqi
 ros_t001chainify() {
   dest="$1"
-  pushd $dest
   #generate once... it's so slow
-  [ -d cmake/modules ] || "$TOOLSDIR"/bin/generate-t001chain-sdk.sh
-  popd
+  target=$@
+  (
+    pushd $dest
+    source "./setup.sh"
+    [ -f cmake/modules/ROSCPPConfig.cmake ] || "$TOOLSDIR"/bin/generate-t001chain-sdk.sh
+    popd
+  )
 }
 
 #cross-compile ros
@@ -85,12 +90,29 @@ ros_compile() {
   )
 }
 
+#make a dist tarball
+ros_dist() {
+  dest="$1"
+  pushd "$dest"
+  "$TOOLSDIR"/bin/naorosdist.sh
+    pushd "$dest/dist"
+    tar cvzf ../data.tar.gz .
+    popd
+  rm rosbridge.crg
+  ar cr rosbridge.crg debian-binary control.tar.gz data.tar.gz
+  popd
+}
+
+
 DEST=~/rostest
 
-#ros_get "$DEST"
+ros_get "$DEST"
 ros_get_ctc "$DEST"
 ros_patch_cross "$DEST" "$DEST/$CTC_NAME/"
 ros_compile "$DEST" roscpp
 ros_t001chainify "$DEST"
 ros_compile "$DEST" rosbridge
+#bullet does not work the first time... fix your code
+ros_compile "$DEST" rosbridge
 ros_compile "$DEST" gscam
+ros_dist "$DEST"

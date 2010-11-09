@@ -1,10 +1,5 @@
 #!/bin/sh
 ##
-## generate-gscam.sh
-## Login : <ctaf42@localhost.localdomain>
-## Started on  Tue Oct 12 15:05:25 2010 Cedric GESTES
-## $Id$
-##
 ## Author(s):
 ##  - Cedric GESTES <gestes@aldebaran-robotics.com>
 ##
@@ -24,23 +19,27 @@
 ## Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 ##
 
+[ -d ros ] && [ -d stacks ] || exit 1
+
+TOOLSDIR=$(dirname "$(readlink -f $0 2>/dev/null)")/../
+
+rm -rf dist
 mkdir dist
 mkdir dist/bin
 mkdir dist/lib
 mkdir -p dist/ros/config
 
-cat >dist/ros/config/rosconsole.config <<EOF
-log4j.rootLogger=INFO, A1
-log4j.logger.ros=INFO
-log4j.logger.ros.roscpp.superdebug=ERROR
+# cat >dist/ros/config/rosconsole.config <<EOF
+# log4j.rootLogger=INFO, A1
+# log4j.logger.ros=INFO
+# log4j.logger.ros.roscpp.superdebug=ERROR
 
-# A1 is set to be a ConsoleAppender.
-log4j.appender.A1=org.apache.log4j.ConsoleAppender
-# A1 uses PatternLayout.
-log4j.appender.A1.layout=org.apache.log4j.PatternLayout
-log4j.appender.A1.layout.ConversionPattern=\%-4r [\%t] \%-5p \%c \%x - \%m\%n
-
-EOF
+# # A1 is set to be a ConsoleAppender.
+# log4j.appender.A1=org.apache.log4j.ConsoleAppender
+# # A1 uses PatternLayout.
+# log4j.appender.A1.layout=org.apache.log4j.PatternLayout
+# log4j.appender.A1.layout.ConversionPattern=\%-4r [\%t] \%-5p \%c \%x - \%m\%n
+# EOF
 
 cat >dist/setup.sh <<EOF
 export ROS_ROOT=\$(pwd)/ros/
@@ -61,6 +60,11 @@ insta() {
   srcdir="$1"
   cp -r "$srcdir/bin/"*                   dist/bin/
   cp -r "$srcdir/lib/"*                   dist/lib/
+}
+
+insta_full() {
+  srcdir="$1"
+  insta "$srcdir"
 
   mkdir -p dist/$srcdir/
   mkdir -p dist/$srcdir/lib
@@ -84,28 +88,32 @@ insta ros/tools/rosbag
 insta ros/tools/topic_tools
 insta ros/tools/rospack
 
-insta stacks/image_common/image_transport
-insta stacks/image_transport_plugins/compressed_image_transport
-insta stacks/image_transport_plugins/theora_image_transport
-insta stacks/image_transport_plugins/libtheora
-
-insta stacks/common/pluginlib
-
-insta stacks/image_common/camera_calibration_parsers
 insta stacks/common/yaml_cpp/yaml-cpp
 insta stacks/common_msgs/sensor_msgs
+insta stacks/common/pluginlib
 
-insta stacks/ctaf/gscam
+insta      stacks/image_common/camera_calibration_parsers
+insta_full stacks/image_common/image_transport
+
+insta      stacks/image_transport_plugins/libtheora
+insta_full stacks/image_transport_plugins/compressed_image_transport
+insta_full stacks/image_transport_plugins/theora_image_transport
+
 insta stacks/geometry/bullet
 insta stacks/geometry/tf
 
+insta stacks/brown-ros-pkg/gscam
 
-cp ros/config/rosconsole.config                            dist/config/
-cp stacks/image_common/image_transport/default_plugins.xml dist
+insta stacks/nao/rosbridge/build/sdk
 
 
-#find . -name lib -d -exec cp '{}/*' dist/lib/ ';'
+cp "$TOOLSDIR"/data/rosconsole.config dist/ros/config/rosconsole.config
+cp "$TOOLSDIR"/data/control.tar.gz    .
+cp "$TOOLSDIR"/data/control.tar.gz    debian-binary
+cp "$TOOLSDIR"/data/behavior.xar      dist/
 
-rsync -avrcz dist nao@10.0.252.152:
-
-#GSCAM_CONFIG="videotestsrc is-live=true  ! ffmpegcolorspace ! video/x-raw-rgb ! identity name=ros ! fakesink" bin/gscam
+#hack because choregraphe does not like empty files
+rm -rf dist/bin/rospack_nosubdirs
+rm dist/lib/libyaml-cpp.so
+rm dist/lib/libyaml-cpp.so.0.2
+mv dist/lib/libyaml-cpp.so.0.2.2 dist/lib/libyaml-cpp.so

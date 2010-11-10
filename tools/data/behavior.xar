@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ChoregrapheProject xmlns="http://www.aldebaran-robotics.com/schema/choregraphe/project.xsd" xar_version="3">
+    <Box name="root" robot="" id="-1" tooltip="Root box of Choregraphe&apos;s project. Highest level possible." bitmap_expanded="1" plugin="" x="0" y="0">
+        <bitmap>media/images/box/root.png</bitmap>
+        <script language="4">
+            <content>
+                <![CDATA[]]>
+</content>
+        </script>
+        <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+        <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+        <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+        <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+        <Timeline fps="10" resources_acquisition="0" size="300" enable="0" start_frame="0" end_frame="-1" scale="10">
+            <watches />
+            <BehaviorLayer name="behavior_layer1" mute="0">
+                <BehaviorKeyframe name="keyframe1" index="1" bitmap="">
+                    <Diagram scale="-1">
+                        <Box name="Launch rosbridge" robot="" id="1" tooltip="Launch a binary" bitmap_expanded="1" plugin="" x="270" y="76">
+                            <bitmap>media/images/box/box-diagram.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[import subprocess
+import socket
+import struct
+import fcntl
+
+def get_ip_address(ifname):
+  try:
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    return socket.inet_ntoa(fcntl.ioctl(s.fileno(),
+      0x8915,  # SIOCGIFADDR
+      struct.pack('256s', ifname[:15]))[20:24])
+  except IOError:
+    return None
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        self.process = None
+        
+    def onLoad(self):
+        # choregraphe file transfert miss permission
+        pgm = ALFrameManager.getBehaviorPath(self.behaviorId)
+        pgm = os.path.join(pgm, "bin", "fixperm.sh")
+        print("Starting " + pgm)
+        subprocess.call(["chmod", "755", pgm])
+        subprocess.call(["sh", "-c", pgm])
+
+    def onUnload(self):
+        #terminate the process
+        if self.process:
+            self.process.kill()
+        pass
+
+    def onInput_onStart(self, ros_master_uri):
+        pgm = ALFrameManager.getBehaviorPath(self.behaviorId)
+        pgm = os.path.join(pgm, "rosbridge")
+        myenv = os.environ.copy()
+        myenv["ROS_MASTER_URI"] = ros_master_uri
+        myip = get_ip_address("eth0")
+        if not myip:
+            myip = get_ip_address('wlan0')
+        myenv["ROS_IP"] = myip
+        print("Starting " + pgm)
+        print("ROS_MASTER_URI=" + ros_master_uri)
+        print("ROS_IP=" + myip)
+        self.process = subprocess.Popen([pgm], env=myenv)
+
+    def onInput_onStop(self):
+        self.onUnload() #~ it is recommanded to call onUnload of this box in a onStop method, as the code written in onUnload is used to stop the box as well
+        pass]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                            <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                        </Box>
+                        <Box name="ROS_MASTER_URI" robot="" id="2" tooltip="The address of the Ros Master to connect to." bitmap_expanded="1" plugin="textedit_plugin" x="58" y="92">
+                            <bitmap>media/images/box/box-diagram.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped("http://10.0.252.49:11311")]]>
+</content>
+                            </script>
+                            <pluginContent>
+                                <text>http://10.0.252.49:11311</text>
+                            </pluginContent>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Transmits text." id="2" />
+                            <Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="3" />
+                        </Box>
+                        <Box name="Launch gscam" robot="" id="3" tooltip="Launch a binary" bitmap_expanded="1" plugin="" x="274" y="226">
+                            <bitmap>media/images/box/box-diagram.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[import subprocess
+import socket
+import struct
+import fcntl
+
+def get_ip_address(ifname):
+  try:
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    return socket.inet_ntoa(fcntl.ioctl(s.fileno(),
+      0x8915,  # SIOCGIFADDR
+      struct.pack('256s', ifname[:15]))[20:24])
+  except IOError:
+    return None
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        self.process = None
+        
+    def onLoad(self):
+        # choregraphe file transfert miss permission
+        pgm = ALFrameManager.getBehaviorPath(self.behaviorId)
+        pgm = os.path.join(pgm, "bin", "fixperm.sh")
+        print("Starting " + pgm)
+        subprocess.call(["chmod", "755", pgm])
+        subprocess.call(["sh", "-c", pgm])
+
+    def onUnload(self):
+        #terminate the process
+        if self.process:
+            self.process.kill()
+
+    def onInput_onStart(self, ros_master_uri):
+        pgm = ALFrameManager.getBehaviorPath(self.behaviorId)
+        pgm = os.path.join(pgm, "gscam")
+        myenv = os.environ.copy()
+        myenv["ROS_MASTER_URI"] = ros_master_uri
+        myip = get_ip_address("eth0")
+        if not myip:
+            myip = get_ip_address('wlan0')
+        myenv["ROS_IP"] = myip
+        print("Starting " + pgm)
+        print("ROS_MASTER_URI=" + ros_master_uri)
+        print("ROS_IP=" + myip)
+        self.process = subprocess.Popen([pgm], env=myenv)
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                            <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                        </Box>
+                        <Link inputowner="0" indexofinput="4" outputowner="1" indexofoutput="4" />
+                        <Link inputowner="1" indexofinput="2" outputowner="2" indexofoutput="3" />
+                        <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="2" />
+                        <Link inputowner="0" indexofinput="4" outputowner="3" indexofoutput="4" />
+                        <Link inputowner="3" indexofinput="2" outputowner="2" indexofoutput="3" />
+                    </Diagram>
+                </BehaviorKeyframe>
+            </BehaviorLayer>
+            <ActuatorList />
+        </Timeline>
+    </Box>
+</ChoregrapheProject>

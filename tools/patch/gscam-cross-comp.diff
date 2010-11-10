@@ -1,0 +1,79 @@
+Index: bootstrap.cmake
+===================================================================
+--- stacks/brown-ros-pkg/gscam/bootstrap.cmake	(revision 0)
++++ stacks/brown-ros-pkg/gscam/bootstrap.cmake	(revision 0)
+@@ -0,0 +1,53 @@
++##
++## bootstrap.cmake
++##
++## Author(s):
++##  - Cedric GESTES <gestes@aldebaran-robotics.com>
++##
++## Copyright (C) 2009 Aldebaran Robotics
++##
++##
++
++###############################################
++# Warning:                                    #
++# This file should stay verbatin              #
++# This file is part of the T001CHAIN project  #
++###############################################
++
++set(BOOTSTRAP_VERSION 1)
++if (NOT CMAKE_TOOLCHAIN_FILE)
++  message(STATUS
++    "\n"
++    "===========================================================\n"
++    "= No toolchain file has been specified                    =\n"
++    "= Please use cmake-gui (>= 2.6.4)                         =\n"
++    "= or call cmake like that:                                =\n"
++    "= cmake -DCMAKE_TOOLCHAIN_FILE=../toolchain.cmake ..      =\n"
++    "= with a valid toolchain.cmake                            =\n"
++    "= Please refer to the T001chain doc                       =\n"
++    "===========================================================\n"
++    )
++  message(FATAL_ERROR "")
++endif (NOT CMAKE_TOOLCHAIN_FILE)
++
++#ok I must admin 1337 15 n07 7h47 gr347 f0r c0d1ng
++#for the export of TOOLCHAIN_DIR to T001CHAIN_DIR
++if (NOT TOOLCHAIN_DIR STREQUAL "")
++  set(T001CHAIN_DIR ${TOOLCHAIN_DIR} CACHE PATH "" FORCE)
++endif (NOT TOOLCHAIN_DIR STREQUAL "")
++
++if (NOT T001CHAIN_DIR OR NOT EXISTS "${T001CHAIN_DIR}/cmake/general.cmake")
++  message(STATUS
++    "\n"
++    "===========================================================\n"
++    " ${T001CHAIN_DIR}\n"
++    "= TOOLCHAIN_DIR is undefined                              =\n"
++    "= Set this variable in your toolchain.cmake file          =\n"
++    "= or verify that you called project before including      =\n"
++    "= bootstrap.cmake                                         =\n"
++    "===========================================================\n"
++    )
++  message(FATAL_ERROR "")
++endif (NOT T001CHAIN_DIR OR NOT EXISTS "${T001CHAIN_DIR}/cmake/general.cmake")
++
++include("${T001CHAIN_DIR}/cmake/general.cmake")
+Index: CMakeLists.txt
+===================================================================
+--- stacks/brown-ros-pkg/gscam/CMakeLists.txt	(revision 959)
++++ stacks/brown-ros-pkg/gscam/CMakeLists.txt	(working copy)
+@@ -1,5 +1,6 @@
+ cmake_minimum_required(VERSION 2.4.6)
+ include($ENV{ROS_ROOT}/core/rosbuild/rosbuild.cmake)
++include(boostrap.cmake)
+
+ # Set the build type.  Options are:
+ #  Coverage       : w/ debug symbols, w/o optimization, w/ code-coverage
+@@ -29,6 +30,7 @@
+ #rosbuild_add_executable(example examples/example.cpp)
+ #target_link_libraries(example ${PROJECT_NAME})
+
+-include_directories(/usr/include/gstreamer-0.10 /usr/include/glib-2.0 /usr/lib/glib-2.0/include /usr/include/libxml2)
++#include_directories(/usr/include/gstreamer-0.10 /usr/include/glib-2.0 /usr/lib/glib-2.0/include /usr/include/libxml2)
+ rosbuild_add_executable(gscam src/gscam.cpp)
+-target_link_libraries(gscam gstreamer-0.10 gobject-2.0 gmodule-2.0 gthread-2.0 rt xml2 glib-2.0 pthread)
++#target_link_libraries(gscam gstreamer-0.10 gobject-2.0 gmodule-2.0 gthread-2.0 rt xml2 glib-2.0 pthread)
++use_lib(gscam GSTREAMER GLIB XML2)

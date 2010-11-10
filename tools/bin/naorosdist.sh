@@ -29,33 +29,6 @@ mkdir dist/bin
 mkdir dist/lib
 mkdir -p dist/ros/config
 
-# cat >dist/ros/config/rosconsole.config <<EOF
-# log4j.rootLogger=INFO, A1
-# log4j.logger.ros=INFO
-# log4j.logger.ros.roscpp.superdebug=ERROR
-
-# # A1 is set to be a ConsoleAppender.
-# log4j.appender.A1=org.apache.log4j.ConsoleAppender
-# # A1 uses PatternLayout.
-# log4j.appender.A1.layout=org.apache.log4j.PatternLayout
-# log4j.appender.A1.layout.ConversionPattern=\%-4r [\%t] \%-5p \%c \%x - \%m\%n
-# EOF
-
-cat >dist/setup.sh <<EOF
-export ROS_ROOT=\$(pwd)/ros/
-export PATH=\$ROS_ROOT/../bin:\$PATH
-#export PYTHONPATH=$ROS_ROOT/core/roslib/src:\$PYTHONPATH
-
-if [ ! "\$ROS_MASTER_URI" ] ; then
-  export ROS_MASTER_URI=http://localhost:11311 ;
-fi
-
-export ROS_PACKAGE_PATH=\${ROS_ROOT}/../stacks
-export LD_LIBRARY_PATH=\${ROS_ROOT}/../lib
-#export GSCAM_CONFIG="v4l2src device=/dev/video ! video/x-raw-rgb ! ffmpegcolorspace ! identity name=ros ! fakesink"
-export GSCAM_CONFIG="fakesrc is-live=true ! naovideosrc ! ffmpegcolorspace ! video/x-raw-rgb ! identity name=ros ! fakesink"
-EOF
-
 insta() {
   srcdir="$1"
   cp -r "$srcdir/bin/"*                   dist/bin/
@@ -111,9 +84,13 @@ cp "$TOOLSDIR"/data/rosconsole.config dist/ros/config/rosconsole.config
 cp "$TOOLSDIR"/data/control.tar.gz    .
 cp "$TOOLSDIR"/data/control.tar.gz    debian-binary
 cp "$TOOLSDIR"/data/behavior.xar      dist/
+cp "$TOOLSDIR"/data/rosbridge         dist/
+cp "$TOOLSDIR"/data/gscam             dist/
+cp "$TOOLSDIR"/data/fixperm.sh        dist/bin
 
 #hack because choregraphe does not like empty files
 rm -rf dist/bin/rospack_nosubdirs
 rm dist/lib/libyaml-cpp.so
 rm dist/lib/libyaml-cpp.so.0.2
-mv dist/lib/libyaml-cpp.so.0.2.2 dist/lib/libyaml-cpp.so
+cp dist/lib/libyaml-cpp.so.0.2.2 dist/lib/libyaml-cpp.so
+cp dist/lib/libyaml-cpp.so.0.2.2 dist/lib/libyaml-cpp.so.0.2

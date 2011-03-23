@@ -3,7 +3,7 @@
 ## Author(s):
 ##  - Cedric GESTES <gestes@aldebaran-robotics.com>
 ##
-## Copyright (C) 2010 Cedric GESTES
+## Copyright (C) 2010, 2011 Cedric GESTES
 ## This program is free software; you can redistribute it and/or modify
 ## it under the terms of the GNU General Public License as published by
 ## the Free Software Foundation; either version 3 of the License, or
@@ -21,8 +21,9 @@
 
 TOOLSDIR=$(dirname "$(readlink -f $0 2>/dev/null)")/
 
-CTC_NAME="ctc-1.9.1.1-oe4"
-CTC_URL="ftp://ananas.aldebaran.lan/v1.9.x/v1.9.1/${CTC_NAME}.tar.bz2"
+CTC_NAME="nao-cross-toolchain-1.10.25"
+CTC_URL="ftp://ananas.aldebaran.lan/v1.10.x/v1.10.25/${CTC_NAME}.tar.gz"
+
 
 #download ros, rosbridge and gscam
 ros_get() {
@@ -36,7 +37,7 @@ ros_get_ctc() {
   pushd $dest
   [ -d ${CTC_NAME} ] && return
   wget "$CTC_URL"
-  tar xvjf "${CTC_NAME}.tar.bz2"
+  tar xvzf "${CTC_NAME}.tar.gz"
   popd
 }
 

@@ -53,7 +53,7 @@ set(SDK_DIRS \${SDK_DIRS} "${dest}")
 EOF
 
   #we provide gtest, dont build it (it's not cross-compiled)
-  rm -rf "$dest/ros/3rdparty/gtest/Makefile"
+  rm -rf "$dest/ros/3rdparty/gtest/Makefile" || :
   pushd $dest
   patch -N -p0 < "$TOOLSDIR"/patch/rosmake-no-gtest.diff
   patch -N -p0 < "$TOOLSDIR"/patch/tf-no-python.diff
@@ -100,7 +100,7 @@ ros_dist() {
     pushd "$dest/dist"
     tar cvzf ../data.tar.gz .
     popd
-  rm rosbridge.crg
+  rm -rf rosbridge.crg || :
   ar cr rosbridge.crg debian-binary control.tar.gz data.tar.gz
   popd
 }

@@ -111,6 +111,7 @@ DEST=~/rostest
 ros_get "$DEST"
 ros_get_ctc "$DEST"
 ros_patch_cross "$DEST" "$DEST/$CTC_NAME/"
+set -e
 ros_compile "$DEST" roscpp
 ros_t001chainify "$DEST"
 ros_compile "$DEST" rosbridge

@@ -58,6 +58,7 @@ EOF
   patch -N -p0 < "$TOOLSDIR"/patch/tf-no-python.diff
   patch -N -p0 < "$TOOLSDIR"/patch/yaml-cpp-cross-comp.diff
   patch -N -p0 < "$TOOLSDIR"/patch/gscam-cross-comp.diff
+  patch -N -p0 < "$TOOLSDIR"/patch/0001-bullet-forward-the-toolchain-file.patch
   popd
 }
 

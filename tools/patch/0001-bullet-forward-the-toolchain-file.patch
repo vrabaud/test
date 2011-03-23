@@ -1,0 +1,25 @@
+From 5101a9683710061f09ccf57fc0c0d9dfaa9c0c29 Mon Sep 17 00:00:00 2001
+From: gestes <gestes@aldebaran-robotics.com>
+Date: Wed, 23 Mar 2011 14:56:06 +0100
+Subject: [PATCH] bullet: forward the toolchain file
+
+---
+ Makefile.bullet |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/Makefile.bullet b/Makefile.bullet
+index c7cf2d8..b58852d 100644
+--- stacks/geometry/bullet/Makefile.bullet
++++ stacks/geometry/bullet/Makefile.bullet
+@@ -51,7 +51,7 @@ build_tarball: $(SVN_DIR) patched
+
+
+ installed: wiped $(SOURCE_DIR)/unpacked
+-	cd $(SOURCE_DIR) && cmake -DCMAKE_INSTALL_PREFIX=$(CURDIR) -DCMAKE_CXX_FLAGS="-fPIC -DBT_USE_DOUBLE_PRECISION" -D BUILD_SHARED_LIBS=on .
++	cd $(SOURCE_DIR) && cmake -DCMAKE_TOOLCHAIN_FILE=`rospack find rosbuild`/rostoolchain.cmake -DCMAKE_INSTALL_PREFIX=$(CURDIR) -DCMAKE_CXX_FLAGS="-fPIC -DBT_USE_DOUBLE_PRECISION" -DBUILD_SHARED_LIBS=ON .
+ 	# Bullet appears not be parallel-make safe
+ 	#cd $(SOURCE_DIR) && make $(PARALLEL_JOBS)
+ 	cd $(SOURCE_DIR) && make $(BULLET_TARGETS)
+--
+1.7.4.1
+

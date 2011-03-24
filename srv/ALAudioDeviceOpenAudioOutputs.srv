@@ -1,0 +1,6 @@
+# Generated for NaoQi method ALAudioDevice.openAudioOutputs
+# Opens the audio device for playback. If you closed the audio outputs with the closeAudioOutputs method, you must call this method to ear or send sound onto the nao's loudspeakers.
+
+---
+
+

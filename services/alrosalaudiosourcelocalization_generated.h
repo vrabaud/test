@@ -21,7 +21,6 @@
 #include <rosbridge/ALModuleGetUsage.h>
 #include <rosbridge/ALModulePing.h>
 #include <rosbridge/ALSoundExtractorSetDebugMode.h>
-#include <rosbridge/ALAudioSourceLocalizationSetParameter.h>
 #include <rosbridge/ALExtractorSubscribeString.h>
 #include <rosbridge/ALExtractorSubscribe.h>
 #include <rosbridge/ALExtractorUnsubscribe.h>
@@ -88,10 +87,6 @@ namespace AL {
       bool setDebugMode(
           rosbridge::ALSoundExtractorSetDebugMode::Request  &req,
           rosbridge::ALSoundExtractorSetDebugMode::Response &res);
-
-      bool setParameter(
-          rosbridge::ALAudioSourceLocalizationSetParameter::Request  &req,
-          rosbridge::ALAudioSourceLocalizationSetParameter::Response &res);
 
       bool subscribeString(
           rosbridge::ALExtractorSubscribeString::Request  &req,

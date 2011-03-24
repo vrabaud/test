@@ -1,5 +1,5 @@
 # Generated for NaoQi method ALSpeechRecognition.setLanguage
-# Sets the language used by the speech recognition engine.               The list of the available languages can be collected through the getAvailableLanguages method.               If you want to set a language as the default language (loading automatically at module launch), please refer to the web page of the robot.
+# Sets the language used by the speech recognition engine.                 The list of the available languages can be collected through the getAvailableLanguages method.                 If you want to set a language as the default language (loading automatically at module launch), please refer to the web page of the robot.
 
 # Name of the language in English.
 string languageName

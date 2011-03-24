@@ -1,0 +1,6 @@
+# Generated for NaoQi method ALAudioDevice.closeAudioOutputs
+# Closes the audio device for playback. close the audio device for capture. You can call this method if you want to send sound to alsa in another program than naoqi while naoqi is running (with aplay for example)
+
+---
+
+

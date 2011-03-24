@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALMemory.getSubscribers
+# Returns the names of subscribers
+
+# Name of the event or micro-event
+string name
+---
+# List of subscriber names
+string[] value
+
+

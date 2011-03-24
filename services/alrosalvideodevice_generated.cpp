@@ -23,6 +23,7 @@ void ALRosALVideoDevice::bindMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ros::
   fProxy = ALPtr<ALVideoDeviceProxy> (new ALVideoDeviceProxy(pNaoQiBroker));
 
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALVideoDevice/exit"), &ALRosALVideoDevice::exit, this));
+  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALVideoDevice/getActiveCamera"), &ALRosALVideoDevice::getActiveCamera, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALVideoDevice/getAngPosFromImgPos"), &ALRosALVideoDevice::getAngPosFromImgPos, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALVideoDevice/getAngSizeFromImgSize"), &ALRosALVideoDevice::getAngSizeFromImgSize, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALVideoDevice/getBrokerName"), &ALRosALVideoDevice::getBrokerName, this));
@@ -70,6 +71,19 @@ bool ALRosALVideoDevice::exit(
     return true;
   } catch(const ALError& e) {
     ROS_ERROR("ALVideoDevice.exit failed with exception: %s", e.what());
+    return false;
+  }
+}
+
+bool ALRosALVideoDevice::getActiveCamera(
+    rosbridge::ALVisionVideoInputGetActiveCamera::Request  &req,
+    rosbridge::ALVisionVideoInputGetActiveCamera::Response &res)
+{
+  try {
+    res.value = fProxy->getActiveCamera();
+    return true;
+  } catch(const ALError& e) {
+    ROS_ERROR("ALVideoDevice.getActiveCamera failed with exception: %s", e.what());
     return false;
   }
 }

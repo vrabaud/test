@@ -10,6 +10,8 @@
 
 #include <vector>
 #include <alcore/alptr.h>
+#include <rosbridge/ALAudioDeviceCloseAudioInputs.h>
+#include <rosbridge/ALAudioDeviceCloseAudioOutputs.h>
 #include <rosbridge/ALAudioDeviceDisableEnergyComputation.h>
 #include <rosbridge/ALAudioDeviceEnableEnergyComputation.h>
 #include <rosbridge/ALModuleExit.h>
@@ -22,6 +24,8 @@
 #include <rosbridge/ALAudioDeviceGetRearMicEnergy.h>
 #include <rosbridge/ALAudioDeviceGetRightMicEnergy.h>
 #include <rosbridge/ALModuleGetUsage.h>
+#include <rosbridge/ALAudioDeviceOpenAudioInputs.h>
+#include <rosbridge/ALAudioDeviceOpenAudioOutputs.h>
 #include <rosbridge/ALModulePing.h>
 #include <rosbridge/ALAudioDevicePlaySine.h>
 #include <rosbridge/ALAudioDeviceResetAudio.h>
@@ -35,7 +39,6 @@
 #include <rosbridge/ALAudioDeviceSubscribeRemoteModule.h>
 #include <rosbridge/ALAudioDeviceUnSubscribeRemoteModule.h>
 #include <rosbridge/ALModuleVersion.h>
-#include <rosbridge/ALAudioDeviceWaitSynchronizer.h>
 
 // non generated code included
 #include "alrosalaudiodevice_h.inc"
@@ -52,6 +55,14 @@ namespace AL {
   class ALRosALAudioDevice {
     public:
       void bindMethods(ALPtr<ALBroker> pNaoQiBroker, ros::NodeHandle& pRosNode);
+
+      bool closeAudioInputs(
+          rosbridge::ALAudioDeviceCloseAudioInputs::Request  &req,
+          rosbridge::ALAudioDeviceCloseAudioInputs::Response &res);
+
+      bool closeAudioOutputs(
+          rosbridge::ALAudioDeviceCloseAudioOutputs::Request  &req,
+          rosbridge::ALAudioDeviceCloseAudioOutputs::Response &res);
 
       bool disableEnergyComputation(
           rosbridge::ALAudioDeviceDisableEnergyComputation::Request  &req,
@@ -100,6 +111,14 @@ namespace AL {
       bool getUsage(
           rosbridge::ALModuleGetUsage::Request  &req,
           rosbridge::ALModuleGetUsage::Response &res);
+
+      bool openAudioInputs(
+          rosbridge::ALAudioDeviceOpenAudioInputs::Request  &req,
+          rosbridge::ALAudioDeviceOpenAudioInputs::Response &res);
+
+      bool openAudioOutputs(
+          rosbridge::ALAudioDeviceOpenAudioOutputs::Request  &req,
+          rosbridge::ALAudioDeviceOpenAudioOutputs::Response &res);
 
       bool ping(
           rosbridge::ALModulePing::Request  &req,
@@ -152,10 +171,6 @@ namespace AL {
       bool version(
           rosbridge::ALModuleVersion::Request  &req,
           rosbridge::ALModuleVersion::Response &res);
-
-      bool waitSynchronizer(
-          rosbridge::ALAudioDeviceWaitSynchronizer::Request  &req,
-          rosbridge::ALAudioDeviceWaitSynchronizer::Response &res);
 
 
 // non generated code included

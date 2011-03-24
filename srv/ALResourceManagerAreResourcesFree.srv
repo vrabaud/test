@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALResourceManager.areResourcesFree
+# True if resources free
+
+# Resource names
+string[] resourceNames
+---
+# True if all the specify resources are free
+bool value
+
+

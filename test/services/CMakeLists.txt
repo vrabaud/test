@@ -126,6 +126,11 @@ create_gtest(test_services_alredballtracker
  DEPENDENCIES ROSCPP ROSCONSOLE ROSLIB GTEST
  TIMEOUT 120)
  
+create_gtest(test_services_alresourcemanager
+ SRC test_alresourcemanager_generated.cpp
+ DEPENDENCIES ROSCPP ROSCONSOLE ROSLIB GTEST
+ TIMEOUT 120)
+ 
 create_gtest(test_services_alrobotpose
  SRC test_alrobotpose_generated.cpp
  DEPENDENCIES ROSCPP ROSCONSOLE ROSLIB GTEST

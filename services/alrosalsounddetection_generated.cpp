@@ -34,6 +34,7 @@ void ALRosALSoundDetection::bindMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ro
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALSoundDetection/ping"), &ALRosALSoundDetection::ping, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALSoundDetection/setDebugMode"), &ALRosALSoundDetection::setDebugMode, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALSoundDetection/setParameter"), &ALRosALSoundDetection::setParameter, this));
+  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALSoundDetection/setParameterString"), &ALRosALSoundDetection::setParameterString, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALSoundDetection/subscribeString"), &ALRosALSoundDetection::subscribeString, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALSoundDetection/subscribe"), &ALRosALSoundDetection::subscribe, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALSoundDetection/unsubscribe"), &ALRosALSoundDetection::unsubscribe, this));
@@ -191,6 +192,19 @@ bool ALRosALSoundDetection::setDebugMode(
 bool ALRosALSoundDetection::setParameter(
     rosbridge::ALSoundDetectionSetParameter::Request  &req,
     rosbridge::ALSoundDetectionSetParameter::Response &res)
+{
+  try {
+    fProxy->setParameter(req.paraDetect, req.param);
+    return true;
+  } catch(const ALError& e) {
+    ROS_ERROR("ALSoundDetection.setParameter failed with exception: %s", e.what());
+    return false;
+  }
+}
+
+bool ALRosALSoundDetection::setParameterString(
+    rosbridge::ALSoundDetectionSetParameterString::Request  &req,
+    rosbridge::ALSoundDetectionSetParameterString::Response &res)
 {
   try {
     fProxy->setParameter(req.type, req.paraDetect, req.param);

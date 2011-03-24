@@ -1,0 +1,12 @@
+# Generated for NaoQi method ALResourceManager.areResourcesOwnedBy
+# True if all the specified resources are owned by the owner
+
+# Resource name
+string[] resourceNameList
+# Owner pointer with hierarchy
+string ownerName
+---
+# True if all the specify resources are owned by the owner
+bool value
+
+

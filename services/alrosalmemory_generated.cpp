@@ -30,6 +30,7 @@ void ALRosALMemory::bindMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ros::NodeH
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALMemory/getExtractorEvent"), &ALRosALMemory::getExtractorEvent, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALMemory/getMethodList"), &ALRosALMemory::getMethodList, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALMemory/getMicroEventList"), &ALRosALMemory::getMicroEventList, this));
+  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALMemory/getSubscribers"), &ALRosALMemory::getSubscribers, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALMemory/getType"), &ALRosALMemory::getType, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALMemory/getUsage"), &ALRosALMemory::getUsage, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALMemory/insertDataInt"), &ALRosALMemory::insertDataInt, this));
@@ -153,6 +154,19 @@ bool ALRosALMemory::getMicroEventList(
     return true;
   } catch(const ALError& e) {
     ROS_ERROR("ALMemory.getMicroEventList failed with exception: %s", e.what());
+    return false;
+  }
+}
+
+bool ALRosALMemory::getSubscribers(
+    rosbridge::ALMemoryGetSubscribers::Request  &req,
+    rosbridge::ALMemoryGetSubscribers::Response &res)
+{
+  try {
+    res.value = fProxy->getSubscribers(req.name);
+    return true;
+  } catch(const ALError& e) {
+    ROS_ERROR("ALMemory.getSubscribers failed with exception: %s", e.what());
     return false;
   }
 }

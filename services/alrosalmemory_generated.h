@@ -18,6 +18,7 @@
 #include <rosbridge/ALMemoryGetExtractorEvent.h>
 #include <rosbridge/ALModuleGetMethodList.h>
 #include <rosbridge/ALMemoryGetMicroEventList.h>
+#include <rosbridge/ALMemoryGetSubscribers.h>
 #include <rosbridge/ALMemoryGetType.h>
 #include <rosbridge/ALModuleGetUsage.h>
 #include <rosbridge/ALMemoryInsertDataInt.h>
@@ -84,6 +85,10 @@ namespace AL {
       bool getMicroEventList(
           rosbridge::ALMemoryGetMicroEventList::Request  &req,
           rosbridge::ALMemoryGetMicroEventList::Response &res);
+
+      bool getSubscribers(
+          rosbridge::ALMemoryGetSubscribers::Request  &req,
+          rosbridge::ALMemoryGetSubscribers::Response &res);
 
       bool getType(
           rosbridge::ALMemoryGetType::Request  &req,

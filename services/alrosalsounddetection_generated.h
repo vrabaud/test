@@ -22,6 +22,7 @@
 #include <rosbridge/ALModulePing.h>
 #include <rosbridge/ALSoundExtractorSetDebugMode.h>
 #include <rosbridge/ALSoundDetectionSetParameter.h>
+#include <rosbridge/ALSoundDetectionSetParameterString.h>
 #include <rosbridge/ALExtractorSubscribeString.h>
 #include <rosbridge/ALExtractorSubscribe.h>
 #include <rosbridge/ALExtractorUnsubscribe.h>
@@ -92,6 +93,10 @@ namespace AL {
       bool setParameter(
           rosbridge::ALSoundDetectionSetParameter::Request  &req,
           rosbridge::ALSoundDetectionSetParameter::Response &res);
+
+      bool setParameterString(
+          rosbridge::ALSoundDetectionSetParameterString::Request  &req,
+          rosbridge::ALSoundDetectionSetParameterString::Response &res);
 
       bool subscribeString(
           rosbridge::ALExtractorSubscribeString::Request  &req,

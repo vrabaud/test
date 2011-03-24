@@ -1,0 +1,14 @@
+# Generated for NaoQi method ALResourceManager.waitForResource
+# Wait resource
+
+# Resource name
+string ressourceName
+# Owner name
+string ownerName
+# callback name
+string callbackName
+# Timeout in seconds
+int32 timeoutSeconds
+---
+
+

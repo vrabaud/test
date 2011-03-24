@@ -1,5 +1,5 @@
 # Generated for NaoQi method ALMotion.changePosition
-# Creates a move of an end effector in cartesian space. This is a blocking call.
+# Creates a move of an end effector in cartesian space. This is a non-blocking call.
 
 # Name of the effector.
 string effectorName

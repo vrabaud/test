@@ -10,6 +10,8 @@
 
 #include <vector>
 #include <alcore/alptr.h>
+#include <rosbridge/ALTextToSpeechDisableNotifications.h>
+#include <rosbridge/ALTextToSpeechEnableNotifications.h>
 #include <rosbridge/ALModuleExit.h>
 #include <rosbridge/ALTextToSpeechGetAvailableLanguages.h>
 #include <rosbridge/ALTextToSpeechGetAvailableVoices.h>
@@ -48,6 +50,14 @@ namespace AL {
   class ALRosALTextToSpeech {
     public:
       void bindMethods(ALPtr<ALBroker> pNaoQiBroker, ros::NodeHandle& pRosNode);
+
+      bool disableNotifications(
+          rosbridge::ALTextToSpeechDisableNotifications::Request  &req,
+          rosbridge::ALTextToSpeechDisableNotifications::Response &res);
+
+      bool enableNotifications(
+          rosbridge::ALTextToSpeechEnableNotifications::Request  &req,
+          rosbridge::ALTextToSpeechEnableNotifications::Response &res);
 
       bool exit(
           rosbridge::ALModuleExit::Request  &req,

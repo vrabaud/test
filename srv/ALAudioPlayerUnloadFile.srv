@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALAudioPlayer.unloadFile
+# unloads a file previously loaded with the loadFile function
+
+# Id returned by the loadFile function
+int32 id
+---
+
+

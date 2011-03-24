@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALResourceManager.createResource
+# Create a resource
+
+# Resource name to create
+string resourceName
+# Parent resource name or empty string for root resource
+string parentResourceName
+---
+
+

@@ -11,6 +11,7 @@
 #include <vector>
 #include <alcore/alptr.h>
 #include <rosbridge/ALModuleExit.h>
+#include <rosbridge/ALVisionVideoInputGetActiveCamera.h>
 #include <rosbridge/ALVisionVideoInputGetAngPosFromImgPos.h>
 #include <rosbridge/ALVisionVideoInputGetAngSizeFromImgSize.h>
 #include <rosbridge/ALModuleGetBrokerName.h>
@@ -64,6 +65,10 @@ namespace AL {
       bool exit(
           rosbridge::ALModuleExit::Request  &req,
           rosbridge::ALModuleExit::Response &res);
+
+      bool getActiveCamera(
+          rosbridge::ALVisionVideoInputGetActiveCamera::Request  &req,
+          rosbridge::ALVisionVideoInputGetActiveCamera::Response &res);
 
       bool getAngPosFromImgPos(
           rosbridge::ALVisionVideoInputGetAngPosFromImgPos::Request  &req,

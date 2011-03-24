@@ -33,7 +33,6 @@ void ALRosALAudioSourceLocalization::bindMethods(AL::ALPtr<AL::ALBroker> pNaoQiB
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioSourceLocalization/getUsage"), &ALRosALAudioSourceLocalization::getUsage, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioSourceLocalization/ping"), &ALRosALAudioSourceLocalization::ping, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioSourceLocalization/setDebugMode"), &ALRosALAudioSourceLocalization::setDebugMode, this));
-  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioSourceLocalization/setParameter"), &ALRosALAudioSourceLocalization::setParameter, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioSourceLocalization/subscribeString"), &ALRosALAudioSourceLocalization::subscribeString, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioSourceLocalization/subscribe"), &ALRosALAudioSourceLocalization::subscribe, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioSourceLocalization/unsubscribe"), &ALRosALAudioSourceLocalization::unsubscribe, this));
@@ -184,19 +183,6 @@ bool ALRosALAudioSourceLocalization::setDebugMode(
     return true;
   } catch(const ALError& e) {
     ROS_ERROR("ALAudioSourceLocalization.setDebugMode failed with exception: %s", e.what());
-    return false;
-  }
-}
-
-bool ALRosALAudioSourceLocalization::setParameter(
-    rosbridge::ALAudioSourceLocalizationSetParameter::Request  &req,
-    rosbridge::ALAudioSourceLocalizationSetParameter::Response &res)
-{
-  try {
-    fProxy->setParameter(req.param, req.value);
-    return true;
-  } catch(const ALError& e) {
-    ROS_ERROR("ALAudioSourceLocalization.setParameter failed with exception: %s", e.what());
     return false;
   }
 }

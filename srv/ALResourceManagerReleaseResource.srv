@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALResourceManager.releaseResource
+# Release resource
+
+# Resource name
+string resourceName
+# Existing owner name
+string ownerName
+---
+
+

@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALLogger.logInForwarder
+# Publish logs to a Log Forwarder. Pass an empty string in order to use the default value:  "tcp://localhost:50998"
+
+# Desired input ZMQ address of the Log Forwarder.
+string inputAddress
+---
+
+

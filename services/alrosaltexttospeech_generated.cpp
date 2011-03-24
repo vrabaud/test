@@ -22,6 +22,8 @@ void ALRosALTextToSpeech::bindMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ros:
   }
   fProxy = ALPtr<ALTextToSpeechProxy> (new ALTextToSpeechProxy(pNaoQiBroker));
 
+  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALTextToSpeech/disableNotifications"), &ALRosALTextToSpeech::disableNotifications, this));
+  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALTextToSpeech/enableNotifications"), &ALRosALTextToSpeech::enableNotifications, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALTextToSpeech/exit"), &ALRosALTextToSpeech::exit, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALTextToSpeech/getAvailableLanguages"), &ALRosALTextToSpeech::getAvailableLanguages, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALTextToSpeech/getAvailableVoices"), &ALRosALTextToSpeech::getAvailableVoices, this));
@@ -48,6 +50,32 @@ void ALRosALTextToSpeech::bindMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ros:
 }
 
 // -- generated ros methods --
+
+bool ALRosALTextToSpeech::disableNotifications(
+    rosbridge::ALTextToSpeechDisableNotifications::Request  &req,
+    rosbridge::ALTextToSpeechDisableNotifications::Response &res)
+{
+  try {
+    fProxy->disableNotifications();
+    return true;
+  } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.disableNotifications failed with exception: %s", e.what());
+    return false;
+  }
+}
+
+bool ALRosALTextToSpeech::enableNotifications(
+    rosbridge::ALTextToSpeechEnableNotifications::Request  &req,
+    rosbridge::ALTextToSpeechEnableNotifications::Response &res)
+{
+  try {
+    fProxy->enableNotifications();
+    return true;
+  } catch(const ALError& e) {
+    ROS_ERROR("ALTextToSpeech.enableNotifications failed with exception: %s", e.what());
+    return false;
+  }
+}
 
 bool ALRosALTextToSpeech::exit(
     rosbridge::ALModuleExit::Request  &req,

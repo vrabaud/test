@@ -22,6 +22,8 @@ void ALRosALAudioDevice::bindMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ros::
   }
   fProxy = ALPtr<ALAudioDeviceProxy> (new ALAudioDeviceProxy(pNaoQiBroker));
 
+  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioDevice/closeAudioInputs"), &ALRosALAudioDevice::closeAudioInputs, this));
+  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioDevice/closeAudioOutputs"), &ALRosALAudioDevice::closeAudioOutputs, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioDevice/disableEnergyComputation"), &ALRosALAudioDevice::disableEnergyComputation, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioDevice/enableEnergyComputation"), &ALRosALAudioDevice::enableEnergyComputation, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioDevice/exit"), &ALRosALAudioDevice::exit, this));
@@ -34,6 +36,8 @@ void ALRosALAudioDevice::bindMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ros::
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioDevice/getRearMicEnergy"), &ALRosALAudioDevice::getRearMicEnergy, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioDevice/getRightMicEnergy"), &ALRosALAudioDevice::getRightMicEnergy, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioDevice/getUsage"), &ALRosALAudioDevice::getUsage, this));
+  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioDevice/openAudioInputs"), &ALRosALAudioDevice::openAudioInputs, this));
+  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioDevice/openAudioOutputs"), &ALRosALAudioDevice::openAudioOutputs, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioDevice/ping"), &ALRosALAudioDevice::ping, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioDevice/playSine"), &ALRosALAudioDevice::playSine, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioDevice/resetAudio"), &ALRosALAudioDevice::resetAudio, this));
@@ -47,11 +51,36 @@ void ALRosALAudioDevice::bindMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ros::
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioDevice/subscribeRemoteModule"), &ALRosALAudioDevice::subscribeRemoteModule, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioDevice/unSubscribeRemoteModule"), &ALRosALAudioDevice::unSubscribeRemoteModule, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioDevice/version"), &ALRosALAudioDevice::version, this));
-  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioDevice/waitSynchronizer"), &ALRosALAudioDevice::waitSynchronizer, this));
   bindCustomMethods(pNaoQiBroker, pRosNode);
 }
 
 // -- generated ros methods --
+
+bool ALRosALAudioDevice::closeAudioInputs(
+    rosbridge::ALAudioDeviceCloseAudioInputs::Request  &req,
+    rosbridge::ALAudioDeviceCloseAudioInputs::Response &res)
+{
+  try {
+    fProxy->closeAudioInputs();
+    return true;
+  } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.closeAudioInputs failed with exception: %s", e.what());
+    return false;
+  }
+}
+
+bool ALRosALAudioDevice::closeAudioOutputs(
+    rosbridge::ALAudioDeviceCloseAudioOutputs::Request  &req,
+    rosbridge::ALAudioDeviceCloseAudioOutputs::Response &res)
+{
+  try {
+    fProxy->closeAudioOutputs();
+    return true;
+  } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.closeAudioOutputs failed with exception: %s", e.what());
+    return false;
+  }
+}
 
 bool ALRosALAudioDevice::disableEnergyComputation(
     rosbridge::ALAudioDeviceDisableEnergyComputation::Request  &req,
@@ -205,6 +234,32 @@ bool ALRosALAudioDevice::getUsage(
     return true;
   } catch(const ALError& e) {
     ROS_ERROR("ALAudioDevice.getUsage failed with exception: %s", e.what());
+    return false;
+  }
+}
+
+bool ALRosALAudioDevice::openAudioInputs(
+    rosbridge::ALAudioDeviceOpenAudioInputs::Request  &req,
+    rosbridge::ALAudioDeviceOpenAudioInputs::Response &res)
+{
+  try {
+    fProxy->openAudioInputs();
+    return true;
+  } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.openAudioInputs failed with exception: %s", e.what());
+    return false;
+  }
+}
+
+bool ALRosALAudioDevice::openAudioOutputs(
+    rosbridge::ALAudioDeviceOpenAudioOutputs::Request  &req,
+    rosbridge::ALAudioDeviceOpenAudioOutputs::Response &res)
+{
+  try {
+    fProxy->openAudioOutputs();
+    return true;
+  } catch(const ALError& e) {
+    ROS_ERROR("ALAudioDevice.openAudioOutputs failed with exception: %s", e.what());
     return false;
   }
 }
@@ -374,19 +429,6 @@ bool ALRosALAudioDevice::version(
     return true;
   } catch(const ALError& e) {
     ROS_ERROR("ALAudioDevice.version failed with exception: %s", e.what());
-    return false;
-  }
-}
-
-bool ALRosALAudioDevice::waitSynchronizer(
-    rosbridge::ALAudioDeviceWaitSynchronizer::Request  &req,
-    rosbridge::ALAudioDeviceWaitSynchronizer::Response &res)
-{
-  try {
-    fProxy->waitSynchronizer(req.name);
-    return true;
-  } catch(const ALError& e) {
-    ROS_ERROR("ALAudioDevice.waitSynchronizer failed with exception: %s", e.what());
     return false;
   }
 }

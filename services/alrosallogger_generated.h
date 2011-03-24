@@ -19,11 +19,13 @@
 #include <rosbridge/ALModuleGetUsage.h>
 #include <rosbridge/ALLoggerInfo.h>
 #include <rosbridge/ALLoggerLogInFile.h>
+#include <rosbridge/ALLoggerLogInForwarder.h>
 #include <rosbridge/ALLoggerLogInStd.h>
 #include <rosbridge/ALLoggerLogInSys.h>
 #include <rosbridge/ALLoggerLowDebug.h>
 #include <rosbridge/ALLoggerLowInfo.h>
 #include <rosbridge/ALModulePing.h>
+#include <rosbridge/ALLoggerRemoveHandler.h>
 #include <rosbridge/ALLoggerSeparator.h>
 #include <rosbridge/ALLoggerSetFilter.h>
 #include <rosbridge/ALLoggerSetVerbosity.h>
@@ -82,6 +84,10 @@ namespace AL {
           rosbridge::ALLoggerLogInFile::Request  &req,
           rosbridge::ALLoggerLogInFile::Response &res);
 
+      bool logInForwarder(
+          rosbridge::ALLoggerLogInForwarder::Request  &req,
+          rosbridge::ALLoggerLogInForwarder::Response &res);
+
       bool logInStd(
           rosbridge::ALLoggerLogInStd::Request  &req,
           rosbridge::ALLoggerLogInStd::Response &res);
@@ -101,6 +107,10 @@ namespace AL {
       bool ping(
           rosbridge::ALModulePing::Request  &req,
           rosbridge::ALModulePing::Response &res);
+
+      bool removeHandler(
+          rosbridge::ALLoggerRemoveHandler::Request  &req,
+          rosbridge::ALLoggerRemoveHandler::Response &res);
 
       bool separator(
           rosbridge::ALLoggerSeparator::Request  &req,

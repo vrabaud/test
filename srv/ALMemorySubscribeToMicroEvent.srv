@@ -7,7 +7,7 @@ string name
 string moduleName
 # message passed to the module when a notification is sent.
 string message
-# name of function to call when a data is changed (default is dataChanged)
+# name of function to call when a data is changed
 string callback
 ---
 

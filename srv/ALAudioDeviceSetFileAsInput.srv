@@ -1,5 +1,5 @@
 # Generated for NaoQi method ALAudioDevice.setFileAsInput
-# This method allows to send sound samples contained in a sound file at the input of ALAudioDevice, instead of the nao's microphones sound data  The sound file must be a .wav file containing 16bits / 4 channels / interleaved samples. Once the file has been read, microphones sound data will again taken as input
+# This method allows to send sound samples contained in a sound file at the input of ALAudioDevice, instead of the nao's microphones sound data                   The sound file must be a .wav file containing 16bits / 4 channels / interleaved samples. Once the file has been read, microphones sound data will again taken as input
 
 # Name of the input file.
 string pFileName

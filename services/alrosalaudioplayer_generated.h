@@ -34,6 +34,8 @@
 #include <rosbridge/ALAudioPlayerSetPanorama.h>
 #include <rosbridge/ALAudioPlayerSetVolume.h>
 #include <rosbridge/ALAudioPlayerStopAll.h>
+#include <rosbridge/ALAudioPlayerUnloadAllFiles.h>
+#include <rosbridge/ALAudioPlayerUnloadFile.h>
 #include <rosbridge/ALModuleVersion.h>
 
 // non generated code included
@@ -147,6 +149,14 @@ namespace AL {
       bool stopAll(
           rosbridge::ALAudioPlayerStopAll::Request  &req,
           rosbridge::ALAudioPlayerStopAll::Response &res);
+
+      bool unloadAllFiles(
+          rosbridge::ALAudioPlayerUnloadAllFiles::Request  &req,
+          rosbridge::ALAudioPlayerUnloadAllFiles::Response &res);
+
+      bool unloadFile(
+          rosbridge::ALAudioPlayerUnloadFile::Request  &req,
+          rosbridge::ALAudioPlayerUnloadFile::Response &res);
 
       bool version(
           rosbridge::ALModuleVersion::Request  &req,

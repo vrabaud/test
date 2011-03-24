@@ -1,0 +1,6 @@
+# Generated for NaoQi method ALAudioDevice.closeAudioInputs
+# Closes the audio device for capture. You can call this method if you want to have access to the alsa input buffers in another program than naoqi while naoqi is running (with a record for example)
+
+---
+
+

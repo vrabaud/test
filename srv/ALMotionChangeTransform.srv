@@ -1,5 +1,5 @@
 # Generated for NaoQi method ALMotion.changeTransform
-# Moves an end-effector to the given position and orientation transform. This is a blocking call.
+# Moves an end-effector to the given position and orientation transform. This is a non-blocking call.
 
 # Name of the chain. Could be: "Head", "LArm","RArm", "LLeg", "RLeg", "Torso"
 string chainName

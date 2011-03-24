@@ -1,0 +1,6 @@
+# Generated for NaoQi method ALTextToSpeech.enableNotifications
+# Enables the notifications puted in ALMemory during the synthesis (TextStarted, TextDone, CurrentBookMark, CurrentWord, ...)
+
+---
+
+

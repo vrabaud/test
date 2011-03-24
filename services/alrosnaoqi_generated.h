@@ -29,6 +29,7 @@
 #include "alrosalpythonbridge_generated.h"
 #include "alrosalredballdetection_generated.h"
 #include "alrosalredballtracker_generated.h"
+#include "alrosalresourcemanager_generated.h"
 #include "alrosalrobotpose_generated.h"
 #include "alrosalsensors_generated.h"
 #include "alrosalsentinel_generated.h"
@@ -70,6 +71,7 @@ namespace AL {
       fALRosALPythonBridge.bindMethods(pNaoQiBroker, pRosNode);
       fALRosALRedBallDetection.bindMethods(pNaoQiBroker, pRosNode);
       fALRosALRedBallTracker.bindMethods(pNaoQiBroker, pRosNode);
+      fALRosALResourceManager.bindMethods(pNaoQiBroker, pRosNode);
       fALRosALRobotPose.bindMethods(pNaoQiBroker, pRosNode);
       fALRosALSensors.bindMethods(pNaoQiBroker, pRosNode);
       fALRosALSentinel.bindMethods(pNaoQiBroker, pRosNode);
@@ -108,6 +110,7 @@ namespace AL {
     ALRosALPythonBridge fALRosALPythonBridge;
     ALRosALRedBallDetection fALRosALRedBallDetection;
     ALRosALRedBallTracker fALRosALRedBallTracker;
+    ALRosALResourceManager fALRosALResourceManager;
     ALRosALRobotPose fALRosALRobotPose;
     ALRosALSensors fALRosALSensors;
     ALRosALSentinel fALRosALSentinel;

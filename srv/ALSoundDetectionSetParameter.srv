@@ -1,8 +1,6 @@
 # Generated for NaoQi method ALSoundDetection.setParameter
 # Set detection parameters
 
-# Name of detector. For now only one detector is available : "soundDetection/SoundDetector".
-string type
 # Name of the parameter. Please refer to the example below for the available parameters.
 string paraDetect
 # Value of the parameter.

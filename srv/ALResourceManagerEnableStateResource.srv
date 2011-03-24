@@ -1,0 +1,10 @@
+# Generated for NaoQi method ALResourceManager.enableStateResource
+# Enable or disable a state resource
+
+# The name of the resource that you wish enable of disable. e.g. Standing
+string resourceName
+# True to enable, false to disable
+bool enabled
+---
+
+

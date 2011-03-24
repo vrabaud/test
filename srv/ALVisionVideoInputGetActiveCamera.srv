@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALVisionVideoInput.getActiveCamera
+# Get the active camera
+
+---
+# 0: top camera - 1: bottom camera
+int32 value
+
+

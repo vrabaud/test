@@ -31,11 +31,13 @@ void ALRosALLogger::bindMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ros::NodeH
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALLogger/getUsage"), &ALRosALLogger::getUsage, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALLogger/info"), &ALRosALLogger::info, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALLogger/logInFile"), &ALRosALLogger::logInFile, this));
+  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALLogger/logInForwarder"), &ALRosALLogger::logInForwarder, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALLogger/logInStd"), &ALRosALLogger::logInStd, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALLogger/logInSys"), &ALRosALLogger::logInSys, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALLogger/lowDebug"), &ALRosALLogger::lowDebug, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALLogger/lowInfo"), &ALRosALLogger::lowInfo, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALLogger/ping"), &ALRosALLogger::ping, this));
+  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALLogger/removeHandler"), &ALRosALLogger::removeHandler, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALLogger/separator"), &ALRosALLogger::separator, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALLogger/setFilter"), &ALRosALLogger::setFilter, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALLogger/setVerbosity"), &ALRosALLogger::setVerbosity, this));
@@ -163,6 +165,19 @@ bool ALRosALLogger::logInFile(
   }
 }
 
+bool ALRosALLogger::logInForwarder(
+    rosbridge::ALLoggerLogInForwarder::Request  &req,
+    rosbridge::ALLoggerLogInForwarder::Response &res)
+{
+  try {
+    fProxy->logInForwarder(req.inputAddress);
+    return true;
+  } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.logInForwarder failed with exception: %s", e.what());
+    return false;
+  }
+}
+
 bool ALRosALLogger::logInStd(
     rosbridge::ALLoggerLogInStd::Request  &req,
     rosbridge::ALLoggerLogInStd::Response &res)
@@ -224,6 +239,19 @@ bool ALRosALLogger::ping(
     return true;
   } catch(const ALError& e) {
     ROS_ERROR("ALLogger.ping failed with exception: %s", e.what());
+    return false;
+  }
+}
+
+bool ALRosALLogger::removeHandler(
+    rosbridge::ALLoggerRemoveHandler::Request  &req,
+    rosbridge::ALLoggerRemoveHandler::Response &res)
+{
+  try {
+    fProxy->removeHandler(req.id);
+    return true;
+  } catch(const ALError& e) {
+    ROS_ERROR("ALLogger.removeHandler failed with exception: %s", e.what());
     return false;
   }
 }

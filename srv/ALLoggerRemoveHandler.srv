@@ -1,0 +1,8 @@
+# Generated for NaoQi method ALLogger.removeHandler
+# Unsubscribe specified id from connection list.
+
+# Id used to register the handler.
+string id
+---
+
+

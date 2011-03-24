@@ -46,6 +46,8 @@ void ALRosALAudioPlayer::bindMethods(AL::ALPtr<AL::ALBroker> pNaoQiBroker, ros::
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioPlayer/setPanorama"), &ALRosALAudioPlayer::setPanorama, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioPlayer/setVolume"), &ALRosALAudioPlayer::setVolume, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioPlayer/stopAll"), &ALRosALAudioPlayer::stopAll, this));
+  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioPlayer/unloadAllFiles"), &ALRosALAudioPlayer::unloadAllFiles, this));
+  fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioPlayer/unloadFile"), &ALRosALAudioPlayer::unloadFile, this));
   fServices.push_back(pRosNode.advertiseService(std::string("NaoQi/ALAudioPlayer/version"), &ALRosALAudioPlayer::version, this));
   bindCustomMethods(pNaoQiBroker, pRosNode);
 }
@@ -360,6 +362,32 @@ bool ALRosALAudioPlayer::stopAll(
     return true;
   } catch(const ALError& e) {
     ROS_ERROR("ALAudioPlayer.stopAll failed with exception: %s", e.what());
+    return false;
+  }
+}
+
+bool ALRosALAudioPlayer::unloadAllFiles(
+    rosbridge::ALAudioPlayerUnloadAllFiles::Request  &req,
+    rosbridge::ALAudioPlayerUnloadAllFiles::Response &res)
+{
+  try {
+    fProxy->unloadAllFiles();
+    return true;
+  } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.unloadAllFiles failed with exception: %s", e.what());
+    return false;
+  }
+}
+
+bool ALRosALAudioPlayer::unloadFile(
+    rosbridge::ALAudioPlayerUnloadFile::Request  &req,
+    rosbridge::ALAudioPlayerUnloadFile::Response &res)
+{
+  try {
+    fProxy->unloadFile(req.id);
+    return true;
+  } catch(const ALError& e) {
+    ROS_ERROR("ALAudioPlayer.unloadFile failed with exception: %s", e.what());
     return false;
   }
 }

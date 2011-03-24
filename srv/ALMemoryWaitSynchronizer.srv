@@ -1,5 +1,5 @@
 # Generated for NaoQi method ALMemory.waitSynchronizer
-# Waits for a signal.
+# Waits for a condition to be triggered.
 
 # Condition name
 string name

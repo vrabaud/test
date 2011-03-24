@@ -1,0 +1,29 @@
+From b631552d772ebecd72976d028e71094018b25288 Mon Sep 17 00:00:00 2001
+From: gestes <gestes@aldebaran-robotics.com>
+Date: Thu, 24 Mar 2011 13:45:38 +0000
+Subject: [PATCH] asdfasd
+
+---
+ CMakeLists.txt |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5d64b6f..e96b0ba 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -9,9 +9,9 @@ if(IPHONE)
+   set(LIB_TYPE)
+ endif(IPHONE)
+ 
+-if(CMAKE_COMPILER_IS_GNUCC)
+-  set(CMAKE_CXX_FLAGS "-O2 -Wall -pedantic -Wextra")
+-endif(CMAKE_COMPILER_IS_GNUCC)
++#if(CMAKE_COMPILER_IS_GNUCC)
++#  set(CMAKE_CXX_FLAGS "-O2 -Wall -pedantic -Wextra")
++#endif(CMAKE_COMPILER_IS_GNUCC)
+ 
+ set(YAML_CPP_VERSION_MAJOR "0")
+ set(YAML_CPP_VERSION_MINOR "2")
+-- 
+1.6.3.3
+

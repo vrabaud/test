@@ -60,6 +60,7 @@ EOF
   patch -N -p0 < "$TOOLSDIR"/patch/yaml-cpp-cross-comp.diff
   patch -N -p0 < "$TOOLSDIR"/patch/gscam-cross-comp.diff
   patch -N -p0 < "$TOOLSDIR"/patch/0001-bullet-forward-the-toolchain-file.patch
+  cp -r "$TOOLSDIR"/patch/yaml-cpp-cmakelist.patch $dest/stacks/common/yaml_cpp/
   popd
 }
 
